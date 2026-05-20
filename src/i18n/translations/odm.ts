@@ -1,6 +1,7 @@
 export const odmText = {
   en: {
     heading: 'OEM/ODM PROCESS',
+    sub: 'From concept to delivery — our end-to-end process ensures quality at every step.',
     steps: [
       { num: '1', label: 'Requirement\nCommunication' },
       { num: '2', label: 'Design &\nSample' },

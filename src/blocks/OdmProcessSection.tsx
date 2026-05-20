@@ -33,15 +33,17 @@ export default function OdmProcessSection() {
             fontWeight: 900,
             color: '#111',
             letterSpacing: '-0.01em',
-            margin: '0 0 0',
+            margin: '0 0 8px',
           }}
         >
           {t.heading}
         </h2>
+        {/* invisible spacer to match ProductsSection subtitle height */}
+        <p style={{ fontSize: 13, lineHeight: 1.6, margin: 0, visibility: 'hidden', userSelect: 'none' }}>&nbsp;</p>
       </div>
 
       {/* Step circles with arrows */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 6px', alignItems: 'flex-start', justifyContent: 'center' }}>
+      <div className="justify-center lg:justify-between" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 6px', alignItems: 'flex-start' }}>
         {t.steps.map(({ num, label }, i) => (
           <Fragment key={i}>
             <div
@@ -50,6 +52,7 @@ export default function OdmProcessSection() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 gap: 7,
+                flex: '1 1 0',
                 minWidth: 72,
               }}
             >
@@ -76,7 +79,8 @@ export default function OdmProcessSection() {
                   textAlign: 'center',
                   lineHeight: 1.4,
                   whiteSpace: 'pre-line',
-                  width: 72,
+                  maxWidth: 72,
+                  width: '100%',
                 }}
               >
                 {label}

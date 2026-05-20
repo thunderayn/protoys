@@ -5,15 +5,15 @@ import { productsText } from '../i18n/translations/products'
 
 const productImages = [
   {
-    src: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=400&q=80',
+    src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon3_l74cyj.jpg',
     alt: 'Plush Toy 1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1559454403-b8fb88521f11?auto=format&fit=crop&w=400&q=80',
+    src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg',
     alt: 'Plush Toy 2',
   },
   {
-    src: 'https://images.unsplash.com/photo-1563396983906-b3795482a59a?auto=format&fit=crop&w=400&q=80',
+    src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/panda1_cat0ay.jpg',
     alt: 'Plush Toy 3',
   },
 ]

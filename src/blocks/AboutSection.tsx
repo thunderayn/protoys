@@ -74,7 +74,7 @@ export default function AboutSection() {
 
           <div style={{ position: 'relative', overflow: 'hidden' }}>
             <img
-              src="https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779035590/%CE%A3_%C3%B4%CF%83_%C3%B42_d6d30p.png"
+              src="https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265056/factory4_jrcxct.png"
               alt="Factory"
               style={{
                 position: 'absolute',
@@ -92,7 +92,7 @@ export default function AboutSection() {
         <div className="md:hidden">
           <div style={{ height: 240, overflow: 'hidden' }}>
             <img
-              src="https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779035645/%C2%B5%C3%96_%CF%84_%C3%B9%CF%83%C3%B1%C3%BB%CE%A6%C2%BA%C3%A9_qb7niu.png"
+              src="https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265056/factory4_jrcxct.png"
               alt="Factory"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
