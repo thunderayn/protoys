@@ -19,7 +19,6 @@ export const footerText = {
     contact: {
       heading: 'CONTACT US',
       address: '123 Factory Road, Guangzhou, China',
-      tel: '+86 020-1234-5678',
       email: 'info@protoys.com',
     },
     copyright: '© 2024 Pro Plush Toy. All rights reserved.',
@@ -44,7 +43,6 @@ export const footerText = {
     contact: {
       heading: '联系我们',
       address: '中国广州市工厂路123号',
-      tel: '+86 020-1234-5678',
       email: 'info@protoys.com',
     },
     copyright: '© 2024 Pro Plush Toy. 版权所有。',

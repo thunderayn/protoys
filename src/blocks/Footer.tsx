@@ -1,13 +1,33 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
-import PhoneIcon from '@mui/icons-material/Phone'
 import EmailIcon from '@mui/icons-material/Email'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import YouTubeIcon from '@mui/icons-material/YouTube'
+import CheckIcon from '@mui/icons-material/Check'
+import SvgIcon from '@mui/material/SvgIcon'
 import { useLanguage } from '../i18n/LanguageContext'
 import { footerText } from '../i18n/translations/footer'
+
+function TikTokIcon(props: React.ComponentProps<typeof SvgIcon>) {
+  return (
+    <SvgIcon {...props} viewBox="0 0 24 24">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.54a8.16 8.16 0 0 0 4.77 1.52V7.62a4.85 4.85 0 0 1-1-.93z" />
+    </SvgIcon>
+  )
+}
 
 export default function Footer() {
   const { lang } = useLanguage()
   const t = footerText[lang]
+  const [copied, setCopied] = useState(false)
+
+  function handleCopyEmail() {
+    navigator.clipboard.writeText(t.contact.email).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2500)
+    })
+  }
 
   return (
     <footer style={{ background: '#fff', color: '#111' }}>
@@ -96,14 +116,61 @@ export default function Footer() {
                 {t.contact.address}
               </span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <PhoneIcon sx={{ fontSize: 16, color: '#C49A3C', flexShrink: 0 }} />
-              <span style={{ fontSize: 13, color: '#666' }}>{t.contact.tel}</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+
+            {/* Email — click to copy */}
+            <button
+              onClick={handleCopyEmail}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                cursor: 'pointer',
+                textAlign: 'left',
+              }}
+              onMouseEnter={(e) => {
+                const span = e.currentTarget.querySelector('span') as HTMLElement
+                if (span) span.style.color = '#C49A3C'
+              }}
+              onMouseLeave={(e) => {
+                const span = e.currentTarget.querySelector('span') as HTMLElement
+                if (span) span.style.color = '#666'
+              }}
+            >
               <EmailIcon sx={{ fontSize: 16, color: '#C49A3C', flexShrink: 0 }} />
-              <span style={{ fontSize: 13, color: '#666' }}>{t.contact.email}</span>
-            </div>
+              <span style={{ fontSize: 13, color: '#666', transition: 'color 0.2s' }}>
+                {t.contact.email}
+              </span>
+            </button>
+
+            {[
+              { href: 'https://instagram.com/protoys', Icon: InstagramIcon, label: 'Instagram' },
+              { href: 'https://tiktok.com/@protoys',   Icon: TikTokIcon,    label: 'TikTok'    },
+              { href: 'https://youtube.com/@protoys',  Icon: YouTubeIcon,   label: 'YouTube'   },
+            ].map(({ href, Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  textDecoration: 'none',
+                  color: '#666',
+                  fontSize: 13,
+                  transition: 'color 0.2s',
+                }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = '#C49A3C' }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = '#666' }}
+              >
+                <Icon sx={{ fontSize: 16, color: '#C49A3C', flexShrink: 0 }} />
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -117,6 +184,36 @@ export default function Footer() {
         }}
       >
         <p style={{ fontSize: 12, color: '#aaa', margin: 0 }}>{t.copyright}</p>
+      </div>
+
+      {/* Copy notification */}
+      <div
+        style={{
+          position: 'fixed',
+          bottom: 32,
+          right: 32,
+          zIndex: 9999,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 10,
+          background: '#fff',
+          border: '1px solid #e8d9bc',
+          borderLeft: '3px solid #C49A3C',
+          borderRadius: 3,
+          padding: '12px 18px',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.10)',
+          fontSize: 13,
+          fontWeight: 600,
+          color: '#333',
+          letterSpacing: '0.02em',
+          pointerEvents: 'none',
+          opacity: copied ? 1 : 0,
+          transform: copied ? 'translateY(0)' : 'translateY(8px)',
+          transition: 'opacity 0.25s ease, transform 0.25s ease',
+        }}
+      >
+        <CheckIcon sx={{ fontSize: 15, color: '#C49A3C' }} />
+        Email copied to clipboard
       </div>
     </footer>
   )

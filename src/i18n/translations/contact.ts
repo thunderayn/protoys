@@ -6,10 +6,10 @@ export const contactPageText = {
       cta: 'GET IN TOUCH',
     },
     infoBar: [
-      { label: 'EMAIL US',      value: 'info@protoys.com' },
-      { label: 'CALL US',       value: '+86 123 4567 8900' },
-      { label: 'WHATSAPP',      value: '+86 123 4567 8900' },
-      { label: 'WORKING HOURS', value: 'Mon - Fri: 8:30 - 17:30 (GMT+8)' },
+      { label: 'EMAIL US',  value: 'info@protoys.com',   href: 'mailto:info@protoys.com' },
+      { label: 'INSTAGRAM', value: '@protoys',            href: 'https://instagram.com/protoys' },
+      { label: 'TIKTOK',    value: '@protoys',            href: 'https://tiktok.com/@protoys' },
+      { label: 'YOUTUBE',   value: 'Pro Toys Official',  href: 'https://youtube.com/@protoys' },
     ],
     form: {
       heading: 'SEND US A MESSAGE',
@@ -43,10 +43,10 @@ export const contactPageText = {
       cta: '立即联系',
     },
     infoBar: [
-      { label: '电子邮件',  value: 'info@protoys.com' },
-      { label: '电话联系',  value: '+86 123 4567 8900' },
-      { label: 'WHATSAPP', value: '+86 123 4567 8900' },
-      { label: '工作时间',  value: '周一至周五: 8:30 - 17:30 (GMT+8)' },
+      { label: '电子邮件',  value: 'info@protoys.com',  href: 'mailto:info@protoys.com' },
+      { label: 'INSTAGRAM', value: '@protoys',           href: 'https://instagram.com/protoys' },
+      { label: 'TIKTOK',    value: '@protoys',           href: 'https://tiktok.com/@protoys' },
+      { label: 'YOUTUBE',   value: 'Pro Toys Official', href: 'https://youtube.com/@protoys' },
     ],
     form: {
       heading: '发送消息',

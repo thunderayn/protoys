@@ -11,7 +11,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { useLanguage } from '../i18n/LanguageContext'
 import { navbarText } from '../i18n/translations/navbar'
 
-const navPaths = ['/', '/about', '/oem-odm', '/products', '/quality', '/news', '/contact']
+const navPaths = ['/', '/about', '/oem-odm', '/products', '/news', '/contact']
 
 export default function Navbar() {
   const { lang, setLang } = useLanguage()

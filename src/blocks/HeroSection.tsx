@@ -17,7 +17,7 @@ export default function HeroSection() {
         alignItems: 'center',
         overflow: 'hidden',
         backgroundImage:
-          'url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80)',
+          'url(https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769056876/category-banner_g61ypq.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
