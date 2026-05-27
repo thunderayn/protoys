@@ -26,10 +26,8 @@ export const contactPageText = {
       telLabel: 'Tel:',
       emailLabel: 'Email:',
       list: [
-        { title: 'HEADQUARTERS',         location: 'Yangzhou, Jiangsu, China', tel: '+86 123 4567 8900', email: 'info@protoys.com' },
-        { title: 'NORTH AMERICA OFFICE', location: 'Los Angeles, USA',         tel: '+1 323 123 4567',   email: 'us@protoys.com'   },
-        { title: 'EUROPE OFFICE',        location: 'Hamburg, Germany',         tel: '+49 40 1234567',    email: 'eu@protoys.com'   },
-        { title: 'ASIA OFFICE',          location: 'Singapore',                tel: '+65 6123 4567',     email: 'asia@protoys.com' },
+        { title: 'CHINA HEADQUARTERS', location: 'Yangzhou, Jiangsu, China', tel: '+86 123 4567 8900', email: 'info@protoys.com' },
+        { title: 'CANADA OFFICE',      location: 'Toronto, Ontario, Canada', tel: '+1 416 123 4567',   email: 'ca@protoys.com'   },
       ],
     },
     bottom: {
@@ -65,10 +63,8 @@ export const contactPageText = {
       telLabel: '电话：',
       emailLabel: '邮箱：',
       list: [
-        { title: '总部',       location: '中国 江苏 扬州', tel: '+86 123 4567 8900', email: 'info@protoys.com' },
-        { title: '北美办事处', location: '美国 洛杉矶',   tel: '+1 323 123 4567',   email: 'us@protoys.com'   },
-        { title: '欧洲办事处', location: '德国 汉堡',     tel: '+49 40 1234567',    email: 'eu@protoys.com'   },
-        { title: '亚洲办事处', location: '新加坡',        tel: '+65 6123 4567',     email: 'asia@protoys.com' },
+        { title: '中国总部',   location: '中国 江苏 扬州',   tel: '+86 123 4567 8900', email: 'info@protoys.com' },
+        { title: '加拿大办事处', location: '加拿大 安大略 多伦多', tel: '+1 416 123 4567', email: 'ca@protoys.com' },
       ],
     },
     bottom: {

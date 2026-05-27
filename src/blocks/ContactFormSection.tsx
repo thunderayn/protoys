@@ -1,19 +1,12 @@
 import { useState } from 'react'
 import Button from '@mui/material/Button'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import RoomIcon from '@mui/icons-material/Room'
 import { useLanguage } from '../i18n/LanguageContext'
 import { contactPageText } from '../i18n/translations/contact'
 
 const FACTORY_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory1_pn5awr.png'
 
-/* Approximate pin positions on the world map (% from top-left of the map area) */
-const PINS = [
-  { top: '44%', left: '72%' }, // Yangzhou, China (HQ)
-  { top: '38%', left: '17%' }, // Los Angeles, USA
-  { top: '30%', left: '48%' }, // Hamburg, Germany
-  { top: '54%', left: '75%' }, // Singapore
-]
+const WORLD_MAP_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779872998/wordmap_with_pointer_ibzd3t.png'
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
@@ -143,100 +136,55 @@ export default function ContactFormSection() {
             {t.offices.body}
           </p>
 
-          {/* World map with pins */}
-          <div
-            style={{
-              position: 'relative',
-              width: '100%',
-              aspectRatio: '2 / 1',
-              background: '#f5f0ea',
-              borderRadius: 4,
-              overflow: 'hidden',
-              marginBottom: 28,
-            }}
-          >
-            {/* Dot-grid world-map texture */}
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                backgroundImage:
-                  'radial-gradient(circle, #c9b99a 1px, transparent 1px)',
-                backgroundSize: '8px 8px',
-                opacity: 0.55,
-              }}
+          {/* World map with overlaid office cards */}
+          <div style={{ position: 'relative', width: '100%' }}>
+            <img
+              src={WORLD_MAP_IMG}
+              alt="Global offices map"
+              style={{ width: '100%', borderRadius: 4, display: 'block' }}
             />
-            {/* Location pins */}
-            {PINS.map((pin, i) => (
-              <div
-                key={i}
-                style={{
-                  position: 'absolute',
-                  top: pin.top,
-                  left: pin.left,
-                  transform: 'translate(-50%, -100%)',
-                }}
-              >
-                <RoomIcon sx={{ fontSize: 22, color: '#C49A3C' }} />
-              </div>
-            ))}
-          </div>
 
-          {/* Office cards — 2×2 grid */}
-          <div
-            className="contact-office-grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: 16,
-            }}
-          >
-            {t.offices.list.map((office) => (
-              <div
-                key={office.title}
-                style={{
-                  display: 'flex',
-                  gap: 12,
-                  alignItems: 'flex-start',
-                }}
-              >
-                <img
-                  src={FACTORY_IMG}
-                  alt={office.title}
-                  style={{
-                    width: 72,
-                    height: 56,
-                    objectFit: 'cover',
-                    borderRadius: 3,
-                    flexShrink: 0,
-                  }}
-                />
-                <div>
-                  <p
-                    style={{
-                      fontSize: 11,
-                      fontWeight: 700,
-                      letterSpacing: '0.06em',
-                      color: '#111',
-                      margin: '0 0 3px',
-                      textTransform: 'uppercase',
-                    }}
-                  >
-                    {office.title}
-                  </p>
-                  <p style={{ fontSize: 12, color: '#666', margin: '0 0 2px' }}>{office.location}</p>
-                  <p style={{ fontSize: 12, color: '#666', margin: '0 0 2px' }}>
-                    {t.offices.telLabel} {office.tel}
-                  </p>
-                  <p style={{ fontSize: 12, color: '#C49A3C', margin: 0 }}>
-                    {t.offices.emailLabel}{' '}
-                    <a href={`mailto:${office.email}`} style={{ color: '#C49A3C', textDecoration: 'underline' }}>
-                      {office.email}
-                    </a>
-                  </p>
-                </div>
-              </div>
-            ))}
+            {/* Canada — top-left area */}
+            <div style={{
+              position: 'absolute',
+              top: '45%',
+              left: '3%',
+              background: '#fff',
+              borderRadius: 4,
+              padding: '8px 10px',
+              boxShadow: '0 2px 10px rgba(0,0,0,0.13)',
+              minWidth: 140,
+            }}>
+              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', color: '#C49A3C', margin: '0 0 3px', textTransform: 'uppercase' }}>
+                {t.offices.list[1].title}
+              </p>
+              <p style={{ fontSize: 11, color: '#444', margin: '0 0 2px' }}>{t.offices.list[1].location}</p>
+              <p style={{ fontSize: 11, color: '#666', margin: '0 0 2px' }}>{t.offices.list[1].tel}</p>
+              <a href={`mailto:${t.offices.list[1].email}`} style={{ fontSize: 11, color: '#C49A3C', textDecoration: 'underline' }}>
+                {t.offices.list[1].email}
+              </a>
+            </div>
+
+            {/* China — right area */}
+            <div style={{
+              position: 'absolute',
+              top: '60%',
+              left: '68%',
+              background: '#fff',
+              borderRadius: 4,
+              padding: '8px 10px',
+              boxShadow: '0 2px 10px rgba(0,0,0,0.13)',
+              minWidth: 150,
+            }}>
+              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', color: '#C49A3C', margin: '0 0 3px', textTransform: 'uppercase' }}>
+                {t.offices.list[0].title}
+              </p>
+              <p style={{ fontSize: 11, color: '#444', margin: '0 0 2px' }}>{t.offices.list[0].location}</p>
+              <p style={{ fontSize: 11, color: '#666', margin: '0 0 2px' }}>{t.offices.list[0].tel}</p>
+              <a href={`mailto:${t.offices.list[0].email}`} style={{ fontSize: 11, color: '#C49A3C', textDecoration: 'underline' }}>
+                {t.offices.list[0].email}
+              </a>
+            </div>
           </div>
         </div>
       </div>
