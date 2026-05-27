@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gold: #C49A3C;
-  --color-gold-dark: #A07828;
+  --color-gold: #c7ab54;
+  --color-gold-dark: #a08c3c;
 }
 
 *, *::before, *::after {
@@ -30,7 +30,7 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #C49A3C;
+  background-color: #c7ab54;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.28s ease;

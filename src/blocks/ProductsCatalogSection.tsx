@@ -55,7 +55,7 @@ export default function ProductsCatalogSection() {
             endIcon={<ArrowForwardIcon />}
             href="/contact"
             sx={{
-              backgroundColor: '#C49A3C',
+              backgroundColor: '#c7ab54',
               color: '#fff',
               px: 3,
               py: 1.1,
@@ -66,7 +66,7 @@ export default function ProductsCatalogSection() {
               boxShadow: 'none',
               whiteSpace: 'nowrap',
               flexShrink: 0,
-              '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+              '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
             }}
           >
             {t.contactUs}
@@ -81,7 +81,7 @@ export default function ProductsCatalogSection() {
           {/* Sidebar */}
           <div style={{ width: 210, flexShrink: 0 }}>
             <div style={{ marginBottom: 20 }}>
-              <div style={{ width: 28, height: 2, background: '#C49A3C', marginBottom: 10 }} />
+              <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 10 }} />
               <h2
                 style={{
                   fontSize: 11,
@@ -114,19 +114,19 @@ export default function ProductsCatalogSection() {
                         cursor: 'pointer',
                         fontSize: 13,
                         fontWeight: isActive ? 700 : 400,
-                        color: isActive ? '#C49A3C' : '#444',
+                        color: isActive ? '#c7ab54' : '#444',
                         textAlign: 'left',
                         transition: 'all 0.15s ease',
                       }}
                       onMouseEnter={(e) => {
-                        if (!isActive) (e.currentTarget as HTMLElement).style.color = '#C49A3C'
+                        if (!isActive) (e.currentTarget as HTMLElement).style.color = '#c7ab54'
                       }}
                       onMouseLeave={(e) => {
                         if (!isActive) (e.currentTarget as HTMLElement).style.color = '#444'
                       }}
                     >
                       {label}
-                      {isActive && <ChevronRightIcon sx={{ fontSize: 16, color: '#C49A3C' }} />}
+                      {isActive && <ChevronRightIcon sx={{ fontSize: 16, color: '#c7ab54' }} />}
                     </button>
                   </li>
                 )
@@ -141,7 +141,7 @@ export default function ProductsCatalogSection() {
                 padding: '24px 20px',
               }}
             >
-              <Inventory2OutlinedIcon sx={{ fontSize: 32, color: '#C49A3C', mb: 1.5 }} />
+              <Inventory2OutlinedIcon sx={{ fontSize: 32, color: '#c7ab54', mb: 1.5 }} />
               <h3
                 style={{
                   fontSize: 11,
@@ -161,15 +161,15 @@ export default function ProductsCatalogSection() {
                 endIcon={<ArrowForwardIcon sx={{ fontSize: 14 }} />}
                 href="/oem-odm"
                 sx={{
-                  borderColor: '#C49A3C',
-                  color: '#C49A3C',
+                  borderColor: '#c7ab54',
+                  color: '#c7ab54',
                   px: 2,
                   py: 0.7,
                   fontWeight: 700,
                   fontSize: '0.7rem',
                   letterSpacing: '0.07em',
                   borderRadius: '3px',
-                  '&:hover': { borderColor: '#A07828', color: '#A07828', backgroundColor: 'transparent' },
+                  '&:hover': { borderColor: '#a08c3c', color: '#a08c3c', backgroundColor: 'transparent' },
                 }}
               >
                 {t.oem.cta}
@@ -233,8 +233,8 @@ export default function ProductsCatalogSection() {
                   style={{
                     padding: '7px 14px',
                     borderRadius: 20,
-                    border: `1px solid ${isActive ? '#C49A3C' : '#ddd'}`,
-                    background: isActive ? '#C49A3C' : '#fff',
+                    border: `1px solid ${isActive ? '#c7ab54' : '#ddd'}`,
+                    background: isActive ? '#c7ab54' : '#fff',
                     color: isActive ? '#fff' : '#555',
                     fontSize: 12,
                     fontWeight: isActive ? 700 : 400,
@@ -346,7 +346,7 @@ function ProductCard({
         >
           {name}
         </h3>
-        <div style={{ width: 24, height: 2, background: '#C49A3C', marginBottom: 10 }} />
+        <div style={{ width: 24, height: 2, background: '#c7ab54', marginBottom: 10 }} />
         <p
           style={{
             fontSize: 12,

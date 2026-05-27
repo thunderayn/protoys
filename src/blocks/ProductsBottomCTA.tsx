@@ -75,7 +75,7 @@ export default function ProductsBottomCTA() {
               endIcon={<ArrowForwardIcon />}
               href="/contact"
               sx={{
-                backgroundColor: '#C49A3C',
+                backgroundColor: '#c7ab54',
                 color: '#fff',
                 px: 4,
                 py: 1.4,
@@ -84,7 +84,7 @@ export default function ProductsBottomCTA() {
                 letterSpacing: '0.08em',
                 borderRadius: '3px',
                 boxShadow: 'none',
-                '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+                '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
               }}
             >
               {t.button}
@@ -124,7 +124,7 @@ export default function ProductsBottomCTA() {
             endIcon={<ArrowForwardIcon />}
             href="/contact"
             sx={{
-              backgroundColor: '#C49A3C',
+              backgroundColor: '#c7ab54',
               color: '#fff',
               px: 3.5,
               py: 1.25,
@@ -133,7 +133,7 @@ export default function ProductsBottomCTA() {
               letterSpacing: '0.08em',
               borderRadius: '3px',
               boxShadow: 'none',
-              '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+              '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
             }}
           >
             {t.button}

@@ -25,7 +25,7 @@ export default function ProductsSection() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24, height: '100%' }}>
       <div>
-        <div style={{ width: 32, height: 2, background: '#C49A3C', marginBottom: 12 }} />
+        <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 12 }} />
         <h2
           style={{
             fontSize: 24,
@@ -75,15 +75,15 @@ export default function ProductsSection() {
           variant="outlined"
           endIcon={<ArrowForwardIcon />}
           sx={{
-            borderColor: '#C49A3C',
-            color: '#C49A3C',
+            borderColor: '#c7ab54',
+            color: '#c7ab54',
             px: 3,
             py: 1,
             fontWeight: 700,
             fontSize: '0.78rem',
             letterSpacing: '0.07em',
             borderRadius: '3px',
-            '&:hover': { borderColor: '#A07828', color: '#A07828', backgroundColor: 'transparent' },
+            '&:hover': { borderColor: '#a08c3c', color: '#a08c3c', backgroundColor: 'transparent' },
           }}
         >
           {t.cta}

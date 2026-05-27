@@ -18,7 +18,7 @@ const STEP_COLS = '1fr 32px 1fr 32px 1fr'
 function StepCard({ step, imgSrc }: { step: { num: string; title: string; desc: string }; imgSrc: string }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-      <div style={{ fontSize: 20, fontWeight: 800, color: '#C49A3C', lineHeight: 1, letterSpacing: '-0.01em' }}>
+      <div style={{ fontSize: 20, fontWeight: 800, color: '#c7ab54', lineHeight: 1, letterSpacing: '-0.01em' }}>
         {step.num}
       </div>
       <div style={{ overflow: 'hidden', borderRadius: 2, flexShrink: 0 }}>
@@ -62,7 +62,7 @@ export default function AboutProcessSection() {
 
         {/* Title */}
         <div style={{ marginBottom: 48 }}>
-          <div style={{ width: 32, height: 2, background: '#C49A3C', marginBottom: 14 }} />
+          <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 14 }} />
           <h2 style={{ fontSize: 20, fontWeight: 700, color: '#111', letterSpacing: '0.1em', textTransform: 'uppercase', margin: 0 }}>
             {t.eyebrow}
           </h2>
@@ -74,11 +74,11 @@ export default function AboutProcessSection() {
           {/* Row 1: 01 → 02 → 03 */}
           <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, alignItems: 'center' }}>
             <StepCard step={top[0]} imgSrc={topImgs[0]} />
-            <div style={{ display: 'flex', justifyContent: 'center', color: '#C49A3C' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
               <ArrowForwardIcon sx={{ fontSize: 16 }} />
             </div>
             <StepCard step={top[1]} imgSrc={topImgs[1]} />
-            <div style={{ display: 'flex', justifyContent: 'center', color: '#C49A3C' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
               <ArrowForwardIcon sx={{ fontSize: 16 }} />
             </div>
             <StepCard step={top[2]} imgSrc={topImgs[2]} />
@@ -87,7 +87,7 @@ export default function AboutProcessSection() {
           {/* Corner ↓ arrow — aligned to last column (step 03 → step 04 corner) */}
           <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, margin: '16px 0' }}>
             <div /><div /><div /><div />
-            <div style={{ display: 'flex', justifyContent: 'center', color: '#C49A3C' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
               <ArrowDownwardIcon sx={{ fontSize: 16 }} />
             </div>
           </div>
@@ -95,11 +95,11 @@ export default function AboutProcessSection() {
           {/* Row 2: 06 ← 05 ← 04 */}
           <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, alignItems: 'center' }}>
             <StepCard step={bottom[0]} imgSrc={bottomImgs[0]} />
-            <div style={{ display: 'flex', justifyContent: 'center', color: '#C49A3C' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
               <ArrowBackIcon sx={{ fontSize: 16 }} />
             </div>
             <StepCard step={bottom[1]} imgSrc={bottomImgs[1]} />
-            <div style={{ display: 'flex', justifyContent: 'center', color: '#C49A3C' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
               <ArrowBackIcon sx={{ fontSize: 16 }} />
             </div>
             <StepCard step={bottom[2]} imgSrc={bottomImgs[2]} />
@@ -110,7 +110,7 @@ export default function AboutProcessSection() {
         <div className="md:hidden grid grid-cols-2" style={{ gap: '28px 16px' }}>
           {t.steps.map((step, i) => (
             <div key={step.num} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <div style={{ fontSize: 18, fontWeight: 800, color: '#C49A3C', lineHeight: 1 }}>{step.num}</div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: '#c7ab54', lineHeight: 1 }}>{step.num}</div>
               <div style={{ overflow: 'hidden', borderRadius: 2 }}>
                 <img src={processImages[i]} alt={step.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} />
               </div>

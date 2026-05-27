@@ -6,10 +6,10 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { productsPageText } from '../i18n/translations/products'
 
 const ICONS = [
-  <VerifiedUserOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
-  <SpaOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
-  <TuneOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
-  <LocalShippingOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
+  <VerifiedUserOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <SpaOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <TuneOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <LocalShippingOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
 ]
 
 export default function ProductsFeaturesBar() {

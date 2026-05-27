@@ -60,7 +60,7 @@ export default function ContactBottomSection() {
               endIcon={<ArrowForwardIcon />}
               href="#"
               sx={{
-                backgroundColor: '#C49A3C',
+                backgroundColor: '#c7ab54',
                 color: '#fff',
                 px: 4,
                 py: 1.5,
@@ -69,7 +69,7 @@ export default function ContactBottomSection() {
                 letterSpacing: '0.1em',
                 borderRadius: '3px',
                 boxShadow: 'none',
-                '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+                '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
               }}
             >
               {t.cta}
@@ -99,7 +99,7 @@ export default function ContactBottomSection() {
             endIcon={<ArrowForwardIcon />}
             href="#"
             sx={{
-              backgroundColor: '#C49A3C',
+              backgroundColor: '#c7ab54',
               color: '#fff',
               px: 3.5,
               py: 1.25,
@@ -108,7 +108,7 @@ export default function ContactBottomSection() {
               letterSpacing: '0.1em',
               borderRadius: '3px',
               boxShadow: 'none',
-              '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+              '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
             }}
           >
             {t.cta}

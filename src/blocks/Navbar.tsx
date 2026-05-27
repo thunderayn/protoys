@@ -43,7 +43,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <NavLink to="/" style={{ textDecoration: 'none', lineHeight: 1 }}>
-          <div style={{ fontSize: 22, fontWeight: 900, color: '#C49A3C', lineHeight: 1.1 }}>
+          <div style={{ fontSize: 22, fontWeight: 900, color: '#c7ab54', lineHeight: 1.1 }}>
             PRO
           </div>
           <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', color: '#1a1a1a' }}>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 fontWeight: 700,
                 letterSpacing: '0.06em',
                 textDecoration: 'none',
-                color: isActive ? '#C49A3C' : '#3a3a3a',
+                color: isActive ? '#c7ab54' : '#3a3a3a',
                 transition: 'color 0.2s',
                 whiteSpace: 'nowrap',
               })}
@@ -115,7 +115,7 @@ export default function Navbar() {
                 sx={{
                   fontSize: 13,
                   fontWeight: 600,
-                  '&.Mui-selected': { color: '#C49A3C' },
+                  '&.Mui-selected': { color: '#c7ab54' },
                 }}
               >
                 {opt.label}
@@ -138,7 +138,7 @@ export default function Navbar() {
         <div style={{ width: 256, padding: 20 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24 }}>
             <div>
-              <div style={{ fontSize: 20, fontWeight: 900, color: '#C49A3C' }}>PRO</div>
+              <div style={{ fontSize: 20, fontWeight: 900, color: '#c7ab54' }}>PRO</div>
               <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', color: '#1a1a1a' }}>
                 PLUSH TOY
               </div>
@@ -162,7 +162,7 @@ export default function Navbar() {
                   fontSize: 13,
                   fontWeight: 700,
                   letterSpacing: '0.04em',
-                  color: isActive ? '#C49A3C' : '#333',
+                  color: isActive ? '#c7ab54' : '#333',
                 })}
               >
                 {t.links[i]}
@@ -179,9 +179,9 @@ export default function Navbar() {
                 style={{
                   flex: 1,
                   padding: '8px',
-                  border: `1px solid ${lang === opt.value ? '#C49A3C' : '#ddd'}`,
+                  border: `1px solid ${lang === opt.value ? '#c7ab54' : '#ddd'}`,
                   borderRadius: 4,
-                  background: lang === opt.value ? '#C49A3C' : 'transparent',
+                  background: lang === opt.value ? '#c7ab54' : 'transparent',
                   color: lang === opt.value ? '#fff' : '#555',
                   fontSize: 12,
                   fontWeight: 700,

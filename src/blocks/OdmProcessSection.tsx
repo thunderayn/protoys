@@ -26,7 +26,7 @@ export default function OdmProcessSection() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24, height: '100%' }}>
       <div>
-        <div style={{ width: 32, height: 2, background: '#C49A3C', marginBottom: 12 }} />
+        <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 12 }} />
         <h2
           style={{
             fontSize: 24,
@@ -88,7 +88,7 @@ export default function OdmProcessSection() {
             </div>
 
             {i < t.steps.length - 1 && (
-              <div style={{ display: 'flex', alignItems: 'flex-start', paddingTop: 20, color: '#C49A3C' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', paddingTop: 20, color: '#c7ab54' }}>
                 <ArrowForwardIcon sx={{ fontSize: 16 }} />
               </div>
             )}
@@ -101,7 +101,7 @@ export default function OdmProcessSection() {
           variant="contained"
           endIcon={<ArrowForwardIcon />}
           sx={{
-            backgroundColor: '#C49A3C',
+            backgroundColor: '#c7ab54',
             color: '#fff',
             px: 4,
             py: 1.5,
@@ -110,7 +110,7 @@ export default function OdmProcessSection() {
             letterSpacing: '0.07em',
             borderRadius: '3px',
             boxShadow: 'none',
-            '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+            '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
           }}
         >
           {t.cta}

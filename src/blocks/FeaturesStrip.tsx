@@ -7,11 +7,11 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { featuresText } from '../i18n/translations/features'
 
 const icons = [
-  <BusinessIcon sx={{ fontSize: 38, color: '#C49A3C' }} />,
-  <ShieldIcon sx={{ fontSize: 38, color: '#C49A3C' }} />,
-  <PrecisionManufacturingIcon sx={{ fontSize: 38, color: '#C49A3C' }} />,
-  <GroupsIcon sx={{ fontSize: 38, color: '#C49A3C' }} />,
-  <PublicIcon sx={{ fontSize: 38, color: '#C49A3C' }} />,
+  <BusinessIcon sx={{ fontSize: 38, color: '#c7ab54' }} />,
+  <ShieldIcon sx={{ fontSize: 38, color: '#c7ab54' }} />,
+  <PrecisionManufacturingIcon sx={{ fontSize: 38, color: '#c7ab54' }} />,
+  <GroupsIcon sx={{ fontSize: 38, color: '#c7ab54' }} />,
+  <PublicIcon sx={{ fontSize: 38, color: '#c7ab54' }} />,
 ]
 
 export default function FeaturesStrip() {

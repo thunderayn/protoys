@@ -22,12 +22,12 @@ export default function NotFoundPage() {
         textAlign: 'center',
       }}
     >
-      <ConstructionIcon sx={{ fontSize: 72, color: '#C49A3C' }} />
+      <ConstructionIcon sx={{ fontSize: 72, color: '#c7ab54' }} />
       <div
         style={{
           fontSize: 96,
           fontWeight: 900,
-          color: '#C49A3C',
+          color: '#c7ab54',
           lineHeight: 1,
           margin: '8px 0 4px',
         }}
@@ -43,7 +43,7 @@ export default function NotFoundPage() {
           variant="contained"
           startIcon={<HomeIcon />}
           sx={{
-            backgroundColor: '#C49A3C',
+            backgroundColor: '#c7ab54',
             color: '#fff',
             px: 4,
             py: 1.5,
@@ -52,7 +52,7 @@ export default function NotFoundPage() {
             letterSpacing: '0.06em',
             borderRadius: '3px',
             boxShadow: 'none',
-            '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+            '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
           }}
         >
           {t.cta}

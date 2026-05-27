@@ -55,7 +55,7 @@ export default function ContactInfoBar() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = '#faf8f5' }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = 'transparent' }}
             >
-              <Icon sx={{ fontSize: 28, color: '#C49A3C', mb: 1.25 }} />
+              <Icon sx={{ fontSize: 28, color: '#c7ab54', mb: 1.25 }} />
               <p
                 style={{
                   fontSize: 11,

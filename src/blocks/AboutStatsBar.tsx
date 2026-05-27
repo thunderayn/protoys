@@ -9,12 +9,12 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { aboutPageText } from '../i18n/translations/aboutPage'
 
 const icons = [
-  <EmojiEventsOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
-  <ApartmentOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
-  <GroupsOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
-  <PublicOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
-  <FactoryOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
-  <HandymanOutlinedIcon sx={{ fontSize: 36, color: '#C49A3C' }} />,
+  <EmojiEventsOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <ApartmentOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <GroupsOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <PublicOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <FactoryOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <HandymanOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
 ]
 
 type Stat = {

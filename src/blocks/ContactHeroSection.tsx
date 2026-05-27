@@ -70,7 +70,7 @@ export default function ContactHeroSection() {
           {t.heading}
         </h1>
 
-        <div style={{ width: 44, height: 3, background: '#C49A3C', marginBottom: 20 }} />
+        <div style={{ width: 44, height: 3, background: '#c7ab54', marginBottom: 20 }} />
 
         <p
           style={{
@@ -88,7 +88,7 @@ export default function ContactHeroSection() {
           variant="contained"
           endIcon={<ArrowForwardIcon />}
           sx={{
-            backgroundColor: '#C49A3C',
+            backgroundColor: '#c7ab54',
             color: '#fff',
             px: 4,
             py: 1.5,
@@ -97,7 +97,7 @@ export default function ContactHeroSection() {
             letterSpacing: '0.1em',
             borderRadius: '3px',
             boxShadow: 'none',
-            '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+            '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
           }}
         >
           {t.cta}

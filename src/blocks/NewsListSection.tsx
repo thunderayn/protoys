@@ -49,7 +49,7 @@ export default function NewsListSection() {
           }}
         >
           <div>
-            <div style={{ width: 28, height: 2, background: '#C49A3C', marginBottom: 10 }} />
+            <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 10 }} />
             <h2
               style={{
                 fontSize: 13,
@@ -86,7 +86,7 @@ export default function NewsListSection() {
                 outline: 'none',
                 background: '#fafafa',
               }}
-              onFocus={(e) => { e.target.style.borderColor = '#C49A3C' }}
+              onFocus={(e) => { e.target.style.borderColor = '#c7ab54' }}
               onBlur={(e) => { e.target.style.borderColor = '#e0e0e0' }}
             />
             <SearchIcon
@@ -198,7 +198,7 @@ function ArticleCard({
           style={{
             fontSize: 10,
             fontWeight: 700,
-            color: '#C49A3C',
+            color: '#c7ab54',
             letterSpacing: '0.12em',
             marginBottom: 8,
             display: 'block',
@@ -211,7 +211,7 @@ function ArticleCard({
           style={{
             fontSize: 18,
             fontWeight: 700,
-            color: hovered ? '#C49A3C' : '#111',
+            color: hovered ? '#c7ab54' : '#111',
             lineHeight: 1.25,
             margin: '0 0 10px',
             transition: 'color 0.2s',
@@ -258,7 +258,7 @@ function ArticleCard({
               cursor: 'pointer',
               fontSize: 11,
               fontWeight: 700,
-              color: '#C49A3C',
+              color: '#c7ab54',
               letterSpacing: '0.07em',
             }}
           >
@@ -340,8 +340,8 @@ function Pagination({
             onClick={() => onChange(item as number)}
             style={{
               ...btnBase,
-              background: item === current ? '#C49A3C' : '#fff',
-              borderColor: item === current ? '#C49A3C' : '#e0e0e0',
+              background: item === current ? '#c7ab54' : '#fff',
+              borderColor: item === current ? '#c7ab54' : '#e0e0e0',
               color: item === current ? '#fff' : '#444',
             }}
           >

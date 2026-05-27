@@ -28,7 +28,7 @@ export default function AboutWhySection() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: '#C49A3C',
+                color: '#c7ab54',
                 letterSpacing: '0.16em',
                 textTransform: 'uppercase',
                 margin: '0 0 14px',
@@ -36,7 +36,7 @@ export default function AboutWhySection() {
             >
               {t.eyebrow}
             </p>
-            <div style={{ width: 32, height: 2, background: '#C49A3C', marginBottom: 18 }} />
+            <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 18 }} />
             <h2
               style={{
                 fontSize: 'clamp(22px, 2.4vw, 32px)',
@@ -63,7 +63,7 @@ export default function AboutWhySection() {
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 36px', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {t.bullets.map((item) => (
                 <li key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <TaskAltIcon sx={{ fontSize: 18, color: '#C49A3C', flexShrink: 0 }} />
+                  <TaskAltIcon sx={{ fontSize: 18, color: '#c7ab54', flexShrink: 0 }} />
                   <span style={{ fontSize: 14, color: '#444' }}>{item}</span>
                 </li>
               ))}
@@ -74,15 +74,15 @@ export default function AboutWhySection() {
               endIcon={<ArrowForwardIcon />}
               href="/oem-odm"
               sx={{
-                borderColor: '#C49A3C',
-                color: '#C49A3C',
+                borderColor: '#c7ab54',
+                color: '#c7ab54',
                 px: 3,
                 py: 1,
                 fontWeight: 700,
                 fontSize: '0.75rem',
                 letterSpacing: '0.07em',
                 borderRadius: '3px',
-                '&:hover': { borderColor: '#A07828', color: '#A07828', backgroundColor: 'transparent' },
+                '&:hover': { borderColor: '#a08c3c', color: '#a08c3c', backgroundColor: 'transparent' },
               }}
             >
               {t.cta}
@@ -165,7 +165,7 @@ export default function AboutWhySection() {
                     marginTop: 12,
                     fontSize: 11,
                     fontWeight: 700,
-                    color: '#C49A3C',
+                    color: '#c7ab54',
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
                   }}
@@ -186,10 +186,10 @@ export default function AboutWhySection() {
 
         {/* Mobile layout */}
         <div className="md:hidden" style={{ paddingBottom: 60 }}>
-          <p style={{ fontSize: 11, fontWeight: 700, color: '#C49A3C', letterSpacing: '0.16em', textTransform: 'uppercase', margin: '0 0 12px' }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: '#c7ab54', letterSpacing: '0.16em', textTransform: 'uppercase', margin: '0 0 12px' }}>
             {t.eyebrow}
           </p>
-          <div style={{ width: 28, height: 2, background: '#C49A3C', marginBottom: 14 }} />
+          <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 14 }} />
           <h2 style={{ fontSize: 24, fontWeight: 900, color: '#111', margin: '0 0 16px', lineHeight: 1.15 }}>
             {t.heading}
           </h2>
@@ -197,7 +197,7 @@ export default function AboutWhySection() {
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'flex', flexDirection: 'column', gap: 10 }}>
             {t.bullets.map((item) => (
               <li key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <TaskAltIcon sx={{ fontSize: 17, color: '#C49A3C', flexShrink: 0 }} />
+                <TaskAltIcon sx={{ fontSize: 17, color: '#c7ab54', flexShrink: 0 }} />
                 <span style={{ fontSize: 14, color: '#444' }}>{item}</span>
               </li>
             ))}
@@ -214,7 +214,7 @@ export default function AboutWhySection() {
           <Button
             variant="outlined"
             endIcon={<ArrowForwardIcon />}
-            sx={{ borderColor: '#C49A3C', color: '#C49A3C', px: 3, py: 1, fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.07em', borderRadius: '3px', '&:hover': { borderColor: '#A07828', color: '#A07828', backgroundColor: 'transparent' } }}
+            sx={{ borderColor: '#c7ab54', color: '#c7ab54', px: 3, py: 1, fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.07em', borderRadius: '3px', '&:hover': { borderColor: '#a08c3c', color: '#a08c3c', backgroundColor: 'transparent' } }}
           >
             {t.cta}
           </Button>

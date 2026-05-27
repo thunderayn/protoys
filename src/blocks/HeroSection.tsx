@@ -10,6 +10,7 @@ export default function HeroSection() {
 
   return (
     <section
+      className="hero-section"
       style={{
         position: 'relative',
         minHeight: '85vh',
@@ -17,13 +18,20 @@ export default function HeroSection() {
         alignItems: 'center',
         overflow: 'hidden',
         backgroundImage:
-          'url(https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769056876/category-banner_g61ypq.png)',
+          'url(https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779876508/homepage-cropped-compressed_ncqpic.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
+      <style>{`
+        @media (max-width: 767px) {
+          .hero-section {
+            background-image: url(https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769041988/everyday_zieiam.png) !important;
+          }
+        }
+      `}</style>
       {/* Dark overlay */}
-      <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.55)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 50%, transparent 90%)' }} />
 
       {/* Vertical side labels */}
       <div
@@ -62,13 +70,13 @@ export default function HeroSection() {
           maxWidth: 1280,
           margin: '0 auto',
           width: '100%',
-          padding: '64px 80px',
+          padding: '64px 80px 64px 36px',
         }}
       >
         <h1
           style={{
             fontSize: 'clamp(36px, 5vw, 64px)',
-            fontWeight: 900,
+            fontWeight: 600,
             color: '#fff',
             lineHeight: 1.05,
             letterSpacing: '-0.01em',
@@ -84,7 +92,7 @@ export default function HeroSection() {
           ))}
         </h1>
 
-        <div style={{ width: 48, height: 2, background: '#C49A3C', marginBottom: 20 }} />
+        <div style={{ width: 48, height: 2, background: '#c7ab54', marginBottom: 20 }} />
 
         <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 16, margin: '0 0 6px' }}>
           {t.sub1}
@@ -97,7 +105,7 @@ export default function HeroSection() {
           variant="contained"
           endIcon={<ArrowForwardIcon />}
           sx={{
-            backgroundColor: '#C49A3C',
+            backgroundColor: '#c7ab54',
             color: '#fff',
             px: 4,
             py: 1.5,
@@ -106,7 +114,7 @@ export default function HeroSection() {
             letterSpacing: '0.07em',
             borderRadius: '3px',
             boxShadow: 'none',
-            '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+            '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
           }}
         >
           {t.cta}

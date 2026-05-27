@@ -13,8 +13,8 @@ export default function AboutSection() {
       endIcon={<ArrowForwardIcon />}
       href="/about"
       sx={{
-        borderColor: '#C49A3C',
-        color: '#C49A3C',
+        borderColor: '#c7ab54',
+        color: '#c7ab54',
         px: 3,
         py: 1,
         fontWeight: 700,
@@ -22,7 +22,7 @@ export default function AboutSection() {
         letterSpacing: '0.07em',
         borderRadius: '3px',
         alignSelf: 'flex-start',
-        '&:hover': { borderColor: '#A07828', color: '#A07828', backgroundColor: 'transparent' },
+        '&:hover': { borderColor: '#a08c3c', color: '#a08c3c', backgroundColor: 'transparent' },
       }}
     >
       {t.cta}
@@ -47,7 +47,7 @@ export default function AboutSection() {
               background: '#f8f8f6',
             }}
           >
-            <div style={{ width: 32, height: 2, background: '#C49A3C', marginBottom: 18 }} />
+            <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 18 }} />
             <h2
               style={{
                 fontSize: 28,
@@ -99,7 +99,7 @@ export default function AboutSection() {
             />
           </div>
           <div style={{ padding: '48px 24px' }}>
-            <div style={{ width: 28, height: 2, background: '#C49A3C', marginBottom: 16 }} />
+            <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 16 }} />
             <h2 style={{ fontSize: 24, fontWeight: 900, color: '#111', margin: '0 0 16px' }}>
               {t.heading}
             </h2>

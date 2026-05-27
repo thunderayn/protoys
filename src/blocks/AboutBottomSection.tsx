@@ -34,7 +34,7 @@ export default function AboutBottomSection() {
         {/* Left: Certifications */}
         <div style={{ padding: '72px 80px 72px 80px', background: '#fff', borderTop: '1px solid #f0f0f0' }}>
           <div style={{ maxWidth: 480 }}>
-            <div style={{ width: 32, height: 2, background: '#C49A3C', marginBottom: 14 }} />
+            <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 14 }} />
             <h2
               style={{
                 fontSize: 18,
@@ -126,7 +126,7 @@ export default function AboutBottomSection() {
               endIcon={<ArrowForwardIcon />}
               href="/contact"
               sx={{
-                backgroundColor: '#C49A3C',
+                backgroundColor: '#c7ab54',
                 color: '#fff',
                 px: 3.5,
                 py: 1.25,
@@ -135,7 +135,7 @@ export default function AboutBottomSection() {
                 letterSpacing: '0.08em',
                 borderRadius: '3px',
                 boxShadow: 'none',
-                '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+                '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
               }}
             >
               {ctaT.button}
@@ -147,7 +147,7 @@ export default function AboutBottomSection() {
       {/* Mobile layout */}
       <div className="md:hidden">
         <div style={{ padding: '56px 24px', background: '#fff', borderTop: '1px solid #f0f0f0' }}>
-          <div style={{ width: 28, height: 2, background: '#C49A3C', marginBottom: 12 }} />
+          <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 12 }} />
           <h2 style={{ fontSize: 18, fontWeight: 700, color: '#111', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 12px' }}>
             {certsT.eyebrow}
           </h2>
@@ -169,7 +169,7 @@ export default function AboutBottomSection() {
             variant="contained"
             endIcon={<ArrowForwardIcon />}
             href="/contact"
-            sx={{ backgroundColor: '#C49A3C', color: '#fff', px: 3, py: 1.25, fontWeight: 700, fontSize: '0.78rem', letterSpacing: '0.08em', borderRadius: '3px', boxShadow: 'none', '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' } }}
+            sx={{ backgroundColor: '#c7ab54', color: '#fff', px: 3, py: 1.25, fontWeight: 700, fontSize: '0.78rem', letterSpacing: '0.08em', borderRadius: '3px', boxShadow: 'none', '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' } }}
           >
             {ctaT.button}
           </Button>

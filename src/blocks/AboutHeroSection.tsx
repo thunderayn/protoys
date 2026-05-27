@@ -38,7 +38,7 @@ export default function AboutHeroSection() {
           style={{
             fontSize: 12,
             fontWeight: 600,
-            color: '#C49A3C',
+            color: '#c7ab54',
             letterSpacing: '0.18em',
             margin: '0 0 14px',
             textTransform: 'uppercase',
@@ -66,7 +66,7 @@ export default function AboutHeroSection() {
           ))}
         </h1>
 
-        <div style={{ width: 44, height: 2, background: '#C49A3C', marginBottom: 20 }} />
+        <div style={{ width: 44, height: 2, background: '#c7ab54', marginBottom: 20 }} />
 
         <p
           style={{
@@ -85,7 +85,7 @@ export default function AboutHeroSection() {
           endIcon={<ArrowForwardIcon />}
           href="/contact"
           sx={{
-            backgroundColor: '#C49A3C',
+            backgroundColor: '#c7ab54',
             color: '#fff',
             px: 4,
             py: 1.5,
@@ -94,7 +94,7 @@ export default function AboutHeroSection() {
             letterSpacing: '0.08em',
             borderRadius: '3px',
             boxShadow: 'none',
-            '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+            '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
           }}
         >
           {t.cta}

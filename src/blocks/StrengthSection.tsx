@@ -8,11 +8,11 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { strengthText } from '../i18n/translations/strength'
 
 const icons = [
-  <FactoryIcon sx={{ fontSize: 44, color: '#C49A3C' }} />,
-  <PeopleAltIcon sx={{ fontSize: 44, color: '#C49A3C' }} />,
-  <PrecisionManufacturingIcon sx={{ fontSize: 44, color: '#C49A3C' }} />,
-  <ArticleIcon sx={{ fontSize: 44, color: '#C49A3C' }} />,
-  <LanguageIcon sx={{ fontSize: 44, color: '#C49A3C' }} />,
+  <FactoryIcon sx={{ fontSize: 44, color: '#c7ab54' }} />,
+  <PeopleAltIcon sx={{ fontSize: 44, color: '#c7ab54' }} />,
+  <PrecisionManufacturingIcon sx={{ fontSize: 44, color: '#c7ab54' }} />,
+  <ArticleIcon sx={{ fontSize: 44, color: '#c7ab54' }} />,
+  <LanguageIcon sx={{ fontSize: 44, color: '#c7ab54' }} />,
 ]
 
 function parseStatValue(value: string): { num: number; suffix: string } {
@@ -77,7 +77,7 @@ export default function StrengthSection() {
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 1280, margin: '0 auto' }}>
         {/* Title */}
         <div style={{ textAlign: 'center', marginBottom: 64 }}>
-          <div style={{ width: 32, height: 2, background: '#C49A3C', margin: '0 auto 16px' }} />
+          <div style={{ width: 32, height: 2, background: '#c7ab54', margin: '0 auto 16px' }} />
           <h2
             style={{
               fontSize: 20,

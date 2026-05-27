@@ -48,7 +48,7 @@ export default function Footer() {
         {/* Brand column */}
         <div>
           <div style={{ marginBottom: 16 }}>
-            <div style={{ fontSize: 24, fontWeight: 900, color: '#C49A3C', lineHeight: 1.1 }}>
+            <div style={{ fontSize: 24, fontWeight: 900, color: '#c7ab54', lineHeight: 1.1 }}>
               PRO
             </div>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', color: '#555' }}>
@@ -70,7 +70,7 @@ export default function Footer() {
               fontSize: 11,
               fontWeight: 800,
               letterSpacing: '0.12em',
-              color: '#C49A3C',
+              color: '#c7ab54',
               margin: '0 0 20px',
             }}
           >
@@ -87,7 +87,7 @@ export default function Footer() {
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#C49A3C')}
+                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#c7ab54')}
                 onMouseLeave={(e) => ((e.target as HTMLElement).style.color = '#666')}
               >
                 {label}
@@ -103,7 +103,7 @@ export default function Footer() {
               fontSize: 11,
               fontWeight: 800,
               letterSpacing: '0.12em',
-              color: '#C49A3C',
+              color: '#c7ab54',
               margin: '0 0 20px',
             }}
           >
@@ -111,7 +111,7 @@ export default function Footer() {
           </h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-              <LocationOnIcon sx={{ fontSize: 16, color: '#C49A3C', mt: '2px', flexShrink: 0 }} />
+              <LocationOnIcon sx={{ fontSize: 16, color: '#c7ab54', mt: '2px', flexShrink: 0 }} />
               <span style={{ fontSize: 13, color: '#666', lineHeight: 1.5 }}>
                 {t.contact.address}
               </span>
@@ -132,14 +132,14 @@ export default function Footer() {
               }}
               onMouseEnter={(e) => {
                 const span = e.currentTarget.querySelector('span') as HTMLElement
-                if (span) span.style.color = '#C49A3C'
+                if (span) span.style.color = '#c7ab54'
               }}
               onMouseLeave={(e) => {
                 const span = e.currentTarget.querySelector('span') as HTMLElement
                 if (span) span.style.color = '#666'
               }}
             >
-              <EmailIcon sx={{ fontSize: 16, color: '#C49A3C', flexShrink: 0 }} />
+              <EmailIcon sx={{ fontSize: 16, color: '#c7ab54', flexShrink: 0 }} />
               <span style={{ fontSize: 13, color: '#666', transition: 'color 0.2s' }}>
                 {t.contact.email}
               </span>
@@ -164,10 +164,10 @@ export default function Footer() {
                   fontSize: 13,
                   transition: 'color 0.2s',
                 }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = '#C49A3C' }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = '#c7ab54' }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = '#666' }}
               >
-                <Icon sx={{ fontSize: 16, color: '#C49A3C', flexShrink: 0 }} />
+                <Icon sx={{ fontSize: 16, color: '#c7ab54', flexShrink: 0 }} />
                 {label}
               </a>
             ))}
@@ -183,7 +183,9 @@ export default function Footer() {
           textAlign: 'center',
         }}
       >
-        <p style={{ fontSize: 12, color: '#aaa', margin: 0 }}>{t.copyright}</p>
+        <p style={{ fontSize: 12, color: '#aaa', margin: 0 }}>
+          {t.copyright.replace('2024', String(new Date().getFullYear()))}
+        </p>
       </div>
 
       {/* Copy notification */}
@@ -198,7 +200,7 @@ export default function Footer() {
           gap: 10,
           background: '#fff',
           border: '1px solid #e8d9bc',
-          borderLeft: '3px solid #C49A3C',
+          borderLeft: '3px solid #c7ab54',
           borderRadius: 3,
           padding: '12px 18px',
           boxShadow: '0 4px 20px rgba(0,0,0,0.10)',
@@ -212,7 +214,7 @@ export default function Footer() {
           transition: 'opacity 0.25s ease, transform 0.25s ease',
         }}
       >
-        <CheckIcon sx={{ fontSize: 15, color: '#C49A3C' }} />
+        <CheckIcon sx={{ fontSize: 15, color: '#c7ab54' }} />
         Email copied to clipboard
       </div>
     </footer>

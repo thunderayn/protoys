@@ -46,7 +46,7 @@ export default function ProductsHeroSection() {
           {t.title}
         </h1>
 
-        <div style={{ width: 44, height: 2, background: '#C49A3C', marginBottom: 18 }} />
+        <div style={{ width: 44, height: 2, background: '#c7ab54', marginBottom: 18 }} />
 
         <p
           style={{

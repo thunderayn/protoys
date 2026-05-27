@@ -45,7 +45,7 @@ export default function ContactFormSection() {
       >
         {/* Left — form */}
         <div>
-          <div style={{ width: 36, height: 3, background: '#C49A3C', marginBottom: 14 }} />
+          <div style={{ width: 36, height: 3, background: '#c7ab54', marginBottom: 14 }} />
           <h2
             style={{
               fontSize: 20,
@@ -101,7 +101,7 @@ export default function ContactFormSection() {
             onClick={() => {}}
             sx={{
               mt: 3,
-              backgroundColor: '#C49A3C',
+              backgroundColor: '#c7ab54',
               color: '#fff',
               px: 4,
               py: 1.5,
@@ -110,7 +110,7 @@ export default function ContactFormSection() {
               letterSpacing: '0.1em',
               borderRadius: '3px',
               boxShadow: 'none',
-              '&:hover': { backgroundColor: '#A07828', boxShadow: 'none' },
+              '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
             }}
           >
             {t.form.cta}
@@ -119,7 +119,7 @@ export default function ContactFormSection() {
 
         {/* Right — global offices */}
         <div>
-          <div style={{ width: 36, height: 3, background: '#C49A3C', marginBottom: 14 }} />
+          <div style={{ width: 36, height: 3, background: '#c7ab54', marginBottom: 14 }} />
           <h2
             style={{
               fontSize: 20,
@@ -155,12 +155,12 @@ export default function ContactFormSection() {
               boxShadow: '0 2px 10px rgba(0,0,0,0.13)',
               minWidth: 140,
             }}>
-              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', color: '#C49A3C', margin: '0 0 3px', textTransform: 'uppercase' }}>
+              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', color: '#c7ab54', margin: '0 0 3px', textTransform: 'uppercase' }}>
                 {t.offices.list[1].title}
               </p>
               <p style={{ fontSize: 11, color: '#444', margin: '0 0 2px' }}>{t.offices.list[1].location}</p>
               <p style={{ fontSize: 11, color: '#666', margin: '0 0 2px' }}>{t.offices.list[1].tel}</p>
-              <a href={`mailto:${t.offices.list[1].email}`} style={{ fontSize: 11, color: '#C49A3C', textDecoration: 'underline' }}>
+              <a href={`mailto:${t.offices.list[1].email}`} style={{ fontSize: 11, color: '#c7ab54', textDecoration: 'underline' }}>
                 {t.offices.list[1].email}
               </a>
             </div>
@@ -176,12 +176,12 @@ export default function ContactFormSection() {
               boxShadow: '0 2px 10px rgba(0,0,0,0.13)',
               minWidth: 150,
             }}>
-              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', color: '#C49A3C', margin: '0 0 3px', textTransform: 'uppercase' }}>
+              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', color: '#c7ab54', margin: '0 0 3px', textTransform: 'uppercase' }}>
                 {t.offices.list[0].title}
               </p>
               <p style={{ fontSize: 11, color: '#444', margin: '0 0 2px' }}>{t.offices.list[0].location}</p>
               <p style={{ fontSize: 11, color: '#666', margin: '0 0 2px' }}>{t.offices.list[0].tel}</p>
-              <a href={`mailto:${t.offices.list[0].email}`} style={{ fontSize: 11, color: '#C49A3C', textDecoration: 'underline' }}>
+              <a href={`mailto:${t.offices.list[0].email}`} style={{ fontSize: 11, color: '#c7ab54', textDecoration: 'underline' }}>
                 {t.offices.list[0].email}
               </a>
             </div>
