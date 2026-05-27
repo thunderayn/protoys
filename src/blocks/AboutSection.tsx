@@ -11,6 +11,7 @@ export default function AboutSection() {
     <Button
       variant="outlined"
       endIcon={<ArrowForwardIcon />}
+      href="/about"
       sx={{
         borderColor: '#C49A3C',
         color: '#C49A3C',
