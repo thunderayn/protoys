@@ -4,8 +4,6 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { useLanguage } from '../i18n/LanguageContext'
 import { contactPageText } from '../i18n/translations/contact'
 
-const FACTORY_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory1_pn5awr.png'
-
 const WORLD_MAP_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779872998/wordmap_with_pointer_ibzd3t.png'
 
 const inputStyle: React.CSSProperties = {
