@@ -9,25 +9,16 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { aboutPageText } from '../i18n/translations/aboutPage'
 
 const icons = [
-  <EmojiEventsOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
-  <ApartmentOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
-  <GroupsOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
-  <PublicOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
-  <FactoryOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
-  <HandymanOutlinedIcon sx={{ fontSize: 36, color: '#c7ab54' }} />,
+  <EmojiEventsOutlinedIcon sx={{ fontSize: 20, color: '#c0bdb8' }} />,
+  <ApartmentOutlinedIcon   sx={{ fontSize: 20, color: '#c0bdb8' }} />,
+  <GroupsOutlinedIcon      sx={{ fontSize: 20, color: '#c0bdb8' }} />,
+  <PublicOutlinedIcon      sx={{ fontSize: 20, color: '#c0bdb8' }} />,
+  <FactoryOutlinedIcon     sx={{ fontSize: 20, color: '#c0bdb8' }} />,
+  <HandymanOutlinedIcon    sx={{ fontSize: 20, color: '#c0bdb8' }} />,
 ]
-
-type Stat = {
-  num?: number
-  suffix?: string
-  display?: string
-  label: string
-  sub?: string
-}
 
 function CountUp({ target, suffix, active }: { target: number; suffix: string; active: boolean }) {
   const [count, setCount] = useState(0)
-
   useEffect(() => {
     if (!active) return
     const duration = 1600
@@ -40,89 +31,101 @@ function CountUp({ target, suffix, active }: { target: number; suffix: string; a
     }
     requestAnimationFrame(tick)
   }, [active, target])
-
   return <>{count}{suffix}</>
 }
 
 export default function AboutStatsBar() {
   const { lang } = useLanguage()
-  const stats = aboutPageText[lang].stats as Stat[]
-  const barRef = useRef<HTMLDivElement>(null)
+  const stats = aboutPageText[lang].stats
+  const ref = useRef<HTMLDivElement>(null)
   const [active, setActive] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setActive(true)
-          observer.disconnect()
-        }
-      },
+      ([entry]) => { if (entry.isIntersecting) { setActive(true); observer.disconnect() } },
       { threshold: 0.3 }
     )
-    if (barRef.current) observer.observe(barRef.current)
+    if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
 
-  return (
-    <div
-      ref={barRef}
-      style={{
-        background: '#fff',
-        borderBottom: '1px solid #efefef',
-        boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
-      }}
-    >
+  const cell = (i: number, content: React.ReactNode) => {
+    const isLast = i === stats.length - 1
+    return (
       <div
-        style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}
-        className="grid grid-cols-3 md:grid-cols-6"
+        key={i}
+        style={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          padding: '36px 16px',
+          borderRight: isLast ? 'none' : '1px solid #ececec',
+        }}
       >
-        {stats.map((stat, i) => (
-          <div
-            key={i}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              textAlign: 'center',
-              padding: '36px 16px',
-              borderRight: i < stats.length - 1 ? '1px solid #f0f0f0' : 'none',
-            }}
-          >
-            <div style={{ marginBottom: 10 }}>{icons[i]}</div>
+        {content}
+      </div>
+    )
+  }
 
-            <div
-              style={{
-                fontSize: 28,
-                fontWeight: 800,
-                color: '#111',
-                lineHeight: 1,
-                letterSpacing: '-0.02em',
-                marginBottom: 4,
-              }}
-            >
-              {stat.num !== undefined ? (
-                <CountUp target={stat.num} suffix={stat.suffix ?? ''} active={active} />
-              ) : (
-                <>{stat.display}</>
-              )}
-            </div>
+  return (
+    <section style={{ background: '#fff' }} ref={ref}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
 
-            {stat.sub ? (
-              <>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 2 }}>
-                  {stat.label}
-                </div>
-                <div style={{ fontSize: 11, color: '#aaa' }}>{stat.sub}</div>
-              </>
-            ) : (
-              <div style={{ fontSize: 12, color: '#888', marginTop: 2, lineHeight: 1.4 }}>
+        {/* Desktop: 6-column row */}
+        <div
+          className="hidden md:flex"
+          style={{ borderTop: '1px solid #ececec', borderBottom: '1px solid #ececec' }}
+        >
+          {stats.map((stat, i) => cell(i, (
+            <>
+              <div style={{ marginBottom: 10 }}>{icons[i]}</div>
+              <div style={{ fontSize: 26, fontWeight: 600, color: '#c7ab54', lineHeight: 1, marginBottom: 6, letterSpacing: '-0.01em' }}>
+                {stat.num !== undefined
+                  ? <CountUp target={stat.num} suffix={stat.suffix ?? ''} active={active} />
+                  : stat.display}
+              </div>
+              <div style={{ fontSize: 14, fontWeight: 500, color: '#1a1714', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                 {stat.label}
               </div>
-            )}
-          </div>
-        ))}
+            </>
+          )))}
+        </div>
+
+        {/* Mobile: 3-column grid */}
+        <div
+          className="grid md:hidden"
+          style={{ gridTemplateColumns: 'repeat(3, 1fr)', borderTop: '1px solid #ececec' }}
+        >
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center',
+                padding: '24px 10px',
+                borderRight: i % 3 !== 2 ? '1px solid #ececec' : 'none',
+                borderBottom: i < 3 ? '1px solid #ececec' : 'none',
+              }}
+            >
+              <div style={{ marginBottom: 8 }}>{icons[i]}</div>
+              <div style={{ fontSize: 20, fontWeight: 600, color: '#c7ab54', lineHeight: 1, marginBottom: 4, letterSpacing: '-0.01em' }}>
+                {stat.num !== undefined
+                  ? <CountUp target={stat.num} suffix={stat.suffix ?? ''} active={active} />
+                  : stat.display}
+              </div>
+              <div style={{ fontSize: 14, fontWeight: 500, color: '#1a1714', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   )
 }

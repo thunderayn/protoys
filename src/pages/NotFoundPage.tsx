@@ -34,7 +34,7 @@ export default function NotFoundPage() {
       >
         {t.code}
       </div>
-      <h2 style={{ fontSize: 20, fontWeight: 700, color: '#333', margin: '0 0 12px' }}>
+      <h2 style={{ fontSize: 20, fontWeight: 700, color: '#2e2b27', margin: '0 0 12px' }}>
         {t.title}
       </h2>
       <p style={{ fontSize: 14, color: '#888', margin: '0 0 36px' }}>{t.body}</p>

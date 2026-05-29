@@ -3,14 +3,14 @@ export const aboutPageText = {
     hero: {
       eyebrow: 'ABOUT PRO TOYS',
       heading: ['PROFESSIONAL PLUSH', 'TOY FACTORY'],
-      body: 'With over 20 years of experience, Pro Toys is a leading OEM/ODM plush toy manufacturer, providing high quality and safe plush toys to customers worldwide.',
+      body: 'With over 10 years of experience, Pro Toys is a leading OEM/ODM plush toy manufacturer, providing high quality and safe plush toys to customers worldwide.',
       cta: 'CONTACT US',
     },
     stats: [
-      { num: 20,    suffix: '+',   label: 'YEARS',      sub: 'Industry Experience' },
+      { num: 10,    suffix: '+yrs', label: 'Industry Experience' },
       { num: 20000, suffix: '+m²', label: 'Factory Area' },
       { num: 500,   suffix: '+',   label: 'Skilled Workers' },
-      { num: 100,   suffix: '+',   label: 'Export Countries' },
+      { num: 10,    suffix: '+',   label: 'Export Countries' },
       { display: 'Millions+',      label: 'Annual Production' },
       { display: 'OEM/ODM',        label: 'One-stop Service' },
     ],
@@ -58,11 +58,11 @@ export const aboutPageText = {
     hero: {
       eyebrow: '关于宝玩具',
       heading: ['专业毛绒玩具', '制造工厂'],
-      body: '宝玩具拥有超过20年的行业经验，是领先的OEM/ODM毛绒玩具制造商，为全球客户提供高品质、安全的毛绒玩具。',
+      body: '宝玩具拥有超过10年的行业经验，是领先的OEM/ODM毛绒玩具制造商，为全球客户提供高品质、安全的毛绒玩具。',
       cta: '联系我们',
     },
     stats: [
-      { num: 20,    suffix: '+',   label: '年',       sub: '行业经验' },
+      { num: 20,    suffix: '+yrs', label: '行业经验' },
       { num: 20000, suffix: '+m²', label: '工厂面积' },
       { num: 500,   suffix: '+',   label: '专业工人' },
       { num: 100,   suffix: '+',   label: '出口国家' },

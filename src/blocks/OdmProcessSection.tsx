@@ -31,7 +31,7 @@ export default function OdmProcessSection() {
           style={{
             fontSize: 24,
             fontWeight: 900,
-            color: '#111',
+            color: '#1a1714',
             letterSpacing: '-0.01em',
             margin: '0 0 8px',
           }}
@@ -39,7 +39,7 @@ export default function OdmProcessSection() {
           {t.heading}
         </h2>
         {/* invisible spacer to match ProductsSection subtitle height */}
-        <p style={{ fontSize: 13, lineHeight: 1.6, margin: 0, visibility: 'hidden', userSelect: 'none' }}>&nbsp;</p>
+        <p style={{ fontSize: 14, lineHeight: 1.6, margin: 0, visibility: 'hidden', userSelect: 'none' }}>&nbsp;</p>
       </div>
 
       {/* Step circles with arrows */}
@@ -71,15 +71,15 @@ export default function OdmProcessSection() {
               >
                 {stepIcons[i]}
               </div>
-              <span style={{ fontSize: 11, fontWeight: 700, color: '#555' }}>{num}</span>
+              <span style={{ fontSize: 15, fontWeight: 700, color: '#555' }}>{num}</span>
               <span
                 style={{
-                  fontSize: 11,
+                  fontSize: 15,
                   color: '#888',
                   textAlign: 'center',
                   lineHeight: 1.4,
                   whiteSpace: 'pre-line',
-                  maxWidth: 72,
+                  maxWidth: 90,
                   width: '100%',
                 }}
               >
@@ -100,6 +100,7 @@ export default function OdmProcessSection() {
         <Button
           variant="contained"
           endIcon={<ArrowForwardIcon />}
+          href="/custom"
           sx={{
             backgroundColor: '#c7ab54',
             color: '#fff',

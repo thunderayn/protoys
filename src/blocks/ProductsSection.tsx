@@ -30,14 +30,14 @@ export default function ProductsSection() {
           style={{
             fontSize: 24,
             fontWeight: 900,
-            color: '#111',
+            color: '#1a1714',
             letterSpacing: '-0.01em',
             margin: '0 0 8px',
           }}
         >
           {t.heading}
         </h2>
-        <p style={{ fontSize: 13, color: '#888', lineHeight: 1.6, margin: 0 }}>
+        <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6, margin: 0 }}>
           {t.sub}
         </p>
       </div>
@@ -74,6 +74,7 @@ export default function ProductsSection() {
         <Button
           variant="outlined"
           endIcon={<ArrowForwardIcon />}
+          href="/products"
           sx={{
             borderColor: '#c7ab54',
             color: '#c7ab54',

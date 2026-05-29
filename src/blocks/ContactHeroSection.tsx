@@ -74,7 +74,7 @@ export default function ContactHeroSection() {
 
         <p
           style={{
-            color: '#3a3a3a',
+            color: '#2e2b27',
             fontSize: 15,
             lineHeight: 1.75,
             margin: '0 0 36px',

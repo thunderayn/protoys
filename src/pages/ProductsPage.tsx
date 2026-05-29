@@ -7,8 +7,9 @@ export default function ProductsPage() {
   return (
     <>
       <ProductsHeroSection />
-      <ProductsCatalogSection />
       <ProductsFeaturesBar />
+      <ProductsCatalogSection />
+      
       <ProductsBottomCTA />
     </>
   )

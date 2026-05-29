@@ -5,14 +5,14 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { aboutPageText } from '../i18n/translations/aboutPage'
 
 const processImages = [
-  'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80',
+  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory1_pn5awr.png',
+  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory3_zquooi.png',
+  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265058/factory8_wh609y.png',
+  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory2_sgj2of.png',
+  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265057/factory6_jhayok.png',
   'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265056/factory4_jrcxct.png',
-  'https://images.unsplash.com/photo-1516733968668-dbdce39c4651?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80',
 ]
-
+ 
 const STEP_COLS = '1fr 32px 1fr 32px 1fr'
 
 function StepCard({ step, imgSrc }: { step: { num: string; title: string; desc: string }; imgSrc: string }) {
@@ -36,7 +36,7 @@ function StepCard({ step, imgSrc }: { step: { num: string; title: string; desc: 
           onMouseLeave={(e) => ((e.target as HTMLImageElement).style.transform = 'scale(1)')}
         />
       </div>
-      <div style={{ fontSize: 11, fontWeight: 800, color: '#111', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+      <div style={{ fontSize: 11, fontWeight: 800, color: '#1a1714', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
         {step.title}
       </div>
       <div style={{ fontSize: 11, color: '#888', lineHeight: 1.55 }}>
@@ -63,7 +63,7 @@ export default function AboutProcessSection() {
         {/* Title */}
         <div style={{ marginBottom: 48 }}>
           <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 14 }} />
-          <h2 style={{ fontSize: 20, fontWeight: 700, color: '#111', letterSpacing: '0.1em', textTransform: 'uppercase', margin: 0 }}>
+          <h2 style={{ fontSize: 20, fontWeight: 700, color: '#1a1714', letterSpacing: '0.1em', textTransform: 'uppercase', margin: 0 }}>
             {t.eyebrow}
           </h2>
         </div>
@@ -114,7 +114,7 @@ export default function AboutProcessSection() {
               <div style={{ overflow: 'hidden', borderRadius: 2 }}>
                 <img src={processImages[i]} alt={step.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} />
               </div>
-              <div style={{ fontSize: 11, fontWeight: 800, color: '#111', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{step.title}</div>
+              <div style={{ fontSize: 11, fontWeight: 800, color: '#1a1714', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{step.title}</div>
               <div style={{ fontSize: 11, color: '#888', lineHeight: 1.5 }}>{step.desc}</div>
             </div>
           ))}

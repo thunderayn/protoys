@@ -6,7 +6,7 @@ import { contactPageText } from '../i18n/translations/contact'
 
 const BEARS_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg'
 
-export default function ContactBottomSection() {
+export default function ContactBottom() {
   const { lang } = useLanguage()
   const t = contactPageText[lang].bottom
 
@@ -22,7 +22,7 @@ export default function ContactBottomSection() {
           <img
             src={BEARS_IMG}
             alt="Plush toys"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>
 
@@ -39,7 +39,7 @@ export default function ContactBottomSection() {
               style={{
                 fontSize: 'clamp(24px, 2.8vw, 38px)',
                 fontWeight: 900,
-                color: '#111',
+                color: '#1a1714',
                 lineHeight: 1.15,
                 letterSpacing: '-0.01em',
                 margin: '0 0 16px',
@@ -58,7 +58,7 @@ export default function ContactBottomSection() {
             <Button
               variant="contained"
               endIcon={<ArrowForwardIcon />}
-              href="#"
+              href="/contact"
               sx={{
                 backgroundColor: '#c7ab54',
                 color: '#fff',
@@ -88,7 +88,7 @@ export default function ContactBottomSection() {
           />
         </div>
         <div style={{ padding: '48px 24px', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 28, fontWeight: 900, color: '#111', lineHeight: 1.15, margin: '0 0 14px' }}>
+          <h2 style={{ fontSize: 28, fontWeight: 900, color: '#1a1714', lineHeight: 1.15, margin: '0 0 14px' }}>
             {t.heading.map((line, i) => (
               <Fragment key={i}>{line}{i < t.heading.length - 1 && <br />}</Fragment>
             ))}
@@ -97,7 +97,7 @@ export default function ContactBottomSection() {
           <Button
             variant="contained"
             endIcon={<ArrowForwardIcon />}
-            href="#"
+            href="/contact"
             sx={{
               backgroundColor: '#c7ab54',
               color: '#fff',

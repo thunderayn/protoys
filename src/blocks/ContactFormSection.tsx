@@ -13,8 +13,8 @@ const inputStyle: React.CSSProperties = {
   padding: '12px 14px',
   border: '1px solid #ddd',
   borderRadius: 3,
-  fontSize: 13,
-  color: '#333',
+  fontSize: 14,
+  color: '#2e2b27',
   outline: 'none',
   fontFamily: 'inherit',
   background: '#fff',
@@ -50,7 +50,7 @@ export default function ContactFormSection() {
             style={{
               fontSize: 20,
               fontWeight: 900,
-              color: '#111',
+              color: '#1a1714',
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               margin: '0 0 12px',
@@ -124,7 +124,7 @@ export default function ContactFormSection() {
             style={{
               fontSize: 20,
               fontWeight: 900,
-              color: '#111',
+              color: '#1a1714',
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               margin: '0 0 12px',

@@ -41,7 +41,7 @@ export default function AboutWhySection() {
               style={{
                 fontSize: 'clamp(22px, 2.4vw, 32px)',
                 fontWeight: 900,
-                color: '#111',
+                color: '#1a1714',
                 letterSpacing: '-0.01em',
                 lineHeight: 1.15,
                 margin: '0 0 20px',
@@ -138,9 +138,9 @@ export default function AboutWhySection() {
                 <div>
                   <h4
                     style={{
-                      fontSize: 13,
+                      fontSize: 14,
                       fontWeight: 800,
-                      color: '#111',
+                      color: '#1a1714',
                       letterSpacing: '0.06em',
                       margin: '0 0 8px',
                       textTransform: 'uppercase',
@@ -190,7 +190,7 @@ export default function AboutWhySection() {
             {t.eyebrow}
           </p>
           <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 14 }} />
-          <h2 style={{ fontSize: 24, fontWeight: 900, color: '#111', margin: '0 0 16px', lineHeight: 1.15 }}>
+          <h2 style={{ fontSize: 24, fontWeight: 900, color: '#1a1714', margin: '0 0 16px', lineHeight: 1.15 }}>
             {t.heading}
           </h2>
           <p style={{ fontSize: 14, color: '#666', lineHeight: 1.8, margin: '0 0 20px' }}>{t.body}</p>
@@ -206,7 +206,7 @@ export default function AboutWhySection() {
             <img src={IMG_MAIN} alt="Factory" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ background: '#f7f3ec', padding: '20px', borderRadius: 2, marginBottom: 16 }}>
-            <h4 style={{ fontSize: 13, fontWeight: 800, color: '#111', margin: '0 0 8px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+            <h4 style={{ fontSize: 14, fontWeight: 800, color: '#1a1714', margin: '0 0 8px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               {t.factory.title}
             </h4>
             <p style={{ fontSize: 12, color: '#666', lineHeight: 1.65, margin: 0 }}>{t.factory.body}</p>

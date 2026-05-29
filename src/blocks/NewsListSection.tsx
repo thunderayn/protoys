@@ -18,8 +18,11 @@ export default function NewsListSection() {
     return MOCK_ARTICLES.filter(
       (a) =>
         a.title.toLowerCase().includes(q) ||
+        a.titleCn.toLowerCase().includes(q) ||
         a.excerpt.toLowerCase().includes(q) ||
-        a.category.toLowerCase().includes(q),
+        a.excerptCn.toLowerCase().includes(q) ||
+        a.category.toLowerCase().includes(q) ||
+        a.categoryCn.toLowerCase().includes(q),
     )
   }, [search])
 
@@ -52,9 +55,9 @@ export default function NewsListSection() {
             <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 10 }} />
             <h2
               style={{
-                fontSize: 13,
+                fontSize: 14,
                 fontWeight: 700,
-                color: '#111',
+                color: '#1a1714',
                 letterSpacing: '0.1em',
                 margin: 0,
               }}
@@ -63,7 +66,7 @@ export default function NewsListSection() {
             </h2>
           </div>
 
-          <span style={{ fontSize: 13, color: '#999' }}>
+          <span style={{ fontSize: 14, color: '#999' }}>
             {filtered.length > 0
               ? t.showing(start + 1, Math.min(start + ARTICLES_PER_PAGE, filtered.length), filtered.length)
               : ''}
@@ -82,7 +85,7 @@ export default function NewsListSection() {
                 border: '1px solid #e0e0e0',
                 borderRadius: 3,
                 fontSize: 12,
-                color: '#333',
+                color: '#2e2b27',
                 outline: 'none',
                 background: '#fafafa',
               }}
@@ -117,6 +120,7 @@ export default function NewsListSection() {
                 byLabel={t.by}
                 readMoreLabel={t.readMore}
                 isLast={i === pageArticles.length - 1}
+                lang={lang}
               />
             ))}
           </div>
@@ -145,11 +149,13 @@ function ArticleCard({
   byLabel,
   readMoreLabel,
   isLast,
+  lang,
 }: {
   article: Article
   byLabel: string
   readMoreLabel: string
   isLast: boolean
+  lang: 'en' | 'cn'
 }) {
   const [hovered, setHovered] = useState(false)
 
@@ -204,31 +210,31 @@ function ArticleCard({
             display: 'block',
           }}
         >
-          {article.category}
+          {lang === 'cn' ? article.categoryCn : article.category}
         </span>
 
         <h3
           style={{
             fontSize: 18,
             fontWeight: 700,
-            color: hovered ? '#c7ab54' : '#111',
+            color: hovered ? '#c7ab54' : '#1a1714',
             lineHeight: 1.25,
             margin: '0 0 10px',
             transition: 'color 0.2s',
           }}
         >
-          {article.title}
+          {lang === 'cn' ? article.titleCn : article.title}
         </h3>
 
         <p
           style={{
-            fontSize: 13,
+            fontSize: 14,
             color: '#777',
             lineHeight: 1.65,
             margin: '0 0 16px',
           }}
         >
-          {article.excerpt}
+          {lang === 'cn' ? article.excerptCn : article.excerpt}
         </p>
 
         {/* Footer row */}
@@ -242,7 +248,7 @@ function ArticleCard({
           }}
         >
           <span style={{ fontSize: 12, color: '#aaa' }}>
-            {article.displayDate}
+            {lang === 'cn' ? article.displayDateCn : article.displayDate}
             <span style={{ margin: '0 8px', color: '#ddd' }}>|</span>
             {byLabel} {article.author}
           </span>
@@ -263,7 +269,7 @@ function ArticleCard({
             }}
           >
             {readMoreLabel}
-            <ArrowForwardIcon sx={{ fontSize: 13 }} />
+            <ArrowForwardIcon sx={{ fontSize: 14 }} />
           </button>
         </div>
       </div>
@@ -299,7 +305,7 @@ function Pagination({
     borderRadius: 3,
     background: '#fff',
     cursor: 'pointer',
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: 600,
     color: '#444',
     padding: '0 10px',
@@ -331,7 +337,7 @@ function Pagination({
 
       {pages.map((item, i) =>
         item === '...' ? (
-          <span key={`ellipsis-${i}`} style={{ padding: '0 4px', color: '#aaa', fontSize: 13 }}>
+          <span key={`ellipsis-${i}`} style={{ padding: '0 4px', color: '#aaa', fontSize: 14 }}>
             …
           </span>
         ) : (

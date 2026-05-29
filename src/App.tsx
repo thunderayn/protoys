@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import ProductsPage from './pages/ProductsPage'
 import NewsPage from './pages/NewsPage'
+import CustomPage from './pages/CustomPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/oem-odm" element={<NotFoundPage />} />
+          <Route path="/oem-odm" element={<CustomPage />} />
+          <Route path="/custom" element={<CustomPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/quality" element={<NotFoundPage />} />
           <Route path="/news" element={<NewsPage />} />

@@ -30,7 +30,7 @@ export default function Footer() {
   }
 
   return (
-    <footer style={{ background: '#fff', color: '#111' }}>
+    <footer style={{ background: '#fff', color: '#1a1714' }}>
       {/* Top border */}
       <div style={{ height: 1, background: '#ececec' }} />
 
@@ -55,10 +55,10 @@ export default function Footer() {
               PLUSH TOY
             </div>
           </div>
-          <p style={{ fontSize: 13, color: '#333', fontWeight: 600, margin: '0 0 8px' }}>
+          <p style={{ fontSize: 14, color: '#2e2b27', fontWeight: 600, margin: '0 0 8px' }}>
             {t.brand.tagline}
           </p>
-          <p style={{ fontSize: 13, color: '#888', lineHeight: 1.7, margin: 0, maxWidth: 280 }}>
+          <p style={{ fontSize: 14, color: '#888', lineHeight: 1.7, margin: 0, maxWidth: 280 }}>
             {t.brand.desc}
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function Footer() {
         <div>
           <h4
             style={{
-              fontSize: 11,
+              fontSize: 14,
               fontWeight: 800,
               letterSpacing: '0.12em',
               color: '#c7ab54',
@@ -82,7 +82,7 @@ export default function Footer() {
                 key={path}
                 to={path}
                 style={{
-                  fontSize: 13,
+                  fontSize: 14,
                   color: '#666',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
@@ -100,7 +100,7 @@ export default function Footer() {
         <div>
           <h4
             style={{
-              fontSize: 11,
+              fontSize: 14,
               fontWeight: 800,
               letterSpacing: '0.12em',
               color: '#c7ab54',
@@ -112,7 +112,7 @@ export default function Footer() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
               <LocationOnIcon sx={{ fontSize: 16, color: '#c7ab54', mt: '2px', flexShrink: 0 }} />
-              <span style={{ fontSize: 13, color: '#666', lineHeight: 1.5 }}>
+              <span style={{ fontSize: 14, color: '#666', lineHeight: 1.5 }}>
                 {t.contact.address}
               </span>
             </div>
@@ -140,7 +140,7 @@ export default function Footer() {
               }}
             >
               <EmailIcon sx={{ fontSize: 16, color: '#c7ab54', flexShrink: 0 }} />
-              <span style={{ fontSize: 13, color: '#666', transition: 'color 0.2s' }}>
+              <span style={{ fontSize: 14, color: '#666', transition: 'color 0.2s' }}>
                 {t.contact.email}
               </span>
             </button>
@@ -161,7 +161,7 @@ export default function Footer() {
                   gap: 10,
                   textDecoration: 'none',
                   color: '#666',
-                  fontSize: 13,
+                  fontSize: 14,
                   transition: 'color 0.2s',
                 }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = '#c7ab54' }}
@@ -183,7 +183,7 @@ export default function Footer() {
           textAlign: 'center',
         }}
       >
-        <p style={{ fontSize: 12, color: '#aaa', margin: 0 }}>
+        <p style={{ fontSize: 14, color: '#aaa', margin: 0 }}>
           {t.copyright.replace('2024', String(new Date().getFullYear()))}
         </p>
       </div>
@@ -204,9 +204,9 @@ export default function Footer() {
           borderRadius: 3,
           padding: '12px 18px',
           boxShadow: '0 4px 20px rgba(0,0,0,0.10)',
-          fontSize: 13,
+          fontSize: 14,
           fontWeight: 600,
-          color: '#333',
+          color: '#2e2b27',
           letterSpacing: '0.02em',
           pointerEvents: 'none',
           opacity: copied ? 1 : 0,

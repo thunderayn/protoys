@@ -1,16 +1,21 @@
 import AboutHeroSection from '../blocks/AboutHeroSection'
 import AboutStatsBar from '../blocks/AboutStatsBar'
+import AboutIntroSection from '../blocks/AboutIntroSection'
+import ClientReviewsSection from '../blocks/ClientReviewsSection'
+import CertificationSection from '../blocks/CertificationSection'
+import ContactBottom from '../blocks/ContactBottomSection'
 import AboutProcessSection from '../blocks/AboutProcessSection'
-import AboutBottomSection from '../blocks/AboutBottomSection'
 
 export default function AboutPage() {
   return (
     <>
       <AboutHeroSection />
       <AboutStatsBar />
-      {/* <AboutWhySection /> */}
+      <AboutIntroSection />
       <AboutProcessSection />
-      <AboutBottomSection />
+      <CertificationSection />
+      <ClientReviewsSection />
+      <ContactBottom />
     </>
   )
 }

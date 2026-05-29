@@ -46,7 +46,7 @@ export default function Navbar() {
           <div style={{ fontSize: 22, fontWeight: 900, color: '#c7ab54', lineHeight: 1.1 }}>
             PRO
           </div>
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', color: '#1a1a1a' }}>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', color: '#1a1714' }}>
             PLUSH TOY
           </div>
         </NavLink>
@@ -60,11 +60,11 @@ export default function Navbar() {
               end={path === '/'}
               className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
               style={({ isActive }) => ({
-                fontSize: 11,
+                fontSize: 15,
                 fontWeight: 700,
                 letterSpacing: '0.06em',
                 textDecoration: 'none',
-                color: isActive ? '#c7ab54' : '#3a3a3a',
+                color: isActive ? '#c7ab54' : '#2e2b27',
                 transition: 'color 0.2s',
                 whiteSpace: 'nowrap',
               })}
@@ -88,7 +88,7 @@ export default function Navbar() {
               background: 'none',
               border: 'none',
               cursor: 'pointer',
-              fontSize: 12,
+              fontSize: 15,
               fontWeight: 600,
               color: '#555',
               padding: '4px 6px',
@@ -97,7 +97,7 @@ export default function Navbar() {
           >
             <LanguageIcon sx={{ fontSize: 15 }} />
             <span>{t.langLabel}</span>
-            <KeyboardArrowDownIcon sx={{ fontSize: 13 }} />
+            <KeyboardArrowDownIcon sx={{ fontSize: 14 }} />
           </button>
 
           <Menu
@@ -113,7 +113,7 @@ export default function Navbar() {
                 selected={lang === opt.value}
                 onClick={() => { setLang(opt.value); setLangAnchor(null) }}
                 sx={{
-                  fontSize: 13,
+                  fontSize: 14,
                   fontWeight: 600,
                   '&.Mui-selected': { color: '#c7ab54' },
                 }}
@@ -139,7 +139,7 @@ export default function Navbar() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24 }}>
             <div>
               <div style={{ fontSize: 20, fontWeight: 900, color: '#c7ab54' }}>PRO</div>
-              <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', color: '#1a1a1a' }}>
+              <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', color: '#1a1714' }}>
                 PLUSH TOY
               </div>
             </div>
@@ -159,10 +159,10 @@ export default function Navbar() {
                   padding: '13px 0',
                   borderBottom: '1px solid #f0f0f0',
                   textDecoration: 'none',
-                  fontSize: 13,
+                  fontSize: 14,
                   fontWeight: 700,
                   letterSpacing: '0.04em',
-                  color: isActive ? '#c7ab54' : '#333',
+                  color: isActive ? '#c7ab54' : '#2e2b27',
                 })}
               >
                 {t.links[i]}

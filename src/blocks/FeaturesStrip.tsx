@@ -43,16 +43,16 @@ export default function FeaturesStrip() {
               <div style={{ marginBottom: 12 }}>{icons[i]}</div>
               <h3
                 style={{
-                  fontSize: 11,
-                  fontWeight: 700,
-                  color: '#111',
-                  letterSpacing: '0.05em',
+                  fontSize: 14,
+                  fontWeight: 500,
+                  color: '#1a1714',
+                  letterSpacing: '0.06em',
                   margin: '0 0 8px',
                 }}
               >
                 {title}
               </h3>
-              <p style={{ fontSize: 12, color: '#888', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6, margin: 0 }}>
                 {desc}
               </p>
             </div>
@@ -78,10 +78,10 @@ export default function FeaturesStrip() {
               }}
             >
               <div style={{ marginBottom: 10 }}>{icons[i]}</div>
-              <h3 style={{ fontSize: 10, fontWeight: 700, color: '#111', margin: '0 0 6px' }}>
+              <h3 style={{ fontSize: 14, fontWeight: 500, color: '#1a1714', letterSpacing: '0.06em', margin: '0 0 6px' }}>
                 {title}
               </h3>
-              <p style={{ fontSize: 11, color: '#888', lineHeight: 1.5, margin: 0 }}>
+              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.5, margin: 0 }}>
                 {desc}
               </p>
             </div>

@@ -3,7 +3,7 @@ export const heroText = {
     titleLines: ['PROFESSIONAL', 'PLUSH TOY', 'OEM FACTORY'],
     sub1: 'High-quality customization service',
     sub2: 'Bringing your ideas to life',
-    cta: 'GET STARTED',
+    cta: 'Get a Quote',
     verticalLabels: ['PROFESSIONAL', 'QUALITY', 'CUSTOMIZED'],
   },
   cn: {

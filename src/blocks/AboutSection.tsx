@@ -52,7 +52,7 @@ export default function AboutSection() {
               style={{
                 fontSize: 28,
                 fontWeight: 900,
-                color: '#111',
+                color: '#1a1714',
                 letterSpacing: '-0.01em',
                 margin: '0 0 20px',
               }}
@@ -100,7 +100,7 @@ export default function AboutSection() {
           </div>
           <div style={{ padding: '48px 24px' }}>
             <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 16 }} />
-            <h2 style={{ fontSize: 24, fontWeight: 900, color: '#111', margin: '0 0 16px' }}>
+            <h2 style={{ fontSize: 24, fontWeight: 900, color: '#1a1714', margin: '0 0 16px' }}>
               {t.heading}
             </h2>
             <p style={{ fontSize: 14, color: '#666', lineHeight: 1.8, margin: '0 0 28px' }}>

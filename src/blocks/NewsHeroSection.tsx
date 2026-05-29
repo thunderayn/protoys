@@ -2,7 +2,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { newsPageText } from '../i18n/translations/news'
 
 const HERO_IMG =
-  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg'
+  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769041987/christams_mng2tn.png'
 
 export default function NewsHeroSection() {
   const { lang } = useLanguage()

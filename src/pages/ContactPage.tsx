@@ -1,7 +1,7 @@
 import ContactHeroSection from '../blocks/ContactHeroSection'
 import ContactInfoBar from '../blocks/ContactInfoBar'
 import ContactFormSection from '../blocks/ContactFormSection'
-import ContactBottomSection from '../blocks/ContactBottomSection'
+import ContactBottom from '../blocks/ContactBottomSection'
 
 export default function ContactPage() {
   return (
@@ -9,7 +9,7 @@ export default function ContactPage() {
       <ContactHeroSection />
       <ContactInfoBar />
       <ContactFormSection />
-      <ContactBottomSection />
+      <ContactBottom />
     </>
   )
 }

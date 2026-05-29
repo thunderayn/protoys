@@ -1,35 +1,23 @@
-// ---------------------------------------------------------------------------
-// Article data layer
-// ---------------------------------------------------------------------------
-// All article data flows through this file.
-// To integrate Sanity CMS later:
-//   1. Install @sanity/client + groq
-//   2. Replace MOCK_ARTICLES with a Sanity fetch:
-//      export async function fetchArticles(page, perPage, search, category)
-//      using GROQ: *[_type == "post"] | order(publishedAt desc) { ... }
-//   3. Update NewsListSection to call the async function (e.g. with useEffect)
-// ---------------------------------------------------------------------------
-
 export interface Article {
   _id: string
   slug: string
-  /** Display label shown on the card, e.g. "COMPANY NEWS" */
   category: string
-  /** URL-safe key used for filtering, e.g. "company-news" */
+  categoryCn: string
   categoryKey: string
   title: string
+  titleCn: string
   excerpt: string
-  /** ISO date string, e.g. "2024-05-15" */
+  excerptCn: string
   publishedAt: string
-  /** Formatted for display, e.g. "May 15, 2024" */
   displayDate: string
+  displayDateCn: string
   author: string
   mainImage: string
 }
 
-const BEAR   = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon3_l74cyj.jpg'
-const GROUP  = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg'
-const PANDA  = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/panda1_cat0ay.jpg'
+const BEAR     = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon3_l74cyj.jpg'
+const GROUP    = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg'
+const PANDA    = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/panda1_cat0ay.jpg'
 const FACTORY1 = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory1_pn5awr.png'
 const FACTORY4 = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265056/factory4_jrcxct.png'
 
@@ -40,12 +28,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '1',
     slug: 'pro-toys-attends-2024-hong-kong-toys-games-fair',
     category: 'COMPANY NEWS',
+    categoryCn: '公司新闻',
     categoryKey: 'company-news',
     title: 'Pro Toys Attends 2024 Hong Kong Toys & Games Fair',
-    excerpt:
-      'We are excited to announce that Pro Toys will be participating in the 2024 Hong Kong Toys & Games Fair.',
+    titleCn: '宝玩具参展2024年香港玩具及游戏展览会',
+    excerpt: 'We are excited to announce that Pro Toys will be participating in the 2024 Hong Kong Toys & Games Fair.',
+    excerptCn: '我们欣喜地宣布，宝玩具将参加2024年香港玩具及游戏展览会，期待与全球合作伙伴相聚。',
     publishedAt: '2024-05-15',
     displayDate: 'May 15, 2024',
+    displayDateCn: '2024年5月15日',
     author: 'Pro Toys',
     mainImage: BEAR,
   },
@@ -53,12 +44,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '2',
     slug: 'how-we-design-safe-and-loved-plush-toys',
     category: 'DESIGN & DEVELOPMENT',
+    categoryCn: '设计与研发',
     categoryKey: 'design-development',
     title: 'How We Design Safe and Loved Plush Toys',
-    excerpt:
-      'From concept to creation, discover our design process focused on safety, quality and creativity.',
+    titleCn: '我们如何设计安全且深受喜爱的毛绒玩具',
+    excerpt: 'From concept to creation, discover our design process focused on safety, quality and creativity.',
+    excerptCn: '从创意到成品，探索我们以安全、品质和创造力为核心的完整设计流程。',
     publishedAt: '2024-04-28',
     displayDate: 'Apr 28, 2024',
+    displayDateCn: '2024年4月28日',
     author: 'Pro Toys',
     mainImage: FACTORY4,
   },
@@ -66,12 +60,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '3',
     slug: 'choosing-the-best-materials-for-plush-toys',
     category: 'MATERIALS & QUALITY',
+    categoryCn: '材料与品质',
     categoryKey: 'materials-quality',
     title: 'Choosing the Best Materials for Plush Toys',
-    excerpt:
-      'We carefully select premium materials to ensure every plush toy is soft, durable and safe for all ages.',
+    titleCn: '如何为毛绒玩具选择最优材料',
+    excerpt: 'We carefully select premium materials to ensure every plush toy is soft, durable and safe for all ages.',
+    excerptCn: '我们精心挑选优质原材料，确保每款毛绒玩具手感柔软、经久耐用，适合各年龄段使用。',
     publishedAt: '2024-04-10',
     displayDate: 'Apr 10, 2024',
+    displayDateCn: '2024年4月10日',
     author: 'Pro Toys',
     mainImage: GROUP,
   },
@@ -79,12 +76,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '4',
     slug: 'inside-our-factory-quality-in-every-step',
     category: 'PRODUCTION',
+    categoryCn: '生产制造',
     categoryKey: 'production',
     title: 'Inside Our Factory: Quality in Every Step',
-    excerpt:
-      'Take a look behind the scenes and see how our skilled team brings each plush toy to life.',
+    titleCn: '走进工厂：每一步都追求品质',
+    excerpt: 'Take a look behind the scenes and see how our skilled team brings each plush toy to life.',
+    excerptCn: '带您走进幕后，看看我们的专业团队如何将每一款毛绒玩具精心打造成真。',
     publishedAt: '2024-03-22',
     displayDate: 'Mar 22, 2024',
+    displayDateCn: '2024年3月22日',
     author: 'Pro Toys',
     mainImage: FACTORY1,
   },
@@ -92,12 +92,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '5',
     slug: 'plush-toy-trends-2024-whats-popular',
     category: 'INDUSTRY INSIGHTS',
+    categoryCn: '行业洞察',
     categoryKey: 'industry-insights',
     title: "Plush Toy Trends in 2024: What's Popular?",
-    excerpt:
-      'Explore the latest trends in the plush toy industry and what children and parents love this year.',
+    titleCn: '2024年毛绒玩具流行趋势：什么最受欢迎？',
+    excerpt: 'Explore the latest trends in the plush toy industry and what children and parents love this year.',
+    excerptCn: '探索毛绒玩具行业的最新趋势，了解今年儿童和家长最喜爱的产品类型与风格。',
     publishedAt: '2024-03-05',
     displayDate: 'Mar 05, 2024',
+    displayDateCn: '2024年3月5日',
     author: 'Pro Toys',
     mainImage: GROUP,
   },
@@ -105,12 +108,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '6',
     slug: 'our-commitment-to-safety-and-quality',
     category: 'QUALITY ASSURANCE',
+    categoryCn: '质量保证',
     categoryKey: 'quality-assurance',
     title: 'Our Commitment to Safety and Quality',
-    excerpt:
-      'Safety is our top priority. Learn how we ensure every product meets international safety standards.',
+    titleCn: '我们对安全与品质的承诺',
+    excerpt: 'Safety is our top priority. Learn how we ensure every product meets international safety standards.',
+    excerptCn: '安全是我们的首要任务。了解我们如何确保每款产品符合国际安全标准并通过严格检测。',
     publishedAt: '2024-02-15',
     displayDate: 'Feb 15, 2024',
+    displayDateCn: '2024年2月15日',
     author: 'Pro Toys',
     mainImage: FACTORY4,
   },
@@ -118,12 +124,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '7',
     slug: 'spring-2024-new-collection-launch',
     category: 'COMPANY NEWS',
+    categoryCn: '公司新闻',
     categoryKey: 'company-news',
     title: 'New Collection Launch: Spring 2024 Plush Toys',
-    excerpt:
-      'Discover our newest Spring 2024 collection featuring fresh designs, vibrant colors and premium materials.',
+    titleCn: '新品发布：2024春季毛绒玩具系列',
+    excerpt: 'Discover our newest Spring 2024 collection featuring fresh designs, vibrant colors and premium materials.',
+    excerptCn: '探索我们全新的2024春季系列，带来清新设计、鲜艳色彩和优质面料的完美结合。',
     publishedAt: '2024-02-01',
     displayDate: 'Feb 01, 2024',
+    displayDateCn: '2024年2月1日',
     author: 'Pro Toys',
     mainImage: BEAR,
   },
@@ -131,12 +140,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '8',
     slug: 'oem-odm-success-story-custom-plush-toys',
     category: 'DESIGN & DEVELOPMENT',
+    categoryCn: '设计与研发',
     categoryKey: 'design-development',
     title: 'OEM/ODM Success Story: Custom Plush Toys for Leading Brands',
-    excerpt:
-      'Learn how we helped global brands bring their custom plush toy concepts to life with our OEM/ODM service.',
+    titleCn: 'OEM/ODM成功案例：为知名品牌定制毛绒玩具',
+    excerpt: 'Learn how we helped global brands bring their custom plush toy concepts to life with our OEM/ODM service.',
+    excerptCn: '了解我们如何通过专业的OEM/ODM服务，帮助全球知名品牌将毛绒玩具创意完美变为现实。',
     publishedAt: '2024-01-20',
     displayDate: 'Jan 20, 2024',
+    displayDateCn: '2024年1月20日',
     author: 'Pro Toys',
     mainImage: PANDA,
   },
@@ -144,12 +156,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '9',
     slug: 'behind-the-scenes-custom-design-process',
     category: 'PRODUCTION',
+    categoryCn: '生产制造',
     categoryKey: 'production',
     title: 'Behind the Scenes: How We Create Custom Designs',
-    excerpt:
-      'A step-by-step look at our custom design workflow, from initial sketch to final production sample.',
+    titleCn: '幕后揭秘：我们如何打造定制设计',
+    excerpt: 'A step-by-step look at our custom design workflow, from initial sketch to final production sample.',
+    excerptCn: '从初始草图到最终生产样品，逐步了解我们完整的定制设计工作流程。',
     publishedAt: '2024-01-08',
     displayDate: 'Jan 08, 2024',
+    displayDateCn: '2024年1月8日',
     author: 'Pro Toys',
     mainImage: FACTORY4,
   },
@@ -157,12 +172,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '10',
     slug: 'global-shipping-logistics-wholesale-orders',
     category: 'INDUSTRY INSIGHTS',
+    categoryCn: '行业洞察',
     categoryKey: 'industry-insights',
     title: 'Global Shipping & Logistics for Wholesale Orders',
-    excerpt:
-      'How Pro Toys ensures on-time delivery to customers worldwide with reliable logistics partnerships.',
+    titleCn: '批量订单的全球物流与配送',
+    excerpt: 'How Pro Toys ensures on-time delivery to customers worldwide with reliable logistics partnerships.',
+    excerptCn: '宝玩具如何借助可靠的物流合作伙伴，确保全球客户的批量订单准时送达。',
     publishedAt: '2023-12-18',
     displayDate: 'Dec 18, 2023',
+    displayDateCn: '2023年12月18日',
     author: 'Pro Toys',
     mainImage: FACTORY1,
   },
@@ -170,12 +188,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '11',
     slug: 'meet-the-team-designers-and-craftspeople',
     category: 'COMPANY NEWS',
+    categoryCn: '公司新闻',
     categoryKey: 'company-news',
     title: 'Meet the Team: Our Designers and Craftspeople',
-    excerpt:
-      'Get to know the talented people behind every Pro Toys creation — from lead designers to master seamstresses.',
+    titleCn: '认识团队：我们的设计师与工匠',
+    excerpt: 'Get to know the talented people behind every Pro Toys creation — from lead designers to master seamstresses.',
+    excerptCn: '了解宝玩具背后的优秀团队——从首席设计师到资深缝纫师，每一位都为品质倾心投入。',
     publishedAt: '2023-12-05',
     displayDate: 'Dec 05, 2023',
+    displayDateCn: '2023年12月5日',
     author: 'Pro Toys',
     mainImage: GROUP,
   },
@@ -183,12 +204,15 @@ export const MOCK_ARTICLES: Article[] = [
     _id: '12',
     slug: 'sustainability-in-toy-manufacturing',
     category: 'MATERIALS & QUALITY',
+    categoryCn: '材料与品质',
     categoryKey: 'materials-quality',
     title: 'Sustainability in Toy Manufacturing: Our Approach',
-    excerpt:
-      'Discover how Pro Toys is working to reduce environmental impact through sustainable materials and production.',
+    titleCn: '玩具制造中的可持续发展：我们的实践',
+    excerpt: 'Discover how Pro Toys is working to reduce environmental impact through sustainable materials and production.',
+    excerptCn: '了解宝玩具如何通过可持续材料与绿色生产方式，积极减少对环境的影响。',
     publishedAt: '2023-11-20',
     displayDate: 'Nov 20, 2023',
+    displayDateCn: '2023年11月20日',
     author: 'Pro Toys',
     mainImage: PANDA,
   },

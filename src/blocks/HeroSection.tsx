@@ -46,7 +46,7 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        {t.verticalLabels.map((word) => (
+        {['PROFESSIONAL', 'QUALITY', 'CUSTOMIZED'].map((word) => (
           <span
             key={word}
             style={{
@@ -104,6 +104,7 @@ export default function HeroSection() {
         <Button
           variant="contained"
           endIcon={<ArrowForwardIcon />}
+          href="/contact"
           sx={{
             backgroundColor: '#c7ab54',
             color: '#fff',

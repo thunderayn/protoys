@@ -41,16 +41,16 @@ export default function ProductsFeaturesBar() {
               <div style={{ marginBottom: 12 }}>{ICONS[i]}</div>
               <h3
                 style={{
-                  fontSize: 11,
+                  fontSize: 14,
                   fontWeight: 700,
-                  color: '#111',
+                  color: '#1a1714',
                   letterSpacing: '0.05em',
                   margin: '0 0 8px',
                 }}
               >
                 {title}
               </h3>
-              <p style={{ fontSize: 12, color: '#888', lineHeight: 1.6, margin: 0 }}>{desc}</p>
+              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6, margin: 0 }}>{desc}</p>
             </div>
           ))}
         </div>
@@ -74,10 +74,10 @@ export default function ProductsFeaturesBar() {
               }}
             >
               <div style={{ marginBottom: 10 }}>{ICONS[i]}</div>
-              <h3 style={{ fontSize: 10, fontWeight: 700, color: '#111', margin: '0 0 6px' }}>
+              <h3 style={{ fontSize: 14, fontWeight: 700, color: '#1a1714', margin: '0 0 6px' }}>
                 {title}
               </h3>
-              <p style={{ fontSize: 11, color: '#888', lineHeight: 1.5, margin: 0 }}>{desc}</p>
+              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.5, margin: 0 }}>{desc}</p>
             </div>
           ))}
         </div>

@@ -124,7 +124,7 @@ export default function StrengthSection() {
                 </div>
                 <div
                   style={{
-                    fontSize: 13,
+                    fontSize: 14,
                     color: 'rgba(255,255,255,0.6)',
                     lineHeight: 1.5,
                     maxWidth: 120,

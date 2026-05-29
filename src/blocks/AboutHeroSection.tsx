@@ -12,17 +12,26 @@ export default function AboutHeroSection() {
     <section
       style={{
         position: 'relative',
-        minHeight: '62vh',
+        minHeight: '80vh',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
-        backgroundImage:
-          'url(https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory1_pn5awr.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 30%',
       }}
     >
-      <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,14,20,0.52)' }} />
+      <img
+        src="https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779880045/about-banner-fabric2_zl97an.png"
+        alt=""
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: '75% 80%',
+        }}
+      />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, transparent 80%)' }} />
 
       <div
         style={{
@@ -49,8 +58,8 @@ export default function AboutHeroSection() {
 
         <h1
           style={{
-            fontSize: 'clamp(32px, 4.5vw, 58px)',
-            fontWeight: 900,
+            fontSize: 'clamp(36px, 5vw, 64px)',
+            fontWeight: 600,
             color: '#fff',
             lineHeight: 1.08,
             letterSpacing: '-0.01em',

@@ -84,9 +84,9 @@ export default function ProductsCatalogSection() {
               <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 10 }} />
               <h2
                 style={{
-                  fontSize: 11,
+                  fontSize: 13,
                   fontWeight: 700,
-                  color: '#111',
+                  color: '#1a1714',
                   letterSpacing: '0.1em',
                   margin: 0,
                 }}
@@ -112,7 +112,7 @@ export default function ProductsCatalogSection() {
                         border: isActive ? '1px solid #e8d9bc' : '1px solid transparent',
                         borderRadius: 3,
                         cursor: 'pointer',
-                        fontSize: 13,
+                        fontSize: 14,
                         fontWeight: isActive ? 700 : 400,
                         color: isActive ? '#c7ab54' : '#444',
                         textAlign: 'left',
@@ -144,16 +144,16 @@ export default function ProductsCatalogSection() {
               <Inventory2OutlinedIcon sx={{ fontSize: 32, color: '#c7ab54', mb: 1.5 }} />
               <h3
                 style={{
-                  fontSize: 11,
+                  fontSize: 13,
                   fontWeight: 700,
-                  color: '#111',
+                  color: '#1a1714',
                   letterSpacing: '0.08em',
                   margin: '0 0 8px',
                 }}
               >
                 {t.oem.title}
               </h3>
-              <p style={{ fontSize: 12, color: '#888', lineHeight: 1.6, margin: '0 0 16px' }}>
+              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6, margin: '0 0 16px' }}>
                 {t.oem.desc}
               </p>
               <Button
@@ -236,7 +236,7 @@ export default function ProductsCatalogSection() {
                     border: `1px solid ${isActive ? '#c7ab54' : '#ddd'}`,
                     background: isActive ? '#c7ab54' : '#fff',
                     color: isActive ? '#fff' : '#555',
-                    fontSize: 12,
+                    fontSize: 14,
                     fontWeight: isActive ? 700 : 400,
                     whiteSpace: 'nowrap',
                     cursor: 'pointer',
@@ -272,7 +272,7 @@ export default function ProductsCatalogSection() {
                   padding: '40px 0',
                   textAlign: 'center',
                   color: '#aaa',
-                  fontSize: 13,
+                  fontSize: 14,
                 }}
               >
                 No products in this category yet.
@@ -337,9 +337,9 @@ function ProductCard({
       <div style={{ padding: '18px 16px 20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
         <h3
           style={{
-            fontSize: 12,
+            fontSize: 14,
             fontWeight: 700,
-            color: '#111',
+            color: '#1a1714',
             letterSpacing: '0.08em',
             margin: '0 0 6px',
           }}
@@ -349,7 +349,7 @@ function ProductCard({
         <div style={{ width: 24, height: 2, background: '#c7ab54', marginBottom: 10 }} />
         <p
           style={{
-            fontSize: 12,
+            fontSize: 14,
             color: '#888',
             lineHeight: 1.65,
             margin: 0,

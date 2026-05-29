@@ -61,14 +61,14 @@ export default function ContactInfoBar() {
                   fontSize: 11,
                   fontWeight: 700,
                   letterSpacing: '0.1em',
-                  color: '#111',
+                  color: '#1a1714',
                   margin: '0 0 6px',
                   textTransform: 'uppercase',
                 }}
               >
                 {item.label}
               </p>
-              <p style={{ fontSize: 13, color: '#666', margin: 0 }}>
+              <p style={{ fontSize: 14, color: '#666', margin: 0 }}>
                 {item.value}
               </p>
             </a>

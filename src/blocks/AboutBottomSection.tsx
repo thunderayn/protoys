@@ -6,19 +6,15 @@ import { aboutPageText } from '../i18n/translations/aboutPage'
 
 const BEAR_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon3_l74cyj.jpg'
 
-const certStyles: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  border: '1.5px solid #c8c8c8',
-  borderRadius: 4,
-  padding: '6px 14px',
-  fontSize: 13,
-  fontWeight: 700,
-  color: '#333',
-  letterSpacing: '0.04em',
-  minWidth: 54,
-}
+const CERTS = [
+  { label: 'ISO',        src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769205583/cert7_tayiok.png' },
+  { label: 'Walmart',    src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769205581/cert8_y7mjg3.png' },
+  { label: 'BSCI',       src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769205580/cert4_nx3rm9.png' },
+  { label: 'Recycled',   src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769205579/cert5_jfyfzf.png' },
+  { label: 'FSC',        src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1769205579/cert6_iccjux.png' },
+  { label: 'Recycled 2', src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1765112061/cert3_lvewgm.jpg' },
+  { label: 'Sedex',      src: 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1765112061/cert1_imtkwd.png' },
+]
 
 export default function AboutBottomSection() {
   const { lang } = useLanguage()
@@ -29,17 +25,17 @@ export default function AboutBottomSection() {
     <section style={{ marginTop: 0 }}>
       <div
         className="hidden md:grid"
-        style={{ gridTemplateColumns: '55% 45%' }}
+        style={{ gridTemplateColumns: '6.5fr 3.5fr' }}
       >
         {/* Left: Certifications */}
-        <div style={{ padding: '72px 80px 72px 80px', background: '#fff', borderTop: '1px solid #f0f0f0' }}>
+        <div style={{ padding: '72px 80px', background: '#f8f8f6', borderTop: '1px solid #f0f0f0' }}>
           <div style={{ maxWidth: 480 }}>
             <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 14 }} />
             <h2
               style={{
                 fontSize: 18,
                 fontWeight: 700,
-                color: '#111',
+                color: '#1a1714',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
                 margin: '0 0 14px',
@@ -50,11 +46,11 @@ export default function AboutBottomSection() {
             <p style={{ fontSize: 14, color: '#666', lineHeight: 1.75, margin: '0 0 36px' }}>
               {certsT.body}
             </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
-              {certsT.items.map((cert) => (
-                <span key={cert} style={certStyles}>{cert}</span>
-              ))}
-            </div>
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'center' }}>
+            {CERTS.map((cert) => (
+              <img key={cert.src} src={cert.src} alt={cert.label} style={{ height: 60, width: 'auto', objectFit: 'contain', flexShrink: 0 }} />
+            ))}
           </div>
         </div>
 
@@ -105,7 +101,7 @@ export default function AboutBottomSection() {
               style={{
                 fontSize: 'clamp(22px, 2.2vw, 30px)',
                 fontWeight: 900,
-                color: '#111',
+                color: '#1a1714',
                 lineHeight: 1.15,
                 letterSpacing: '-0.01em',
                 margin: '0 0 16px',
@@ -146,20 +142,20 @@ export default function AboutBottomSection() {
 
       {/* Mobile layout */}
       <div className="md:hidden">
-        <div style={{ padding: '56px 24px', background: '#fff', borderTop: '1px solid #f0f0f0' }}>
+        <div style={{ padding: '56px 24px', background: '#f8f8f6', borderTop: '1px solid #f0f0f0' }}>
           <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 12 }} />
-          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#111', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 12px' }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1a1714', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 12px' }}>
             {certsT.eyebrow}
           </h2>
           <p style={{ fontSize: 14, color: '#666', lineHeight: 1.75, margin: '0 0 28px' }}>{certsT.body}</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-            {certsT.items.map((cert) => (
-              <span key={cert} style={certStyles}>{cert}</span>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center' }}>
+            {CERTS.map((cert) => (
+              <img key={cert.src} src={cert.src} alt={cert.label} style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
             ))}
           </div>
         </div>
         <div style={{ background: '#f0e8d8', padding: '56px 24px', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 26, fontWeight: 900, color: '#111', lineHeight: 1.15, margin: '0 0 14px' }}>
+          <h2 style={{ fontSize: 26, fontWeight: 900, color: '#1a1714', lineHeight: 1.15, margin: '0 0 14px' }}>
             {ctaT.heading.map((line, i) => (
               <Fragment key={i}>{line}{i < ctaT.heading.length - 1 && <br />}</Fragment>
             ))}
