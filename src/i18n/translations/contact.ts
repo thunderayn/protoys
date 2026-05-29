@@ -7,9 +7,9 @@ export const contactPageText = {
     },
     infoBar: [
       { label: 'EMAIL US',  value: 'info@protoys.com',   href: 'mailto:info@protoys.com' },
-      { label: 'INSTAGRAM', value: '@protoys',            href: 'https://instagram.com/protoys' },
-      { label: 'TIKTOK',    value: '@protoys',            href: 'https://tiktok.com/@protoys' },
-      { label: 'YOUTUBE',   value: 'Pro Toys Official',  href: 'https://youtube.com/@protoys' },
+      { label: 'INSTAGRAM', value: 'Coming Soon',           href: undefined },
+      { label: 'TIKTOK',    value: 'Coming Soon',           href: undefined },
+      { label: 'YOUTUBE',   value: 'Coming Soon',         href: undefined },
     ],
     form: {
       heading: 'SEND US A MESSAGE',
@@ -44,9 +44,9 @@ export const contactPageText = {
     },
     infoBar: [
       { label: '电子邮件',  value: 'info@protoys.com',  href: 'mailto:info@protoys.com' },
-      { label: 'INSTAGRAM', value: '@protoys',           href: 'https://instagram.com/protoys' },
-      { label: 'TIKTOK',    value: '@protoys',           href: 'https://tiktok.com/@protoys' },
-      { label: 'YOUTUBE',   value: 'Pro Toys Official', href: 'https://youtube.com/@protoys' },
+      { label: 'INSTAGRAM', value: 'Coming Soon',          href: undefined },
+      { label: 'TIKTOK',    value: 'Coming Soon',          href: undefined },
+      { label: 'YOUTUBE',   value: 'Coming Soon',        href: undefined },
     ],
     form: {
       heading: '发送消息',

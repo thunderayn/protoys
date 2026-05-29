@@ -8,8 +8,10 @@ export default function ContactPage() {
     <>
       <ContactHeroSection />
       <ContactInfoBar />
+      
       <ContactFormSection />
       <ContactBottom />
+      
     </>
   )
 }
