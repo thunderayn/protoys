@@ -60,7 +60,7 @@ export default function Navbar() {
               end={path === '/'}
               className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
               style={({ isActive }) => ({
-                fontSize: 15,
+                fontSize: 14,
                 fontWeight: 700,
                 letterSpacing: '0.06em',
                 textDecoration: 'none',
@@ -88,7 +88,7 @@ export default function Navbar() {
               background: 'none',
               border: 'none',
               cursor: 'pointer',
-              fontSize: 15,
+              fontSize: 14,
               fontWeight: 600,
               color: '#555',
               padding: '4px 6px',
