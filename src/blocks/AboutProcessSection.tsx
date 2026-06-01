@@ -5,10 +5,10 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { aboutPageText } from '../i18n/translations/aboutPage'
 
 const processImages = [
-  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory1_pn5awr.png',
+  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory2_sgj2of.png',
   'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory3_zquooi.png',
   'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265058/factory8_wh609y.png',
-  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory2_sgj2of.png',
+  'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory1_pn5awr.png',
   'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265057/factory6_jhayok.png',
   'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265056/factory4_jrcxct.png',
 ]
@@ -59,8 +59,10 @@ export default function AboutProcessSection() {
   const row3Imgs = [processImages[4], processImages[5]]
 
   return (
-    <section style={{ background: '#fff', padding: '100px 0', borderTop: '1px solid #f2f2f2' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 64px' }}>
+    <section style={{ background: '#fff', borderTop: '1px solid #f2f2f2' }}>
+      <style>{`@media (max-width: 767px) { .process-section { padding: 48px 0 !important; } .process-inner { padding: 0 20px !important; } }`}</style>
+      <div className="process-section" style={{ padding: '100px 0' }}>
+      <div className="process-inner" style={{ maxWidth: 1280, margin: '0 auto', padding: '0 64px' }}>
 
         {/* Title */}
         <div style={{ marginBottom: 48 }}>
@@ -137,6 +139,7 @@ export default function AboutProcessSection() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   )
