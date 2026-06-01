@@ -53,7 +53,7 @@ export default function ContactHeroSection() {
           maxWidth: 1280,
           margin: '0 auto',
           width: '100%',
-          padding: '80px 80px',
+          padding: '80px clamp(20px, 6vw, 80px)',
         }}
       >
         <h1

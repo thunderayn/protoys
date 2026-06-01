@@ -15,7 +15,7 @@ export default function AboutWhySection() {
 
   return (
     <section style={{ background: '#fff', padding: '80px 0 0' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
 
         {/* Desktop layout */}
         <div

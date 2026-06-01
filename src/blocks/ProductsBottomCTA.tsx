@@ -102,7 +102,7 @@ export default function ProductsBottomCTA() {
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }}
           />
         </div>
-        <div style={{ padding: '48px 24px', background: '#faf8f5', textAlign: 'center', borderTop: '1px solid #f0f0f0' }}>
+        <div style={{ padding: '48px 48px', background: '#faf8f5', textAlign: 'center', borderTop: '1px solid #f0f0f0' }}>
           <h2 style={{ fontSize: 26, fontWeight: 900, color: '#1a1714', lineHeight: 1.15, margin: '0 0 14px' }}>
             {t.heading.map((line, i) => (
               <Fragment key={i}>

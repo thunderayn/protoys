@@ -18,7 +18,7 @@ export default function ExportMarketsSection() {
   const t = text[lang]
 
   return (
-    <section style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '56px 24px' }}>
+    <section style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '56px 48px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <p style={{ fontSize: 11, fontWeight: 600, color: '#c7ab54', letterSpacing: '0.16em', textTransform: 'uppercase', margin: '0 0 8px' }}>
           {t.eyebrow}

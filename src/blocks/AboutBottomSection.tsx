@@ -142,7 +142,7 @@ export default function AboutBottomSection() {
 
       {/* Mobile layout */}
       <div className="md:hidden">
-        <div style={{ padding: '56px 24px', background: '#f8f8f6', borderTop: '1px solid #f0f0f0' }}>
+        <div style={{ padding: '56px 48px', background: '#f8f8f6', borderTop: '1px solid #f0f0f0' }}>
           <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 12 }} />
           <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1a1714', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 12px' }}>
             {certsT.eyebrow}
@@ -154,7 +154,7 @@ export default function AboutBottomSection() {
             ))}
           </div>
         </div>
-        <div style={{ background: '#f0e8d8', padding: '56px 24px', textAlign: 'center' }}>
+        <div style={{ background: '#f0e8d8', padding: '56px 48px', textAlign: 'center' }}>
           <h2 style={{ fontSize: 26, fontWeight: 900, color: '#1a1714', lineHeight: 1.15, margin: '0 0 14px' }}>
             {ctaT.heading.map((line, i) => (
               <Fragment key={i}>{line}{i < ctaT.heading.length - 1 && <br />}</Fragment>

@@ -39,7 +39,7 @@ export default function Footer() {
         style={{
           maxWidth: 1280,
           margin: '0 auto',
-          padding: '56px 24px 40px',
+          padding: '56px 48px 40px',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '40px 48px',
@@ -179,7 +179,7 @@ export default function Footer() {
       <div
         style={{
           borderTop: '1px solid #ececec',
-          padding: '16px 24px',
+          padding: '16px 48px',
           textAlign: 'center',
         }}
       >

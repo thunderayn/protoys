@@ -20,7 +20,7 @@ export default function FeaturesStrip() {
 
   return (
     <section style={{ background: '#fff', borderBottom: '1px solid #f0f0f0' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
 
         {/* Desktop: strict 5-column row with dividers */}
         <div
@@ -52,7 +52,7 @@ export default function FeaturesStrip() {
               >
                 {title}
               </h3>
-              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6, margin: 0, whiteSpace: 'pre-line' }}>
                 {desc}
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function FeaturesStrip() {
               <h3 style={{ fontSize: 14, fontWeight: 500, color: '#1a1714', letterSpacing: '0.06em', margin: '0 0 6px' }}>
                 {title}
               </h3>
-              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.5, margin: 0 }}>
+              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.5, margin: 0, whiteSpace: 'pre-line' }}>
                 {desc}
               </p>
             </div>

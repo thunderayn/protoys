@@ -40,7 +40,7 @@ export default function AboutHeroSection() {
           maxWidth: 1280,
           margin: '0 auto',
           width: '100%',
-          padding: '80px 80px',
+          padding: '80px clamp(20px, 6vw, 80px)',
         }}
       >
         <p
@@ -58,7 +58,7 @@ export default function AboutHeroSection() {
 
         <h1
           style={{
-            fontSize: 'clamp(36px, 5vw, 64px)',
+            fontSize: 'clamp(30px, 4.5vw, 60px)',
             fontWeight: 600,
             color: '#fff',
             lineHeight: 1.08,

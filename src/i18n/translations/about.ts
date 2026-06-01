@@ -1,12 +1,12 @@
 export const aboutText = {
   en: {
     heading: 'ABOUT US',
-    body: 'Pro Plush Toy is a professional plush toy OEM factory with years of industry experience. We provide high-quality plush toy customization services to customers around the world. Our mission is to bring your ideas to life with professional service and excellent quality.',
+    body: 'Pro Toys is committed to quality as our foundation and customer needs as our guide. We continuously refine our product design, production management, quality control, and export service systems — building strong capabilities in plush toy manufacturing and global market development.',
     cta: 'LEARN MORE',
   },
   cn: {
     heading: '关于我们',
-    body: 'Pro Plush Toy是一家专业的毛绒玩具OEM工厂，拥有多年行业经验。我们为全球客户提供高品质的毛绒玩具定制服务，致力于以专业的服务和卓越的品质将您的创意变为现实。',
+    body: '普罗玩具坚持以产品质量为基础，以客户需求为导向，持续完善产品设计、生产管理、质量控制和外贸服务体系，具备较强的毛绒玩具生产供应能力和市场开拓能力。',
     cta: '了解更多',
   },
 }

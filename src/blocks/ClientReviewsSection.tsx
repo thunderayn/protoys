@@ -43,7 +43,7 @@ export default function ClientReviewsSection() {
   return (
     <section style={{ background: '#fff', borderTop: '1px solid #f0f0f0' }}>
       {/* Testimonials */}
-      <div style={{ padding: '64px 24px' }}>
+      <div style={{ padding: '64px 48px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <p style={{ fontSize: 11, fontWeight: 600, color: '#c7ab54', letterSpacing: '0.16em', textTransform: 'uppercase', margin: '0 0 8px' }}>
             {t.eyebrow}

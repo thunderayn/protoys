@@ -29,7 +29,7 @@ export default function ContactFormSection() {
   }
 
   return (
-    <section style={{ padding: '72px 24px', background: '#fff' }}>
+    <section style={{ padding: '72px 48px', background: '#fff' }}>
       <div
         style={{
           maxWidth: 1280,

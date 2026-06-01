@@ -16,7 +16,7 @@ export default function CertificationSection() {
   const t = aboutPageText[lang].certs
 
   return (
-    <section style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '72px 24px' }}>
+    <section style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '72px 48px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 14 }} />
         <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1a1714', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 14px' }}>

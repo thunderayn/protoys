@@ -48,7 +48,7 @@ export default function OemOdmCapabilitiesSection() {
   const t = content[lang]
 
   return (
-    <section style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '64px 24px' }}>
+    <section style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '64px 48px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 48, marginBottom: 40 }}>
 

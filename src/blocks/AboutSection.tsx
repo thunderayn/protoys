@@ -31,7 +31,7 @@ export default function AboutSection() {
 
   return (
     <section style={{ background: '#f8f8f6' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
 
         {/* Desktop: split view */}
         <div

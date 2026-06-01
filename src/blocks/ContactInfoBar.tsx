@@ -20,7 +20,7 @@ export default function ContactInfoBar() {
   const t = contactPageText[lang].infoBar
 
   return (
-    <section style={{ padding: '0 24px', background: '#fff' }}>
+    <section style={{ padding: '0 48px', background: '#fff' }}>
       <div
         style={{
           maxWidth: 1280,

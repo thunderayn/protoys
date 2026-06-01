@@ -24,7 +24,7 @@ export default function AboutIntroSection() {
   const t = content[lang]
 
   return (
-    <div style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '72px 24px', textAlign: 'center' }}>
+    <div style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '72px 48px', textAlign: 'center' }}>
       <div style={{ maxWidth: 800, margin: '0 auto' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, marginBottom: 16 }}>
           <div style={{ width: 28, height: 2, background: '#c7ab54', flexShrink: 0 }} />

@@ -72,7 +72,7 @@ export default function AboutStatsBar() {
 
   return (
     <section style={{ background: '#fff' }} ref={ref}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
 
         {/* Desktop: 6-column row */}
         <div

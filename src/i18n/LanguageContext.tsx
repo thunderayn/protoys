@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react'
 
 export type Lang = 'en' | 'cn'
 
@@ -15,13 +15,17 @@ const LanguageContext = createContext<LanguageContextType>({
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
     const saved = localStorage.getItem('protoys-lang') as Lang
-    return saved === 'cn' ? 'cn' : 'en'
+    return saved === 'cn' || saved === 'en' ? saved : 'cn'
   })
 
   const setLang = (newLang: Lang) => {
     setLangState(newLang)
     localStorage.setItem('protoys-lang', newLang)
   }
+
+  useEffect(() => {
+    document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en'
+  }, [lang])
 
   return (
     <LanguageContext.Provider value={{ lang, setLang }}>

@@ -32,12 +32,12 @@ export default function OemOdmHeroSection() {
       />
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, transparent 80%)' }} />
 
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 1280, margin: '0 auto', width: '100%', padding: '80px 80px' }}>
+      <div style={{ position: 'relative', zIndex: 1, maxWidth: 1280, margin: '0 auto', width: '100%', padding: '80px clamp(20px, 6vw, 80px)' }}>
         <p style={{ fontSize: 12, fontWeight: 600, color: '#c7ab54', letterSpacing: '0.18em', margin: '0 0 14px', textTransform: 'uppercase' }}>
           {t.eyebrow}
         </p>
 
-        <h1 style={{ fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 600, color: '#fff', lineHeight: 1.08, letterSpacing: '-0.01em', margin: '0 0 20px', maxWidth: 560, textTransform: 'uppercase' }}>
+        <h1 style={{ fontSize: 'clamp(30px, 4.5vw, 60px)', fontWeight: 600, color: '#fff', lineHeight: 1.08, letterSpacing: '-0.01em', margin: '0 0 20px', maxWidth: 560, textTransform: 'uppercase' }}>
           {t.heading.map((line, i) => (
             <Fragment key={i}>
               {line}

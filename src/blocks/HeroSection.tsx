@@ -70,12 +70,12 @@ export default function HeroSection() {
           maxWidth: 1280,
           margin: '0 auto',
           width: '100%',
-          padding: '64px 80px 64px 36px',
+          padding: '64px clamp(20px, 6vw, 80px) 64px clamp(48px, 10vw, 160px)',
         }}
       >
         <h1
           style={{
-            fontSize: 'clamp(36px, 5vw, 64px)',
+            fontSize: 'clamp(30px, 4.5vw, 60px)',
             fontWeight: 600,
             color: '#fff',
             lineHeight: 1.05,
@@ -94,10 +94,10 @@ export default function HeroSection() {
 
         <div style={{ width: 48, height: 2, background: '#c7ab54', marginBottom: 20 }} />
 
-        <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 16, margin: '0 0 6px' }}>
+        <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 14, margin: '0 0 6px' }}>
           {t.sub1}
         </p>
-        <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 16, margin: '0 0 40px' }}>
+        <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 14, margin: '0 0 40px' }}>
           {t.sub2}
         </p>
 

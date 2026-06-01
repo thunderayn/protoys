@@ -87,7 +87,7 @@ export default function ContactBottom() {
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
           />
         </div>
-        <div style={{ padding: '48px 24px', textAlign: 'center' }}>
+        <div style={{ padding: '48px 48px', textAlign: 'center' }}>
           <h2 style={{ fontSize: 28, fontWeight: 900, color: '#1a1714', lineHeight: 1.15, margin: '0 0 14px' }}>
             {t.heading.map((line, i) => (
               <Fragment key={i}>{line}{i < t.heading.length - 1 && <br />}</Fragment>

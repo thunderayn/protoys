@@ -65,7 +65,7 @@ export default function StrengthSection() {
       ref={sectionRef}
       style={{
         position: 'relative',
-        padding: '80px 24px',
+        padding: '80px 0',
         backgroundImage:
           'url(https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265055/factory1_pn5awr.png)',
         backgroundSize: 'cover',
@@ -74,7 +74,7 @@ export default function StrengthSection() {
     >
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(20,20,28,0.78)' }} />
 
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 1280, margin: '0 auto' }}>
+      <div style={{ position: 'relative', zIndex: 1, maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
         {/* Title */}
         <div style={{ textAlign: 'center', marginBottom: 64 }}>
           <div style={{ width: 32, height: 2, background: '#c7ab54', margin: '0 auto 16px' }} />
