@@ -33,14 +33,14 @@ export const aboutPageText = {
       },
     },
     process: {
-      eyebrow: 'PRODUCTION PROCESS',
+      eyebrow: 'FACTORY INTERIOR',
       steps: [
-        { num: '01', title: 'DESIGN',            desc: 'Professional design team to create products' },
-        { num: '02', title: 'SAMPLE',            desc: 'Making samples and confirming details' },
-        { num: '03', title: 'MATERIAL',          desc: 'Carefully selected high quality materials' },
-        { num: '04', title: 'PRODUCTION',        desc: 'Advanced equipment and skilled workmanship' },
-        { num: '05', title: 'QC INSPECTION',     desc: 'Multi-step quality inspection' },
-        { num: '06', title: 'PACKING & SHIPPING',desc: 'Safe packaging and on-time delivery' },
+        { num: '01', title: 'CUTTING',           desc: 'Professional design team to create products' },
+        { num: '02', title: 'NEEDLE DETECTION',  desc: 'Making samples and confirming details' },
+        { num: '03', title: 'MATERIAL WAREHOUSE',desc: 'Carefully selected high quality materials' },
+        { num: '04', title: 'SEWING',            desc: 'Advanced equipment and skilled workmanship' },
+        { num: '05', title: 'STUFFING',          desc: 'Multi-step quality inspection' },
+        { num: '06', title: 'FINISHED GOODS',    desc: 'Safe packaging and on-time delivery' },
       ],
     },
     certs: {
@@ -88,14 +88,14 @@ export const aboutPageText = {
       },
     },
     process: {
-      eyebrow: '生产流程',
+      eyebrow: '工厂内部展示',
       steps: [
-        { num: '01', title: '设计',   desc: '专业设计团队打造产品' },
-        { num: '02', title: '打样',   desc: '制作样品并确认细节' },
-        { num: '03', title: '材料',   desc: '精心挑选高品质材料' },
-        { num: '04', title: '生产',   desc: '先进设备与精湛工艺' },
-        { num: '05', title: '质检',   desc: '多道质量检验工序' },
-        { num: '06', title: '包装出货',desc: '安全包装，准时交货' },
+        { num: '01', title: '裁剪部',   desc: '专业设计团队打造产品' },
+        { num: '02', title: '检针部',   desc: '制作样品并确认细节' },
+        { num: '03', title: '材料仓库', desc: '精心挑选高品质材料' },
+        { num: '04', title: '缝纫部',   desc: '先进设备与精湛工艺' },
+        { num: '05', title: '充棉部',   desc: '多道质量检验工序' },
+        { num: '06', title: '成品仓库', desc: '安全包装，准时交货' },
       ],
     },
     certs: {

@@ -13,11 +13,11 @@ const processImages = [
   'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779265056/factory4_jrcxct.png',
 ]
  
-const STEP_COLS = '1fr 32px 1fr 32px 1fr'
+const STEP_COLS = '1fr 48px 1fr'
 
 function StepCard({ step, imgSrc }: { step: { num: string; title: string; desc: string }; imgSrc: string }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
       <div style={{ fontSize: 20, fontWeight: 800, color: '#c7ab54', lineHeight: 1, letterSpacing: '-0.01em' }}>
         {step.num}
       </div>
@@ -27,7 +27,7 @@ function StepCard({ step, imgSrc }: { step: { num: string; title: string; desc: 
           alt={step.title}
           style={{
             width: '100%',
-            aspectRatio: '4/3',
+            aspectRatio: '16/9',
             objectFit: 'cover',
             display: 'block',
             transition: 'transform 0.4s ease',
@@ -36,10 +36,10 @@ function StepCard({ step, imgSrc }: { step: { num: string; title: string; desc: 
           onMouseLeave={(e) => ((e.target as HTMLImageElement).style.transform = 'scale(1)')}
         />
       </div>
-      <div style={{ fontSize: 11, fontWeight: 800, color: '#1a1714', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+      <div style={{ fontSize: 14, fontWeight: 800, color: '#1a1714', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
         {step.title}
       </div>
-      <div style={{ fontSize: 11, color: '#888', lineHeight: 1.55 }}>
+      <div style={{ fontSize: 14, color: '#888', lineHeight: 1.6 }}>
         {step.desc}
       </div>
     </div>
@@ -50,15 +50,17 @@ export default function AboutProcessSection() {
   const { lang } = useLanguage()
   const t = aboutPageText[lang].process
 
-  // Clockwise: top row 01→02→03, bottom row 06←05←04
-  const top    = t.steps.slice(0, 3)
-  const bottom = [t.steps[5], t.steps[4], t.steps[3]]
-  const topImgs    = processImages.slice(0, 3)
-  const bottomImgs = [processImages[5], processImages[4], processImages[3]]
+  // Snake: row1 01→02, row2 04←03, row3 05→06
+  const row1 = [t.steps[0], t.steps[1]]
+  const row2 = [t.steps[3], t.steps[2]]
+  const row3 = [t.steps[4], t.steps[5]]
+  const row1Imgs = [processImages[0], processImages[1]]
+  const row2Imgs = [processImages[3], processImages[2]]
+  const row3Imgs = [processImages[4], processImages[5]]
 
   return (
-    <section style={{ background: '#fff', padding: '80px 0 80px', borderTop: '1px solid #f2f2f2' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 40px' }}>
+    <section style={{ background: '#fff', padding: '100px 0', borderTop: '1px solid #f2f2f2' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 64px' }}>
 
         {/* Title */}
         <div style={{ marginBottom: 48 }}>
@@ -68,54 +70,70 @@ export default function AboutProcessSection() {
           </h2>
         </div>
 
-        {/* ── Desktop: clockwise 2-row layout ── */}
+        {/* ── Desktop: snake layout 2 per row ── */}
         <div className="hidden md:block">
 
-          {/* Row 1: 01 → 02 → 03 */}
+          {/* Row 1: 01 → 02 */}
           <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, alignItems: 'center' }}>
-            <StepCard step={top[0]} imgSrc={topImgs[0]} />
+            <StepCard step={row1[0]} imgSrc={row1Imgs[0]} />
             <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
               <ArrowForwardIcon sx={{ fontSize: 16 }} />
             </div>
-            <StepCard step={top[1]} imgSrc={topImgs[1]} />
-            <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
-              <ArrowForwardIcon sx={{ fontSize: 16 }} />
-            </div>
-            <StepCard step={top[2]} imgSrc={topImgs[2]} />
+            <StepCard step={row1[1]} imgSrc={row1Imgs[1]} />
           </div>
 
-          {/* Corner ↓ arrow — aligned to last column (step 03 → step 04 corner) */}
-          <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, margin: '16px 0' }}>
-            <div /><div /><div /><div />
+          {/* Corner ↓ at right */}
+          <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, margin: '28px 0' }}>
+            <div /><div />
             <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
               <ArrowDownwardIcon sx={{ fontSize: 16 }} />
             </div>
           </div>
 
-          {/* Row 2: 06 ← 05 ← 04 */}
+          {/* Row 2: 04 ← 03 */}
           <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, alignItems: 'center' }}>
-            <StepCard step={bottom[0]} imgSrc={bottomImgs[0]} />
+            <StepCard step={row2[0]} imgSrc={row2Imgs[0]} />
             <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
               <ArrowBackIcon sx={{ fontSize: 16 }} />
             </div>
-            <StepCard step={bottom[1]} imgSrc={bottomImgs[1]} />
+            <StepCard step={row2[1]} imgSrc={row2Imgs[1]} />
+          </div>
+
+          {/* Corner ↓ at left */}
+          <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, margin: '28px 0' }}>
             <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
-              <ArrowBackIcon sx={{ fontSize: 16 }} />
+              <ArrowDownwardIcon sx={{ fontSize: 16 }} />
             </div>
-            <StepCard step={bottom[2]} imgSrc={bottomImgs[2]} />
+            <div /><div />
+          </div>
+
+          {/* Row 3: 05 → 06 */}
+          <div style={{ display: 'grid', gridTemplateColumns: STEP_COLS, alignItems: 'center' }}>
+            <StepCard step={row3[0]} imgSrc={row3Imgs[0]} />
+            <div style={{ display: 'flex', justifyContent: 'center', color: '#c7ab54' }}>
+              <ArrowForwardIcon sx={{ fontSize: 16 }} />
+            </div>
+            <StepCard step={row3[1]} imgSrc={row3Imgs[1]} />
           </div>
         </div>
 
-        {/* ── Mobile: 2-col grid with image ── */}
-        <div className="md:hidden grid grid-cols-2" style={{ gap: '28px 16px' }}>
+        {/* ── Mobile: single column with arrow between steps ── */}
+        <div className="md:hidden flex flex-col">
           {t.steps.map((step, i) => (
-            <div key={step.num} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <div style={{ fontSize: 18, fontWeight: 800, color: '#c7ab54', lineHeight: 1 }}>{step.num}</div>
-              <div style={{ overflow: 'hidden', borderRadius: 2 }}>
-                <img src={processImages[i]} alt={step.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }} />
+            <div key={step.num}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div style={{ fontSize: 18, fontWeight: 800, color: '#c7ab54', lineHeight: 1 }}>{step.num}</div>
+                <div style={{ overflow: 'hidden', borderRadius: 2 }}>
+                  <img src={processImages[i]} alt={step.title} style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: '#1a1714', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{step.title}</div>
+                <div style={{ fontSize: 13, color: '#888', lineHeight: 1.55 }}>{step.desc}</div>
               </div>
-              <div style={{ fontSize: 11, fontWeight: 800, color: '#1a1714', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{step.title}</div>
-              <div style={{ fontSize: 11, color: '#888', lineHeight: 1.5 }}>{step.desc}</div>
+              {i < t.steps.length - 1 && (
+                <div style={{ display: 'flex', justifyContent: 'center', padding: '20px 0', color: '#c7ab54' }}>
+                  <ArrowDownwardIcon sx={{ fontSize: 20 }} />
+                </div>
+              )}
             </div>
           ))}
         </div>
