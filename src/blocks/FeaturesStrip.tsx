@@ -20,7 +20,8 @@ export default function FeaturesStrip() {
 
   return (
     <section style={{ background: '#fff', borderBottom: '1px solid #f0f0f0' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+      <style>{`@media (max-width: 767px) { .features-inner { padding: 0 20px !important; } }`}</style>
+      <div className="features-inner" style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
 
         {/* Desktop: strict 5-column row with dividers */}
         <div

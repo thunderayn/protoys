@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import EmailIcon from '@mui/icons-material/Email'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import YouTubeIcon from '@mui/icons-material/YouTube'
 import CheckIcon from '@mui/icons-material/Check'
 import SvgIcon from '@mui/material/SvgIcon'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -48,17 +46,16 @@ export default function Footer() {
         {/* Brand column */}
         <div>
           <div style={{ marginBottom: 16 }}>
-            <div style={{ fontSize: 24, fontWeight: 900, color: '#c7ab54', lineHeight: 1.1 }}>
-              PRO
-            </div>
-            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', color: '#555' }}>
-              PLUSH TOY
-            </div>
+            <img
+              src="/Logo_nobackground.png"
+              alt="Pro Toys logo"
+              style={{ height: 100,width: 'auto', display: 'block' }}
+            />
           </div>
           <p style={{ fontSize: 14, color: '#2e2b27', fontWeight: 600, margin: '0 0 8px' }}>
             {t.brand.tagline}
           </p>
-          <p style={{ fontSize: 14, color: '#888', lineHeight: 1.7, margin: 0, maxWidth: 280 }}>
+          <p style={{ fontSize: 14, color: '#888', lineHeight: 1.7, margin: 0, maxWidth: 280, whiteSpace: 'pre-line' }}>
             {t.brand.desc}
           </p>
         </div>
@@ -145,14 +142,14 @@ export default function Footer() {
               </span>
             </button>
 
-            {[
-              { href: 'https://instagram.com/protoys', Icon: InstagramIcon, label: 'Instagram' },
-              { href: 'https://tiktok.com/@protoys',   Icon: TikTokIcon,    label: 'TikTok'    },
-              { href: 'https://youtube.com/@protoys',  Icon: YouTubeIcon,   label: 'YouTube'   },
-            ].map(({ href, Icon, label }) => (
+            {t.contact.douyin ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, color: '#666' }}>
+                <TikTokIcon sx={{ fontSize: 16, color: '#c7ab54', flexShrink: 0 }} />
+                {t.contact.douyin}
+              </div>
+            ) : (
               <a
-                key={label}
-                href={href}
+                href="https://tiktok.com/@protoys"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -167,10 +164,10 @@ export default function Footer() {
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = '#c7ab54' }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = '#666' }}
               >
-                <Icon sx={{ fontSize: 16, color: '#c7ab54', flexShrink: 0 }} />
-                {label}
+                <TikTokIcon sx={{ fontSize: 16, color: '#c7ab54', flexShrink: 0 }} />
+                TikTok
               </a>
-            ))}
+            )}
           </div>
         </div>
       </div>

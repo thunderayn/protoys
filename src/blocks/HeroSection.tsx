@@ -70,7 +70,7 @@ export default function HeroSection() {
           maxWidth: 1280,
           margin: '0 auto',
           width: '100%',
-          padding: '64px clamp(20px, 6vw, 80px) 64px clamp(48px, 10vw, 160px)',
+          padding: '64px clamp(20px, 6vw, 80px)',
         }}
       >
         <h1

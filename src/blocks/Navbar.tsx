@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import Drawer from '@mui/material/Drawer'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
@@ -13,9 +13,17 @@ import { navbarText } from '../i18n/translations/navbar'
 
 const navPaths = ['/', '/about', '/oem-odm', '/products', '/news', '/contact']
 
+const pathAliases: Record<string, string[]> = {
+  '/oem-odm': ['/custom'],
+}
+
 export default function Navbar() {
   const { lang, setLang } = useLanguage()
   const t = navbarText[lang]
+  const { pathname } = useLocation()
+
+  const isNavActive = (path: string, isActive: boolean) =>
+    isActive || (pathAliases[path]?.includes(pathname) ?? false)
 
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [langAnchor, setLangAnchor] = useState<null | HTMLElement>(null)
@@ -30,7 +38,9 @@ export default function Navbar() {
         boxShadow: '0 1px 4px rgba(0,0,0,0.07)',
       }}
     >
+      <style>{`@media (max-width: 767px) { .navbar-inner { padding: 0 20px !important; } }`}</style>
       <div
+        className="navbar-inner"
         style={{
           maxWidth: 1280,
           margin: '0 auto',
@@ -43,12 +53,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <NavLink to="/" style={{ textDecoration: 'none', lineHeight: 1 }}>
-          <div style={{ fontSize: 22, fontWeight: 900, color: '#c7ab54', lineHeight: 1.1 }}>
-            PRO
-          </div>
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', color: '#1a1714' }}>
-            PLUSH TOY
-          </div>
+          <img src="/Logo_notext_transparent.png" alt="Pro Plush Toy" style={{ height: 44, width: 'auto', display: 'block' }} />
         </NavLink>
 
         {/* Desktop nav links */}
@@ -58,13 +63,13 @@ export default function Navbar() {
               key={path}
               to={path}
               end={path === '/'}
-              className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+              className={({ isActive }) => `nav-link${isNavActive(path, isActive) ? ' active' : ''}`}
               style={({ isActive }) => ({
                 fontSize: 14,
-                fontWeight: 700,
+                fontWeight: 600,
                 letterSpacing: '0.06em',
                 textDecoration: 'none',
-                color: isActive ? '#c7ab54' : '#2e2b27',
+                color: isNavActive(path, isActive) ? '#c7ab54' : '#2e2b27',
                 transition: 'color 0.2s',
                 whiteSpace: 'nowrap',
               })}
@@ -137,12 +142,7 @@ export default function Navbar() {
       <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <div style={{ width: 256, padding: 20 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24 }}>
-            <div>
-              <div style={{ fontSize: 20, fontWeight: 900, color: '#c7ab54' }}>PRO</div>
-              <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', color: '#1a1714' }}>
-                PLUSH TOY
-              </div>
-            </div>
+            <img src="/Logo_notext_transparent.png" alt="Pro Plush Toy" style={{ height: 40, width: 'auto', display: 'block' }} />
             <IconButton size="small" onClick={() => setDrawerOpen(false)}>
               <CloseIcon />
             </IconButton>
@@ -162,7 +162,7 @@ export default function Navbar() {
                   fontSize: 14,
                   fontWeight: 700,
                   letterSpacing: '0.04em',
-                  color: isActive ? '#c7ab54' : '#2e2b27',
+                  color: isNavActive(path, isActive) ? '#c7ab54' : '#2e2b27',
                 })}
               >
                 {t.links[i]}

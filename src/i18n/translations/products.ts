@@ -1,12 +1,12 @@
 export const productsText = {
   en: {
     heading: 'OUR PRODUCTS',
-    sub: 'We provide a wide range of plush toys to meet different market needs.',
+    sub: 'From creative design to mass production, crafting high-quality plush toy products for your brand.',
     cta: 'VIEW MORE',
   },
   cn: {
     heading: '我们的产品',
-    sub: '我们提供种类丰富的毛绒玩具，满足不同市场需求。',
+    sub: '从创意设计到批量生产，为您的品牌打造高品质毛绒玩具产品。',
     cta: '查看更多',
   },
 }

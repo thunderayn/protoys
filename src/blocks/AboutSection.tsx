@@ -31,7 +31,8 @@ export default function AboutSection() {
 
   return (
     <section style={{ background: '#f8f8f6' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+      <style>{`@media (max-width: 767px) { .about-container { padding-left: 0 !important; } }`}</style>
+      <div className="about-container" style={{ maxWidth: 1280, margin: '0 auto', paddingLeft: 48 }}>
 
         {/* Desktop: split view */}
         <div
@@ -43,7 +44,7 @@ export default function AboutSection() {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              padding: '72px 60px',
+              padding: '72px 60px 72px 48px',
               background: '#f8f8f6',
             }}
           >
@@ -98,7 +99,7 @@ export default function AboutSection() {
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
           </div>
-          <div style={{ padding: '48px 24px' }}>
+          <div style={{ padding: '48px 20px' }}>
             <div style={{ width: 28, height: 2, background: '#c7ab54', marginBottom: 16 }} />
             <h2 style={{ fontSize: 24, fontWeight: 900, color: '#1a1714', margin: '0 0 16px' }}>
               {t.heading}

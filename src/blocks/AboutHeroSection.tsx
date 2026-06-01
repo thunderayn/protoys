@@ -1,6 +1,4 @@
 import { Fragment } from 'react'
-import Button from '@mui/material/Button'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { useLanguage } from '../i18n/LanguageContext'
 import { aboutPageText } from '../i18n/translations/aboutPage'
 
@@ -64,12 +62,14 @@ export default function AboutHeroSection() {
             lineHeight: 1.08,
             letterSpacing: '-0.01em',
             margin: '0 0 20px',
-            maxWidth: 560,
+            maxWidth: 360,
           }}
         >
           {t.heading.map((line, i) => (
             <Fragment key={i}>
-              {line}
+              {line.split('​').map((part, j) =>
+                j === 0 ? part : <span key={j} style={{ display: 'inline-block' }}>{part}</span>
+              )}
               {i < t.heading.length - 1 && <br />}
             </Fragment>
           ))}
@@ -89,25 +89,6 @@ export default function AboutHeroSection() {
           {t.body}
         </p>
 
-        <Button
-          variant="contained"
-          endIcon={<ArrowForwardIcon />}
-          href="/contact"
-          sx={{
-            backgroundColor: '#c7ab54',
-            color: '#fff',
-            px: 4,
-            py: 1.5,
-            fontWeight: 700,
-            fontSize: '0.8rem',
-            letterSpacing: '0.08em',
-            borderRadius: '3px',
-            boxShadow: 'none',
-            '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
-          }}
-        >
-          {t.cta}
-        </Button>
       </div>
     </section>
   )

@@ -26,18 +26,19 @@ export default function AboutIntroSection() {
   return (
     <div style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '72px 48px', textAlign: 'center' }}>
       <div style={{ maxWidth: 800, margin: '0 auto' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, marginBottom: 16 }}>
+        <img src="/Logo_nobackground.png" alt="Pro Toys" style={{ height: 120, width: 'auto', display: 'block', margin: '0 auto 28px' }} />
+        {t.paras.map((p, i) => (
+          <p key={i} style={{ fontSize: 15, color: '#444', lineHeight: 1.85, margin: i < t.paras.length - 1 ? '0 0 16px' : '0 0 24px' }}>
+            {p}
+          </p>
+        ))}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
           <div style={{ width: 28, height: 2, background: '#c7ab54', flexShrink: 0 }} />
-          <span style={{ fontSize: 11, fontWeight: 700, color: '#c7ab54', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+          <span style={{ fontSize: 16, fontWeight: 800, color: '#c7ab54', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
             {t.label}
           </span>
           <div style={{ width: 28, height: 2, background: '#c7ab54', flexShrink: 0 }} />
         </div>
-        {t.paras.map((p, i) => (
-          <p key={i} style={{ fontSize: 15, color: '#444', lineHeight: 1.85, margin: i < t.paras.length - 1 ? '0 0 16px' : 0 }}>
-            {p}
-          </p>
-        ))}
       </div>
     </div>
   )
