@@ -4,7 +4,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { useLanguage } from '../i18n/LanguageContext'
 import { contactPageText } from '../i18n/translations/contact'
 
-const WORLD_MAP_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779872998/wordmap_with_pointer_ibzd3t.png'
+const WORLD_MAP_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1780414627/worldmap-two-pointers_dyhpji.png'
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
@@ -142,7 +142,7 @@ export default function ContactFormSection() {
               style={{ width: '100%', borderRadius: 4, display: 'block' }}
             />
 
-            {/* Canada — top-left area */}
+            {/* Canada pin */}
             <div style={{
               position: 'absolute',
               top: '45%',
@@ -154,19 +154,43 @@ export default function ContactFormSection() {
               minWidth: 140,
             }}>
               <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', color: '#c7ab54', margin: '0 0 3px', textTransform: 'uppercase' }}>
-                {t.offices.list[1].title}
+                {lang === 'cn' ? t.offices.list[2].title : t.offices.list[1].title}
               </p>
-              <p style={{ fontSize: 11, color: '#444', margin: '0 0 2px' }}>{t.offices.list[1].location}</p>
-              <p style={{ fontSize: 11, color: '#666', margin: '0 0 2px' }}>{t.offices.list[1].tel}</p>
-              <a href={`mailto:${t.offices.list[1].email}`} style={{ fontSize: 11, color: '#c7ab54', textDecoration: 'underline' }}>
-                {t.offices.list[1].email}
+              <p style={{ fontSize: 11, color: '#444', margin: '0 0 2px' }}>
+                {lang === 'cn' ? t.offices.list[2].location : t.offices.list[1].location}
+              </p>
+              <a href={`mailto:${lang === 'cn' ? t.offices.list[2].email : t.offices.list[1].email}`} style={{ fontSize: 11, color: '#c7ab54', textDecoration: 'underline' }}>
+                {lang === 'cn' ? t.offices.list[2].email : t.offices.list[1].email}
               </a>
             </div>
 
-            {/* China — right area */}
+
+            {/* China Branch pin (CN only) */}
+            {lang === 'cn' && (
+              <div style={{
+                position: 'absolute',
+                top: '12%',
+                left: '68%',
+                background: '#fff',
+                borderRadius: 4,
+                padding: '8px 10px',
+                boxShadow: '0 2px 10px rgba(0,0,0,0.13)',
+                minWidth: 150,
+              }}>
+                <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', color: '#c7ab54', margin: '0 0 3px', textTransform: 'uppercase' }}>
+                  {t.offices.list[1].title}
+                </p>
+                <p style={{ fontSize: 11, color: '#444', margin: '0 0 2px' }}>{t.offices.list[1].location}</p>
+                <a href={`mailto:${t.offices.list[1].email}`} style={{ fontSize: 11, color: '#c7ab54', textDecoration: 'underline' }}>
+                  {t.offices.list[1].email}
+                </a>
+              </div>
+            )}
+
+            {/* China HQ pin */}
             <div style={{
               position: 'absolute',
-              top: '60%',
+              top: lang === 'cn' ? '62%' : '60%',
               left: '68%',
               background: '#fff',
               borderRadius: 4,
@@ -178,7 +202,6 @@ export default function ContactFormSection() {
                 {t.offices.list[0].title}
               </p>
               <p style={{ fontSize: 11, color: '#444', margin: '0 0 2px' }}>{t.offices.list[0].location}</p>
-              <p style={{ fontSize: 11, color: '#666', margin: '0 0 2px' }}>{t.offices.list[0].tel}</p>
               <a href={`mailto:${t.offices.list[0].email}`} style={{ fontSize: 11, color: '#c7ab54', textDecoration: 'underline' }}>
                 {t.offices.list[0].email}
               </a>

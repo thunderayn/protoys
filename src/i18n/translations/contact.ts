@@ -22,12 +22,12 @@ export const contactPageText = {
     },
     offices: {
       heading: 'GLOBAL OFFICES',
-      body: 'Our products are exported to more than 100 countries and regions around the world. We look forward to working with you!',
+      body: 'Our products are exported to more than 20 countries and regions around the world. We look forward to working with you!',
       telLabel: 'Tel:',
       emailLabel: 'Email:',
       list: [
-        { title: 'CHINA HEADQUARTERS', location: 'Yangzhou, Jiangsu, China', tel: '+86 123 4567 8900', email: 'wilson@protoys.cn' },
-        { title: 'CANADA OFFICE',      location: 'Toronto, Ontario, Canada', tel: '+1 416 123 4567',   email: 'ca@protoys.com'   },
+        { title: 'CHINA HEADQUARTERS', location: 'SME Incubation Park A2&A8, Yongcheng Economic Development Zone, Shangqiu, Henan, China', tel: '', email: 'wilson@protoys.cn' },
+        { title: 'CANADA OFFICE',      location: 'Richmond Hill, Ontario, Canada', tel: '',   email: 'wilson@protoys.cn'   },
       ],
     },
     bottom: {
@@ -59,12 +59,13 @@ export const contactPageText = {
     },
     offices: {
       heading: '全球办事处',
-      body: '我们的产品出口至全球100多个国家和地区，期待与您合作！',
+      body: '我们的产品出口至全球20多个国家和地区，期待与您合作！',
       telLabel: '电话：',
       emailLabel: '邮箱：',
       list: [
-        { title: '中国总部',   location: '中国 江苏 扬州',   tel: '+86 123 4567 8900', email: 'wilson@protoys.cn' },
-        { title: '加拿大办事处', location: '加拿大 安大略 多伦多', tel: '+1 416 123 4567', email: 'ca@protoys.com' },
+        { title: '中国总部', location: '中国河南省商丘市永城市经开区中小企业孵化园A2&A8栋', tel: '', email: 'wilson@protoys.cn' },
+        { title: '中国分部', location: '中国江苏省扬州市', tel: '', email: 'wilson@protoys.cn' },
+        { title: '加拿大办事处', location: '加拿大安大略省多伦多列治文山市', tel: '', email: 'wilson@protoys.cn' },
       ],
     },
     bottom: {
