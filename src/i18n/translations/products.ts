@@ -15,21 +15,21 @@ export const productsPageText = {
   en: {
     hero: {
       title: 'OUR PRODUCTS',
-      sub: 'High quality plush toys for\nall ages and applications.',
+      sub: 'A diverse product range meeting the needs of brand owners, wholesalers, and retailers.',
     },
     catalog: {
       description:
-        'We offer a wide range of plush toys, all of which can be customized to meet your specific needs.',
+        'Covering a wide range of plush toy categories, supporting one-stop customization from design and development to mass production.',
       contactUs: 'CONTACT US',
       categoryHeading: 'PRODUCT CATEGORIES',
       categories: [
         { key: 'all', label: 'All Products' },
-        { key: 'teddy-bears', label: 'Teddy Bears' },
-        { key: 'animals', label: 'Animals' },
-        { key: 'bunnies', label: 'Bunnies' },
-        { key: 'dinosaurs', label: 'Dinosaurs' },
-        { key: 'custom', label: 'Custom Plush Toys' },
-        { key: 'accessories', label: 'Accessories' },
+        { key: 'everyday', label: 'Everyday Toys' },
+        { key: 'playground', label: 'Playground Series' },
+        { key: 'christmas', label: 'Christmas Series' },
+        { key: 'halloween', label: 'Halloween Series' },
+        { key: 'valentines', label: "Valentine's Day Series" },
+        { key: 'easter', label: 'Easter Series' },
       ],
       oem: {
         title: 'OEM/ODM SERVICE',
@@ -47,10 +47,10 @@ export const productsPageText = {
       ],
     },
     features: [
-      { title: 'SAFE & RELIABLE', desc: 'All products meet international safety standards.' },
-      { title: 'SOFT & COMFORTABLE', desc: 'Premium materials for a better touch and feel.' },
-      { title: 'CUSTOMIZABLE', desc: 'OEM/ODM service to bring your ideas to life.' },
-      { title: 'ON-TIME DELIVERY', desc: 'Efficient production and delivery guarantee.' },
+      { title: 'QUALITY ASSURANCE', desc: 'Strict quality inspection standards ensure products meet international market requirements.' },
+      { title: 'PREMIUM MATERIALS', desc: 'Carefully selected eco-friendly fabrics and fillings, balancing safety and comfort.' },
+      { title: 'OEM/ODM CUSTOMIZATION', desc: 'Personalized customization of size, shape, fabric, embroidery, and packaging.' },
+      { title: 'RELIABLE DELIVERY', desc: 'A mature production system ensures consistent quality and on-time order fulfillment.' },
     ],
     bottomCta: {
       heading: ['LOOKING FOR THE', 'PERFECT PLUSH TOY?'],
@@ -61,20 +61,20 @@ export const productsPageText = {
   cn: {
     hero: {
       title: '我们的产品',
-      sub: '高品质毛绒玩具，\n适合各年龄和用途。',
+      sub: '丰富产品品类，满足品牌商、批发商与零售商的多样化需求。',
     },
     catalog: {
-      description: '我们提供种类丰富的毛绒玩具，均可根据您的具体需求进行定制。',
+      description: '涵盖多种毛绒玩具品类，支持从设计开发到批量生产的一站式定制服务。',
       contactUs: '联系我们',
       categoryHeading: '产品分类',
       categories: [
         { key: 'all', label: '所有产品' },
-        { key: 'teddy-bears', label: '泰迪熊' },
-        { key: 'animals', label: '动物' },
-        { key: 'bunnies', label: '兔子' },
-        { key: 'dinosaurs', label: '恐龙' },
-        { key: 'custom', label: '定制毛绒玩具' },
-        { key: 'accessories', label: '配件' },
+        { key: 'everyday', label: 'Everyday玩具' },
+        { key: 'playground', label: '游乐场系列' },
+        { key: 'christmas', label: '圣诞节系列' },
+        { key: 'halloween', label: '万圣节系列' },
+        { key: 'valentines', label: '情人节系列' },
+        { key: 'easter', label: '复活节系列' },
       ],
       oem: {
         title: 'OEM/ODM 服务',
@@ -92,10 +92,10 @@ export const productsPageText = {
       ],
     },
     features: [
-      { title: '安全可靠', desc: '所有产品符合国际安全标准。' },
-      { title: '柔软舒适', desc: '优质材料，触感更佳。' },
-      { title: '可定制', desc: 'OEM/ODM 服务，让您的想法变为现实。' },
-      { title: '准时交货', desc: '高效生产和交付保障。' },
+      { title: '品质保障', desc: '严格执行质量检测标准，确保产品符合国际市场要求。' },
+      { title: '优质材料', desc: '精选环保面料与填充材料，兼顾安全性与舒适度。' },
+      { title: 'OEM/ODM定制', desc: '支持尺寸、造型、面料、刺绣及包装个性化定制。' },
+      { title: '稳定交付', desc: '成熟生产体系保障品质稳定与订单准时交付。' },
     ],
     bottomCta: {
       heading: ['寻找完美的', '毛绒玩具？'],

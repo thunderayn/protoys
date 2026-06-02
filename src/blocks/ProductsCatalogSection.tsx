@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Button from '@mui/material/Button'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { useLanguage } from '../i18n/LanguageContext'
 import { productsPageText } from '../i18n/translations/products'
@@ -133,48 +132,6 @@ export default function ProductsCatalogSection() {
               })}
             </ul>
 
-            {/* OEM/ODM Card */}
-            <div
-              style={{
-                border: '1px solid #e8e8e8',
-                borderRadius: 4,
-                padding: '24px 20px',
-              }}
-            >
-              <Inventory2OutlinedIcon sx={{ fontSize: 32, color: '#c7ab54', mb: 1.5 }} />
-              <h3
-                style={{
-                  fontSize: 13,
-                  fontWeight: 700,
-                  color: '#1a1714',
-                  letterSpacing: '0.08em',
-                  margin: '0 0 8px',
-                }}
-              >
-                {t.oem.title}
-              </h3>
-              <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6, margin: '0 0 16px' }}>
-                {t.oem.desc}
-              </p>
-              <Button
-                variant="outlined"
-                endIcon={<ArrowForwardIcon sx={{ fontSize: 14 }} />}
-                href="/oem-odm"
-                sx={{
-                  borderColor: '#c7ab54',
-                  color: '#c7ab54',
-                  px: 2,
-                  py: 0.7,
-                  fontWeight: 700,
-                  fontSize: '0.7rem',
-                  letterSpacing: '0.07em',
-                  borderRadius: '3px',
-                  '&:hover': { borderColor: '#a08c3c', color: '#a08c3c', backgroundColor: 'transparent' },
-                }}
-              >
-                {t.oem.cta}
-              </Button>
-            </div>
           </div>
 
           {/* Product grid */}
