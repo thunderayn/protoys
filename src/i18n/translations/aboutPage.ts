@@ -44,7 +44,7 @@ export const aboutPageText = {
       ],
     },
     certs: {
-      eyebrow: 'CERTIFICATIONS',
+      eyebrow: 'CERTIFICATIONS & FACTORY AUDITS',
       body: 'Our products comply with international safety standards and have obtained multiple authoritative certifications.',
       items: ['CE', 'EN71', 'ASTM', 'CPC', 'ISO'],
     },
@@ -99,7 +99,7 @@ export const aboutPageText = {
       ],
     },
     certs: {
-      eyebrow: '认证资质',
+      eyebrow: '认证和验厂资质',
       body: '我们的产品符合国际安全标准，已获得多项权威认证。',
       items: ['CE', 'EN71', 'ASTM', 'CPC', 'ISO'],
     },
