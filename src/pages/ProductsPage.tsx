@@ -1,7 +1,8 @@
 import ProductsHeroSection from '../blocks/ProductsHeroSection'
 import ProductsCatalogSection from '../blocks/ProductsCatalogSection'
 import ProductsFeaturesBar from '../blocks/ProductsFeaturesBar'
-import ProductsBottomCTA from '../blocks/ProductsBottomCTA'
+import ContactBottom from '../blocks/ContactBottomSection'
+//import ProductsBottomCTA from '../blocks/ProductsBottomCTA'
 
 export default function ProductsPage() {
   return (
@@ -9,8 +10,8 @@ export default function ProductsPage() {
       <ProductsHeroSection />
       <ProductsFeaturesBar />
       <ProductsCatalogSection />
+      <ContactBottom />
       
-      <ProductsBottomCTA />
     </>
   )
 }

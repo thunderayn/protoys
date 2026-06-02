@@ -11,11 +11,12 @@ export default function CustomPage() {
       <OemOdmHeroSection />
       <ExportMarketsSection />
       <ImageProcessSection />
-      <section style={{ background: '#fff', borderTop: '1px solid #f0f0f0', padding: '64px 24px' }}>
+      <section className="py-16 px-6 md:py-32 md:px-32" style={{ background: '#fff', borderTop: '1px solid #f0f0f0' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <OdmProcessSection />
         </div>
       </section>
+      
       <ContactBottom />
     </>
   )

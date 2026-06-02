@@ -20,14 +20,11 @@ export default function CertificationSection() {
     <section className="cert-section" style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '72px 48px' }}>
       <style>{`@media (min-width: 1024px) { .cert-section { padding: 96px 80px !important; } .cert-grid { gap: 56px !important; } }`}</style>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 14 }} />
-        <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1a1714', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 14px' }}>
+        <div style={{ width: 32, height: 2, background: '#c7ab54', marginBottom: 14, margin: '0 auto 14px' }} />
+        <h2 style={{ fontSize: 26, fontWeight: 700, color: '#1a1714', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 40px', textAlign: 'center' }}>
           {t.eyebrow}
         </h2>
-        <p style={{ fontSize: 14, color: '#666', lineHeight: 1.75, margin: '0 0 40px', maxWidth: 560 }}>
-          {t.body}
-        </p>
-        <div className="cert-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: 32, alignItems: 'center' }}>
+        <div className="cert-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: 32, alignItems: 'center', justifyContent: 'center' }}>
           {CERTS.map((cert) => (
             <img key={cert.src} src={cert.src} alt={cert.label} style={{ height:86, width: 'auto', objectFit: 'contain', flexShrink: 0 }} />
           ))}
