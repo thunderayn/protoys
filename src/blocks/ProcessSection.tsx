@@ -7,7 +7,7 @@ export default function ProcessSection() {
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div className="grid grid-cols-1 lg:grid-cols-[4fr_6fr]" style={{ gap: 48 }}>
           <ProductsSection />
-          <OdmProcessSection />
+          <OdmProcessSection ctaHref="/custom" />
         </div>
       </div>
     </section>

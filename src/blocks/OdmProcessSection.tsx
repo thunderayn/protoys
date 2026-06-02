@@ -19,7 +19,7 @@ const stepIcons = [
   <LocalShippingIcon sx={{ fontSize: 28 }} />,
 ]
 
-export default function OdmProcessSection() {
+export default function OdmProcessSection({ ctaHref = '/contact' }: { ctaHref?: string }) {
   const { lang } = useLanguage()
   const t = odmText[lang]
 
@@ -100,7 +100,7 @@ export default function OdmProcessSection() {
         <Button
           variant="contained"
           endIcon={<ArrowForwardIcon />}
-          href="/custom"
+          href={ctaHref}
           sx={{
             backgroundColor: '#c7ab54',
             color: '#fff',

@@ -19,26 +19,26 @@ export default function ExportMarketsSection() {
 
   return (
     <section style={{ background: '#f8f8f6', borderTop: '1px solid #f0f0f0', padding: '56px 48px' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <p style={{ fontSize: 11, fontWeight: 600, color: '#c7ab54', letterSpacing: '0.16em', textTransform: 'uppercase', margin: '0 0 8px' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', textAlign: 'center' }}>
+        <p style={{ fontSize: 13, fontWeight: 600, color: '#c7ab54', letterSpacing: '0.16em', textTransform: 'uppercase', margin: '0 0 8px' }}>
           {t.eyebrow}
         </p>
         <h2 style={{ fontSize: 22, fontWeight: 700, color: '#1a1714', margin: '0 0 32px', letterSpacing: '-0.01em' }}>
           {t.heading}
         </h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+        <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-3">
           {REGIONS.map((r) => (
             <div
               key={r.en}
               style={{
-                display: 'flex', alignItems: 'center', gap: 10,
+                display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10,
                 padding: '12px 20px',
                 background: '#fff',
                 border: '1px solid #e8e8e8',
                 borderRadius: 4,
               }}
             >
-              <img src={`https://flagcdn.com/w40/${r.code}.png`} alt={r.en} style={{ width: 36, height: 'auto', borderRadius: 2, display: 'block' }} />
+              <img src={`https://flagcdn.com/w80/${r.code}.png`} alt={r.en} className="w-12 md:w-16" style={{ height: 'auto', borderRadius: 2, display: 'block' }} />
               <span style={{ fontSize: 14, fontWeight: 600, color: '#1a1714', letterSpacing: '0.02em' }}>{r[lang]}</span>
             </div>
           ))}

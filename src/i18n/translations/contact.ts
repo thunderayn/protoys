@@ -31,9 +31,9 @@ export const contactPageText = {
       ],
     },
     bottom: {
-      heading: ["LET'S CREATE SOMETHING", 'WONDERFUL TOGETHER'],
-      body: 'Whether you have a question, need a quote, or want to discuss a custom project, our team is ready to assist you.',
-      cta: 'CONTACT US',
+      heading: ['START YOUR PLUSH TOY', 'CUSTOM PROJECT'],
+      body: 'Whether you need OEM/ODM customization, sample development, or a product quote, our professional team will provide fast response and full support throughout the process.',
+      cta: 'GET A QUOTE',
     },
   },
   cn: {
@@ -68,9 +68,9 @@ export const contactPageText = {
       ],
     },
     bottom: {
-      heading: ['携手共创', '美好未来'],
-      body: '无论您有任何问题、需要报价，或想讨论定制项目，我们的团队随时为您提供帮助。',
-      cta: '联系我们',
+      heading: ['开启您的毛绒玩具定制项目'],
+      body: '无论您需要OEM/ODM定制、样品开发还是产品报价，我们的专业团队都将为您提供快速响应与全程支持。',
+      cta: '获取报价',
     },
   },
 }

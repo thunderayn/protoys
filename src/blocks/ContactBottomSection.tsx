@@ -4,14 +4,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { useLanguage } from '../i18n/LanguageContext'
 import { contactPageText } from '../i18n/translations/contact'
 
-const BEARS_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg'
+const BEARS_IMG = 'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1780331780/Weixin_Image_20260530124936_967_1139_vsk8e3.png'
 
 export default function ContactBottom() {
   const { lang } = useLanguage()
   const t = contactPageText[lang].bottom
 
   return (
-    <section style={{ background: '#f5f0ea' }}>
+    <section style={{ background: '#FEEDDB' }}>
       {/* Desktop */}
       <div
         className="hidden md:grid"
@@ -34,7 +34,7 @@ export default function ContactBottom() {
             padding: '72px 80px',
           }}
         >
-          <div style={{ maxWidth: 420 }}>
+          <div>
             <h2
               style={{
                 fontSize: 'clamp(24px, 2.8vw, 38px)',
