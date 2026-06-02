@@ -53,9 +53,9 @@ export const productsPageText = {
       { title: 'RELIABLE DELIVERY', desc: 'A mature production system ensures consistent quality and on-time order fulfillment.' },
     ],
     bottomCta: {
-      heading: ['LOOKING FOR THE', 'PERFECT PLUSH TOY?'],
-      desc: 'We are here to support your business with high quality products and reliable service.',
-      button: 'GET A QUOTE',
+      heading: ['READY TO LAUNCH YOUR', 'NEXT PLUSH TOY PROJECT?'],
+      desc: 'Send us your design files, images, or creative ideas — our team will provide professional advice and a fast quote.',
+      button: 'GET IN TOUCH',
     },
   },
   cn: {
@@ -98,9 +98,9 @@ export const productsPageText = {
       { title: '稳定交付', desc: '成熟生产体系保障品质稳定与订单准时交付。' },
     ],
     bottomCta: {
-      heading: ['寻找完美的', '毛绒玩具？'],
-      desc: '我们致力于为您的业务提供高品质产品和可靠服务。',
-      button: '获取报价',
+      heading: ['准备启动您的', '下一个毛绒玩具项目？'],
+      desc: '发送您的设计稿、图片或创意想法，我们将为您提供专业建议与快速报价。',
+      button: '立即咨询',
     },
   },
 }

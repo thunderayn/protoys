@@ -1,5 +1,3 @@
-import Button from '@mui/material/Button'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { useLanguage } from '../i18n/LanguageContext'
 import { contactPageText } from '../i18n/translations/contact'
 
@@ -83,25 +81,6 @@ export default function ContactHeroSection() {
         >
           {t.body}
         </p>
-
-        <Button
-          variant="contained"
-          endIcon={<ArrowForwardIcon />}
-          sx={{
-            backgroundColor: '#c7ab54',
-            color: '#fff',
-            px: 4,
-            py: 1.5,
-            fontWeight: 700,
-            fontSize: '0.78rem',
-            letterSpacing: '0.1em',
-            borderRadius: '3px',
-            boxShadow: 'none',
-            '&:hover': { backgroundColor: '#a08c3c', boxShadow: 'none' },
-          }}
-        >
-          {t.cta}
-        </Button>
       </div>
     </section>
   )

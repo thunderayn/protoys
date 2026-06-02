@@ -1,7 +1,7 @@
 export const newsPageText = {
   en: {
     hero: {
-      title: 'BLOG & NEWS',
+      title: 'COMPANY & INDUSTRY NEWS',
       sub: 'Stay updated with the latest news,\nindustry insights and company stories.',
     },
     list: {
@@ -12,13 +12,14 @@ export const newsPageText = {
       by: 'By',
       readMore: 'READ MORE',
       noResults: 'No articles found.',
+      comingSoon: 'Coming Soon — Stay Tuned',
       prev: 'Previous',
       next: 'Next',
     },
   },
   cn: {
     hero: {
-      title: '博客与新闻',
+      title: '公司与行业资讯',
       sub: '了解最新资讯、\n行业动态和公司故事。',
     },
     list: {
@@ -29,6 +30,7 @@ export const newsPageText = {
       by: '作者',
       readMore: '阅读更多',
       noResults: '未找到相关文章。',
+      comingSoon: '即将发布，敬请关注',
       prev: '上一页',
       next: '下一页',
     },

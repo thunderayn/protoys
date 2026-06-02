@@ -6,7 +6,7 @@ export const contactPageText = {
       cta: 'GET IN TOUCH',
     },
     infoBar: [
-      { label: 'EMAIL US',  value: 'info@protoys.com',   href: 'mailto:info@protoys.com' },
+      { label: 'EMAIL US',  value: 'wilson@protoys.cn',   href: 'mailto:wilson@protoys.cn' },
       { label: 'INSTAGRAM', value: 'Coming Soon',           href: undefined },
       { label: 'TIKTOK',    value: 'Coming Soon',           href: undefined },
       { label: 'YOUTUBE',   value: 'Coming Soon',         href: undefined },
@@ -26,7 +26,7 @@ export const contactPageText = {
       telLabel: 'Tel:',
       emailLabel: 'Email:',
       list: [
-        { title: 'CHINA HEADQUARTERS', location: 'Yangzhou, Jiangsu, China', tel: '+86 123 4567 8900', email: 'info@protoys.com' },
+        { title: 'CHINA HEADQUARTERS', location: 'Yangzhou, Jiangsu, China', tel: '+86 123 4567 8900', email: 'wilson@protoys.cn' },
         { title: 'CANADA OFFICE',      location: 'Toronto, Ontario, Canada', tel: '+1 416 123 4567',   email: 'ca@protoys.com'   },
       ],
     },
@@ -43,10 +43,10 @@ export const contactPageText = {
       cta: '立即联系',
     },
     infoBar: [
-      { label: '电子邮件',  value: 'info@protoys.com',  href: 'mailto:info@protoys.com' },
-      { label: 'INSTAGRAM', value: 'Coming Soon',          href: undefined },
-      { label: 'TIKTOK',    value: 'Coming Soon',          href: undefined },
-      { label: 'YOUTUBE',   value: 'Coming Soon',        href: undefined },
+      { label: '电子邮件',  value: 'wilson@protoys.cn',  href: 'mailto:wilson@protoys.cn' },
+      { label: 'INSTAGRAM', value: '敬请期待',               href: undefined },
+      { label: '抖音',       value: '河南普罗玩具有限公司',  href: undefined },
+      { label: 'YOUTUBE',   value: '敬请期待',             href: undefined },
     ],
     form: {
       heading: '发送消息',
@@ -63,7 +63,7 @@ export const contactPageText = {
       telLabel: '电话：',
       emailLabel: '邮箱：',
       list: [
-        { title: '中国总部',   location: '中国 江苏 扬州',   tel: '+86 123 4567 8900', email: 'info@protoys.com' },
+        { title: '中国总部',   location: '中国 江苏 扬州',   tel: '+86 123 4567 8900', email: 'wilson@protoys.cn' },
         { title: '加拿大办事处', location: '加拿大 安大略 多伦多', tel: '+1 416 123 4567', email: 'ca@protoys.com' },
       ],
     },

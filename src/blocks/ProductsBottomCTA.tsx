@@ -68,7 +68,7 @@ export default function ProductsBottomCTA() {
             <Button
               variant="contained"
               endIcon={<ArrowForwardIcon />}
-              href="/oem-odm"
+              href="/contact"
               sx={{
                 backgroundColor: '#c7ab54',
                 color: '#fff',
@@ -117,7 +117,7 @@ export default function ProductsBottomCTA() {
           <Button
             variant="contained"
             endIcon={<ArrowForwardIcon />}
-            href="/oem-odm"
+            href="/contact"
             sx={{
               backgroundColor: '#c7ab54',
               color: '#fff',

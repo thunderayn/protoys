@@ -1,40 +1,15 @@
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import SearchIcon from '@mui/icons-material/Search'
 import { useLanguage } from '../i18n/LanguageContext'
 import { newsPageText } from '../i18n/translations/news'
-import { MOCK_ARTICLES, ARTICLES_PER_PAGE, type Article } from '../data/mockNews'
+import type { Article } from '../data/mockNews'
 
 export default function NewsListSection() {
   const { lang } = useLanguage()
   const t = newsPageText[lang].list
 
   const [search, setSearch] = useState('')
-  const [page, setPage] = useState(1)
-
-  const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase()
-    if (!q) return MOCK_ARTICLES
-    return MOCK_ARTICLES.filter(
-      (a) =>
-        a.title.toLowerCase().includes(q) ||
-        a.titleCn.toLowerCase().includes(q) ||
-        a.excerpt.toLowerCase().includes(q) ||
-        a.excerptCn.toLowerCase().includes(q) ||
-        a.category.toLowerCase().includes(q) ||
-        a.categoryCn.toLowerCase().includes(q),
-    )
-  }, [search])
-
-  const totalPages = Math.max(1, Math.ceil(filtered.length / ARTICLES_PER_PAGE))
-  const safePage = Math.min(page, totalPages)
-  const start = (safePage - 1) * ARTICLES_PER_PAGE
-  const pageArticles = filtered.slice(start, start + ARTICLES_PER_PAGE)
-
-  const handleSearch = (value: string) => {
-    setSearch(value)
-    setPage(1)
-  }
 
   return (
     <section style={{ background: '#fff', padding: '64px 0 80px' }}>
@@ -66,18 +41,14 @@ export default function NewsListSection() {
             </h2>
           </div>
 
-          <span style={{ fontSize: 14, color: '#999' }}>
-            {filtered.length > 0
-              ? t.showing(start + 1, Math.min(start + ARTICLES_PER_PAGE, filtered.length), filtered.length)
-              : ''}
-          </span>
+          <span style={{ fontSize: 14, color: '#999' }} />
 
           {/* Search */}
           <div style={{ position: 'relative' }}>
             <input
               type="text"
               value={search}
-              onChange={(e) => handleSearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
               placeholder={t.searchPlaceholder}
               style={{
                 width: 220,
@@ -106,36 +77,11 @@ export default function NewsListSection() {
           </div>
         </div>
 
-        {/* Article list */}
-        {pageArticles.length === 0 ? (
-          <div style={{ padding: '60px 0', textAlign: 'center', color: '#aaa', fontSize: 14 }}>
-            {t.noResults}
-          </div>
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {pageArticles.map((article, i) => (
-              <ArticleCard
-                key={article._id}
-                article={article}
-                byLabel={t.by}
-                readMoreLabel={t.readMore}
-                isLast={i === pageArticles.length - 1}
-                lang={lang}
-              />
-            ))}
-          </div>
-        )}
+        {/* Empty state */}
+        <div style={{ padding: '80px 0', textAlign: 'center' }}>
+          <p style={{ fontSize: 15, color: '#aaa', letterSpacing: '0.04em' }}>{t.comingSoon}</p>
+        </div>
 
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <Pagination
-            current={safePage}
-            total={totalPages}
-            onChange={setPage}
-            prevLabel={t.prev}
-            nextLabel={t.next}
-          />
-        )}
       </div>
     </section>
   )
