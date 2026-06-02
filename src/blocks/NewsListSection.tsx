@@ -90,8 +90,7 @@ export default function NewsListSection() {
 // ---------------------------------------------------------------------------
 // Article card
 // ---------------------------------------------------------------------------
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function ArticleCard({
+export function ArticleCard({
   article,
   byLabel,
   readMoreLabel,
@@ -227,8 +226,7 @@ function ArticleCard({
 // ---------------------------------------------------------------------------
 // Pagination
 // ---------------------------------------------------------------------------
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function Pagination({
+export function Pagination({
   current,
   total,
   onChange,
