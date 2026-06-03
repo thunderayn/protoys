@@ -62,7 +62,7 @@ export const aboutPageText = {
       cta: '联系我们',
     },
     stats: [
-      { num: 30,      suffix: '+年', label: '行业经验' },
+      { num: 30,      suffix: '+yrs', label: '行业经验' },
       { num: 10000,   suffix: '+m²', label: '工厂面积' },
       { num: 300,     suffix: '+',   label: '专业工人' },
       { num: 20,      suffix: '+',   label: '出口国家' },

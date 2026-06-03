@@ -72,7 +72,7 @@ export default function AboutStatsBar() {
 
   return (
     <section style={{ background: '#fff' }} ref={ref}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+      <div className="px-4 md:px-12" style={{ maxWidth: 1280, margin: '0 auto' }}>
 
         {/* Desktop: 6-column row */}
         <div
@@ -97,7 +97,7 @@ export default function AboutStatsBar() {
         {/* Mobile: 3-column grid */}
         <div
           className="grid md:hidden"
-          style={{ gridTemplateColumns: 'repeat(3, 1fr)', borderTop: '1px solid #ececec' }}
+          style={{ gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', borderTop: '1px solid #ececec' }}
         >
           {stats.map((stat, i) => (
             <div
