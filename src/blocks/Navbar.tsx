@@ -52,8 +52,9 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <NavLink to="/" style={{ textDecoration: 'none', lineHeight: 1 }}>
+        <NavLink to="/" style={{ textDecoration: 'none', lineHeight: 1, display: 'flex', alignItems: 'center', gap: 8 }}>
           <img src="/Logo_notext_transparent.png" alt="Pro Plush Toy" style={{ height: 44, width: 'auto', display: 'block' }} />
+          <img src="/logo-text.webp" alt="Pro Plush Toy" style={{ height: 28, width: 'auto', display: 'block' }} />
         </NavLink>
 
         {/* Desktop nav links */}

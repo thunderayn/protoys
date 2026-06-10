@@ -47,9 +47,9 @@ export default function Footer() {
         <div>
           <div style={{ marginBottom: 16 }}>
             <img
-              src="/Logo_nobackground.png"
+              src="/Logo_notext_transparent.png"
               alt="Pro Toys logo"
-              style={{ height: 100,width: 'auto', display: 'block' }}
+              style={{ height: 100, width: 'auto', display: 'block' }}
             />
           </div>
           <p style={{ fontSize: 14, color: '#2e2b27', fontWeight: 600, margin: '0 0 8px' }}>
