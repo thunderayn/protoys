@@ -1,0 +1,110 @@
+[
+  {
+    "id": "jb-cactus-peach",
+    "name": "CACTUS (PEACH POT)",
+    "nameCn": "仙人掌（桃色花盆）",
+    "desc": "Soft cactus plush in a cheerful peach pot, a unique desk companion.",
+    "descCn": "桃色花盆仙人掌毛绒玩具，桌面好伴侣。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100845/cacutus_1_m9tsmv.png"
+  },
+  {
+    "id": "jb-cactus-purple",
+    "name": "CACTUS (PURPLE POT)",
+    "nameCn": "仙人掌（紫色花盆）",
+    "desc": "Charming cactus plush nestled in a vibrant purple pot.",
+    "descCn": "紫色花盆仙人掌毛绒，鲜艳迷人。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100843/cacutus_10_rk595g.png"
+  },
+  {
+    "id": "jb-flower-skyblue",
+    "name": "FLOWER (SKY BLUE POT)",
+    "nameCn": "小花（天蓝色花盆）",
+    "desc": "Delicate flower plush in a sky blue pot, sweet and decorative.",
+    "descCn": "天蓝色花盆小花毛绒，清新装饰。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100841/cacutus_11_fi3kps.png"
+  },
+  {
+    "id": "jb-mushroom-brown",
+    "name": "MUSHROOM (BROWN POT)",
+    "nameCn": "蘑菇（棕色花盆）",
+    "desc": "Whimsical mushroom plush in a rustic brown pot.",
+    "descCn": "棕色花盆蘑菇毛绒，造型奇趣。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100840/cacutus_12_w8ozzf.png"
+  },
+  {
+    "id": "jb-succulent",
+    "name": "SUCCULENT",
+    "nameCn": "多肉植物",
+    "desc": "Vibrant succulent plush bursting with colour, perfect for any shelf.",
+    "descCn": "色彩缤纷多肉毛绒玩具，摆放任意角落。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100840/cacutus_2_eerzq3.png"
+  },
+  {
+    "id": "jb-flower-cherry",
+    "name": "FLOWER (CHERRY POT)",
+    "nameCn": "小花（樱桃色花盆）",
+    "desc": "Pretty flower plush in a soft cherry-coloured pot.",
+    "descCn": "樱桃色花盆小花毛绒，甜美可人。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100840/cacutus_5_r1ft6q.png"
+  },
+  {
+    "id": "jb-flower-straw",
+    "name": "FLOWER (STRAW POT)",
+    "nameCn": "小花（稻草色花盆）",
+    "desc": "Adorable flower plush in a warm straw-toned pot.",
+    "descCn": "稻草色花盆小花毛绒，温馨可爱。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100840/cacutus_3_histky.png"
+  },
+  {
+    "id": "jb-sunflower-skyblue",
+    "name": "SUNFLOWER (SKY BLUE POT)",
+    "nameCn": "向日葵（天蓝色花盆）",
+    "desc": "Bright sunflower plush in a sky blue pot, full of sunshine.",
+    "descCn": "天蓝色花盆向日葵毛绒，阳光满满。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100839/cacutus_6_dear7l.png"
+  },
+  {
+    "id": "jb-mushroom-green",
+    "name": "MUSHROOM (GREEN POT)",
+    "nameCn": "蘑菇（绿色花盆）",
+    "desc": "Whimsical mushroom plush in a fresh green pot.",
+    "descCn": "绿色花盆蘑菇毛绒，清新奇趣。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100839/cacutus_4_vnwjko.png"
+  },
+  {
+    "id": "jb-tulip-purple",
+    "name": "TULIP (PURPLE POT)",
+    "nameCn": "郁金香（紫色花盆）",
+    "desc": "Elegant tulip plush in a rich purple pot.",
+    "descCn": "紫色花盆郁金香毛绒，典雅美丽。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100839/cacutus_8_wwbfo3.png"
+  },
+  {
+    "id": "jb-succulent-grey",
+    "name": "SUCCULENT (GREY POT)",
+    "nameCn": "多肉植物（灰色花盆）",
+    "desc": "Soft succulent plush in a minimalist grey pot.",
+    "descCn": "灰色花盆多肉毛绒，简约清新。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100838/cacutus_7_urr7tq.png"
+  },
+  {
+    "id": "jb-cactus-brown",
+    "name": "CACTUS (BROWN POT)",
+    "nameCn": "仙人掌（棕色花盆）",
+    "desc": "Classic cactus plush in a warm earthy brown pot.",
+    "descCn": "棕色花盆仙人掌毛绒，质朴温暖。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781100838/cacutus_9_iepnkm.png"
+  }
+]

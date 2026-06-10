@@ -1,0 +1,191 @@
+[
+  {
+    "id": "raccoon-red",
+    "name": "RACCOON (RED)",
+    "nameCn": "浣熊（红色）",
+    "desc": "Vibrant red-toned plush raccoon with detailed striped tail.",
+    "descCn": "活泼红色浣熊毛绒玩具，尾巴条纹细节精致。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon3_l74cyj.jpg"
+  },
+  {
+    "id": "raccoon-grey",
+    "name": "RACCOON (GREY)",
+    "nameCn": "浣熊（灰色）",
+    "desc": "Classic grey plush raccoon, soft and huggable.",
+    "descCn": "经典灰色浣熊毛绒玩具，柔软亲肤。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg"
+  },
+  {
+    "id": "panda",
+    "name": "PANDA",
+    "nameCn": "熊猫",
+    "desc": "Iconic black and white panda plush, a timeless classic.",
+    "descCn": "标志性黑白熊猫毛绒玩具，永恒经典。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/panda1_cat0ay.jpg"
+  },
+  {
+    "id": "bear-black",
+    "name": "BLACK BEAR",
+    "nameCn": "黑熊",
+    "desc": "Bold black plush bear, sturdy and cuddly.",
+    "descCn": "黑色大熊毛绒玩具，扎实可爱。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272807/bear1_dgv3pa.jpg"
+  },
+  {
+    "id": "bear-white",
+    "name": "WHITE BEAR",
+    "nameCn": "白熊",
+    "desc": "Pristine white plush bear, elegant and soft.",
+    "descCn": "洁白北极熊毛绒，优雅柔软。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272806/bear2_lqptbk.jpg"
+  },
+  {
+    "id": "bear-brown",
+    "name": "BROWN BEAR",
+    "nameCn": "棕熊",
+    "desc": "Classic brown bear plush, a beloved childhood companion.",
+    "descCn": "经典棕熊毛绒，儿时最爱。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272806/bear3_mk3o2x.jpg"
+  },
+  {
+    "id": "bear-grey",
+    "name": "GREY BEAR",
+    "nameCn": "灰熊",
+    "desc": "Gentle grey plush bear, perfect for all ages.",
+    "descCn": "温柔灰熊毛绒，适合各年龄段。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272806/bear4_mxqzfe.jpg"
+  },
+  {
+    "id": "blowfish",
+    "name": "BLOWFISH",
+    "nameCn": "河豚",
+    "desc": "Quirky and charming blowfish plush with spiky texture.",
+    "descCn": "个性十足的河豚毛绒，带刺纹理独特。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272807/blowfish1_y5gswq.jpg"
+  },
+  {
+    "id": "unicorn-pink",
+    "name": "UNICORN",
+    "nameCn": "独角兽",
+    "desc": "Magical pink unicorn plush with shimmering mane.",
+    "descCn": "粉色魔法独角兽，鬃毛闪亮迷人。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272807/unicorn2_bzpnng.jpg"
+  },
+  {
+    "id": "squirrel",
+    "name": "SQUIRREL",
+    "nameCn": "松鼠",
+    "desc": "Bushy-tailed squirrel plush, full of character.",
+    "descCn": "毛茸茸大尾巴松鼠毛绒，充满个性。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272809/fox3_zmlvgn.jpg"
+  },
+  {
+    "id": "fox",
+    "name": "FOX",
+    "nameCn": "狐狸",
+    "desc": "Clever and cute fox plush with fluffy tail.",
+    "descCn": "聪明可爱的狐狸毛绒，尾巴蓬松。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272809/fox2_wezpne.jpg"
+  },
+  {
+    "id": "cat-grey",
+    "name": "GREY CAT",
+    "nameCn": "灰猫",
+    "desc": "Soft grey cat plush, serene and cuddly.",
+    "descCn": "柔软灰猫毛绒，安静可爱。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/cat1_apb9kt.jpg"
+  },
+  {
+    "id": "cat-calico",
+    "name": "CALICO CAT",
+    "nameCn": "花斑猫",
+    "desc": "Patterned calico cat plush in warm, natural tones.",
+    "descCn": "暖色调花斑猫毛绒，图案精美。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/cat2_u7ekis.jpg"
+  },
+  {
+    "id": "raccoon",
+    "name": "RACCOON",
+    "nameCn": "浣熊",
+    "desc": "Charming raccoon plush with signature masked face.",
+    "descCn": "可爱浣熊毛绒，标志性黑眼圈造型。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon1_ft28iq.jpg"
+  },
+  {
+    "id": "wolf",
+    "name": "WOLF",
+    "nameCn": "狼",
+    "desc": "Majestic wolf plush with realistic detailing.",
+    "descCn": "威风凛凛的狼毛绒，细节逼真。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/wolf2_xtoqkp.png"
+  },
+  {
+    "id": "raccoon-red-2",
+    "name": "RED RACCOON",
+    "nameCn": "红浣熊",
+    "desc": "Vibrant red-furred raccoon plush, full of personality.",
+    "descCn": "鲜红色浣熊毛绒，个性十足。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272807/fox1_z29bcz.png"
+  },
+  {
+    "id": "sloth",
+    "name": "SLOTH",
+    "nameCn": "树懒",
+    "desc": "Laid-back sloth plush with long arms, perfect for hugging.",
+    "descCn": "慵懒树懒毛绒，长手臂适合拥抱。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272807/sloth1_nmi82g.png"
+  },
+  {
+    "id": "unicorn-white",
+    "name": "UNICORN (CLASSIC)",
+    "nameCn": "独角兽（经典款）",
+    "desc": "Classic white unicorn plush with golden horn.",
+    "descCn": "经典白色独角兽，金色独角亮眼。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272807/unicorn1_fiwwxb.png"
+  },
+  {
+    "id": "axolotl",
+    "name": "AXOLOTL",
+    "nameCn": "蝾螈",
+    "desc": "Unique axolotl plush in soft pink, a crowd favourite.",
+    "descCn": "粉色蝾螈毛绒，独特可爱，深受喜爱。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272806/axolotl1_zqjiup.png"
+  },
+  {
+    "id": "cow",
+    "name": "COW",
+    "nameCn": "奶牛",
+    "desc": "Classic black and white cow plush, friendly and lovable.",
+    "descCn": "经典黑白奶牛毛绒，友好可爱。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272806/caw1_eblf2f.png"
+  },
+  {
+    "id": "elephant",
+    "name": "ELEPHANT",
+    "nameCn": "大象",
+    "desc": "Large and lovable elephant plush with floppy ears.",
+    "descCn": "大耳朵大象毛绒，憨厚可爱。",
+    "category": "",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272806/elephant1_jogxci.jpg"
+  }
+]
