@@ -2,35 +2,35 @@ import { useState } from 'react'
 import Button from '@mui/material/Button'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { useLanguage } from '../i18n/LanguageContext'
 import { productsPageText } from '../i18n/translations/products'
+import { allProducts as productsData } from '../data'
 
-const PRODUCT_IMAGES: Record<string, string> = {
-  'teddy-bears':
-    'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon3_l74cyj.jpg',
-  bunnies:
-    'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon3_l74cyj.jpg',
-  dinosaurs:
-    'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/panda1_cat0ay.jpg',
-  animals:
-    'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/panda1_cat0ay.jpg',
-  birds:
-    'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg',
-  custom:
-    'https://res.cloudinary.com/dqj2gwlpf/image/upload/v1779272808/raccoon2_qn55fi.jpg',
-}
-
-// Map product name → image key, since two products share 'animals' key
-const PRODUCT_IMAGE_KEYS = ['teddy-bears', 'bunnies', 'dinosaurs', 'animals', 'birds', 'custom']
+const PAGE_SIZE = 6
 
 export default function ProductsCatalogSection() {
   const { lang } = useLanguage()
   const t = productsPageText[lang].catalog
   const [activeCategory, setActiveCategory] = useState('all')
+  const [currentPage, setCurrentPage] = useState(1)
 
-  const filtered = t.products
-    .map((p, i) => ({ ...p, imageKey: PRODUCT_IMAGE_KEYS[i] }))
-    .filter((p) => activeCategory === 'all' || p.key === activeCategory)
+  const filtered = productsData
+    .filter((p) => activeCategory === 'all' || p.category === activeCategory)
+    .map((p) => ({
+      id: p.id,
+      name: lang === 'cn' ? p.nameCn : p.name,
+      desc: lang === 'cn' ? p.descCn : p.desc,
+      image: p.image,
+    }))
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
+  const paginated = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
+
+  const handleCategoryChange = (key: string) => {
+    setActiveCategory(key)
+    setCurrentPage(1)
+  }
 
   return (
     <section style={{ background: '#fff', padding: '60px 0' }}>
@@ -73,10 +73,8 @@ export default function ProductsCatalogSection() {
         </div>
 
         {/* Main layout: sidebar + grid */}
-        <div
-          className="hidden md:flex"
-          style={{ gap: 36, alignItems: 'flex-start' }}
-        >
+        <div className="hidden md:flex" style={{ gap: 36, alignItems: 'flex-start' }}>
+
           {/* Sidebar */}
           <div style={{ width: 210, flexShrink: 0 }}>
             <div style={{ marginBottom: 20 }}>
@@ -100,7 +98,7 @@ export default function ProductsCatalogSection() {
                 return (
                   <li key={key}>
                     <button
-                      onClick={() => setActiveCategory(key)}
+                      onClick={() => handleCategoryChange(key)}
                       style={{
                         width: '100%',
                         display: 'flex',
@@ -131,46 +129,54 @@ export default function ProductsCatalogSection() {
                 )
               })}
             </ul>
-
           </div>
 
-          {/* Product grid */}
-          <div
-            style={{
-              flex: 1,
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: 20,
-            }}
-          >
-            {filtered.length > 0 ? (
-              filtered.map((product, i) => (
-                <ProductCard
-                  key={`${product.key}-${i}`}
-                  name={product.name}
-                  desc={product.desc}
-                  image={PRODUCT_IMAGES[product.imageKey]}
-                />
-              ))
-            ) : (
-              <div
-                style={{
-                  gridColumn: '1 / -1',
-                  padding: '60px 0',
-                  textAlign: 'center',
-                  color: '#aaa',
-                  fontSize: 14,
-                }}
-              >
-                No products in this category yet.
-              </div>
+          {/* Product grid + pagination */}
+          <div style={{ flex: 1 }}>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                gap: 20,
+              }}
+            >
+              {paginated.length > 0 ? (
+                paginated.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    name={product.name}
+                    desc={product.desc}
+                    image={product.image}
+                  />
+                ))
+              ) : (
+                <div
+                  style={{
+                    gridColumn: '1 / -1',
+                    padding: '60px 0',
+                    textAlign: 'center',
+                    color: '#aaa',
+                    fontSize: 14,
+                  }}
+                >
+                  No products in this category yet.
+                </div>
+              )}
+            </div>
+
+            {totalPages > 1 && (
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onChange={setCurrentPage}
+              />
             )}
           </div>
         </div>
 
         {/* Mobile layout */}
         <div className="md:hidden">
-          {/* Category pills (horizontal scroll) */}
+          {/* Category pills */}
           <div
             style={{
               display: 'flex',
@@ -186,7 +192,7 @@ export default function ProductsCatalogSection() {
               return (
                 <button
                   key={key}
-                  onClick={() => setActiveCategory(key)}
+                  onClick={() => handleCategoryChange(key)}
                   style={{
                     padding: '7px 14px',
                     borderRadius: 20,
@@ -213,13 +219,13 @@ export default function ProductsCatalogSection() {
               gap: 16,
             }}
           >
-            {filtered.length > 0 ? (
-              filtered.map((product, i) => (
+            {paginated.length > 0 ? (
+              paginated.map((product) => (
                 <ProductCard
-                  key={`${product.key}-${i}`}
+                  key={product.id}
                   name={product.name}
                   desc={product.desc}
-                  image={PRODUCT_IMAGES[product.imageKey]}
+                  image={product.image}
                 />
               ))
             ) : (
@@ -236,9 +242,103 @@ export default function ProductsCatalogSection() {
               </div>
             )}
           </div>
+
+          {totalPages > 1 && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onChange={setCurrentPage}
+            />
+          )}
         </div>
       </div>
     </section>
+  )
+}
+
+function Pagination({
+  currentPage,
+  totalPages,
+  onChange,
+}: {
+  currentPage: number
+  totalPages: number
+  onChange: (page: number) => void
+}) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 6,
+        marginTop: 40,
+      }}
+    >
+      <button
+        onClick={() => onChange(currentPage - 1)}
+        disabled={currentPage === 1}
+        style={{
+          width: 36,
+          height: 36,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          border: '1px solid #e0e0e0',
+          borderRadius: 3,
+          background: '#fff',
+          cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+          color: currentPage === 1 ? '#ccc' : '#444',
+          transition: 'all 0.15s ease',
+        }}
+      >
+        <ChevronLeftIcon sx={{ fontSize: 18 }} />
+      </button>
+
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <button
+          key={page}
+          onClick={() => onChange(page)}
+          style={{
+            width: 36,
+            height: 36,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: page === currentPage ? '1px solid #c7ab54' : '1px solid #e0e0e0',
+            borderRadius: 3,
+            background: page === currentPage ? '#c7ab54' : '#fff',
+            color: page === currentPage ? '#fff' : '#444',
+            fontSize: 13,
+            fontWeight: page === currentPage ? 700 : 400,
+            cursor: 'pointer',
+            transition: 'all 0.15s ease',
+          }}
+        >
+          {page}
+        </button>
+      ))}
+
+      <button
+        onClick={() => onChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+        style={{
+          width: 36,
+          height: 36,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          border: '1px solid #e0e0e0',
+          borderRadius: 3,
+          background: '#fff',
+          cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+          color: currentPage === totalPages ? '#ccc' : '#444',
+          transition: 'all 0.15s ease',
+        }}
+      >
+        <ChevronRightIcon sx={{ fontSize: 18 }} />
+      </button>
+    </div>
   )
 }
 
@@ -268,7 +368,6 @@ function ProductCard({
         ;(e.currentTarget as HTMLElement).style.boxShadow = 'none'
       }}
     >
-      {/* Image */}
       <div style={{ aspectRatio: '1 / 1', overflow: 'hidden', background: '#f8f6f3' }}>
         <img
           src={image}
@@ -290,7 +389,6 @@ function ProductCard({
         />
       </div>
 
-      {/* Content */}
       <div style={{ padding: '18px 16px 20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
         <h3
           style={{

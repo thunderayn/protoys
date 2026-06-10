@@ -1,0 +1,173 @@
+[
+  {
+    "id": "jb2-bear-christmas-1",
+    "name": "BEAR (CHRISTMAS)",
+    "nameCn": "熊（圣诞款）",
+    "desc": "Festive Christmas bear plush dressed for the holiday season.",
+    "descCn": "节日圣诞熊毛绒玩具，充满节日气氛。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102047/joybear_bear1_mag2je.png"
+  },
+  {
+    "id": "jb2-bear-cozy",
+    "name": "BEAR (COZY)",
+    "nameCn": "熊（舒适款）",
+    "desc": "Snuggly cozy bear plush, perfect for cuddles.",
+    "descCn": "温暖舒适熊毛绒，适合拥抱。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102044/joybear_bear2_qcteis.png"
+  },
+  {
+    "id": "jb2-panda-1",
+    "name": "PANDA",
+    "nameCn": "熊猫",
+    "desc": "Iconic black and white panda plush, soft and lovable.",
+    "descCn": "经典黑白熊猫毛绒，柔软可爱。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102049/toy_4_phw3ee.png"
+  },
+  {
+    "id": "jb2-salamander",
+    "name": "SALAMANDER",
+    "nameCn": "蝾螈",
+    "desc": "Unique salamander plush with vivid colour and soft texture.",
+    "descCn": "色彩鲜艳蝾螈毛绒，独特可爱。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102052/toy_2_clj8lt.png"
+  },
+  {
+    "id": "jb2-wolf",
+    "name": "WOLF",
+    "nameCn": "狼",
+    "desc": "Majestic wolf plush with soft fur and expressive design.",
+    "descCn": "威风狼毛绒，皮毛柔软，造型传神。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102056/toy_3_f4zqcf.png"
+  },
+  {
+    "id": "jb2-horse",
+    "name": "HORSE",
+    "nameCn": "马",
+    "desc": "Graceful horse plush with flowing mane, elegant and soft.",
+    "descCn": "优雅马毛绒，鬃毛飘逸，柔软精致。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102058/toy_5_nv3yuq.png"
+  },
+  {
+    "id": "jb2-unicorn",
+    "name": "UNICORN",
+    "nameCn": "独角兽",
+    "desc": "Magical unicorn plush with shimmering details.",
+    "descCn": "梦幻独角兽毛绒，细节闪亮。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102060/toy_6_mlxuw1.png"
+  },
+  {
+    "id": "jb2-ape",
+    "name": "APE",
+    "nameCn": "猩猩",
+    "desc": "Lovable ape plush with a friendly face and huggable build.",
+    "descCn": "憨厚猩猩毛绒，表情友善，适合拥抱。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102061/toy_8_rbit6y.png"
+  },
+  {
+    "id": "jb2-elephant",
+    "name": "ELEPHANT",
+    "nameCn": "大象",
+    "desc": "Adorable elephant plush with floppy ears and gentle expression.",
+    "descCn": "可爱大象毛绒，大耳朵，神情温柔。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102063/toy_7_rgp9ee.png"
+  },
+  {
+    "id": "jb2-rabbit",
+    "name": "RABBIT",
+    "nameCn": "兔子",
+    "desc": "Soft and fluffy rabbit plush, a classic gift for all ages.",
+    "descCn": "柔软蓬松兔子毛绒，经典礼品之选。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102073/rabbit1_xtuymp.png"
+  },
+  {
+    "id": "jb2-elephant-cozy",
+    "name": "ELEPHANT (COZY)",
+    "nameCn": "大象（舒适款）",
+    "desc": "Extra soft cozy elephant plush, warm and snuggly.",
+    "descCn": "超柔舒适大象毛绒，温暖亲肤。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102074/elephant1_xmsgmx.png"
+  },
+  {
+    "id": "jb2-bear",
+    "name": "BEAR",
+    "nameCn": "熊",
+    "desc": "Classic bear plush, timeless and endlessly cuddly.",
+    "descCn": "经典熊毛绒，永不过时，拥抱首选。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102076/bears3_hutbrt.png"
+  },
+  {
+    "id": "jb2-slug",
+    "name": "SLUG",
+    "nameCn": "鼻涕虫",
+    "desc": "Quirky and charming slug plush, a fun conversation starter.",
+    "descCn": "个性鼻涕虫毛绒，趣味十足。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102077/slugs1_mapn10.png"
+  },
+  {
+    "id": "jb2-bear-grey",
+    "name": "GREY BEAR",
+    "nameCn": "灰熊",
+    "desc": "Gentle grey bear plush with a calm and cosy feel.",
+    "descCn": "温柔灰熊毛绒，舒适亲切。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102077/bears4_avqxtb.png"
+  },
+  {
+    "id": "jb2-panda-2",
+    "name": "PANDA (CLASSIC)",
+    "nameCn": "熊猫（经典款）",
+    "desc": "Classic panda plush in a relaxed, huggable pose.",
+    "descCn": "经典款熊猫毛绒，放松姿态，适合拥抱。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102098/pandas1_zxic1y.png"
+  },
+  {
+    "id": "jb2-bear-beige",
+    "name": "BEAR (BEIGE)",
+    "nameCn": "熊（米色）",
+    "desc": "Warm beige bear plush with a soft, natural tone.",
+    "descCn": "米色熊毛绒，色调温暖自然。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102099/bears2_iyqhai.png"
+  },
+  {
+    "id": "jb2-bear-christmas-2",
+    "name": "BEAR (CHRISTMAS CLASSIC)",
+    "nameCn": "熊（经典圣诞款）",
+    "desc": "Classic Christmas bear plush in a timeless festive style.",
+    "descCn": "经典圣诞熊毛绒，节日风格永不过时。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102099/bears1_oewnf9.png"
+  },
+  {
+    "id": "jb2-bear-family",
+    "name": "BEAR FAMILY",
+    "nameCn": "熊家族",
+    "desc": "Adorable bear family plush set, perfect as a gift.",
+    "descCn": "可爱熊家族毛绒套装，馈赠佳品。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102101/bears6_gsktfa.png"
+  },
+  {
+    "id": "jb2-bear-grey-large",
+    "name": "GREY BEAR (LARGE)",
+    "nameCn": "灰熊（大号）",
+    "desc": "Oversized grey bear plush, extra huggable and impressive.",
+    "descCn": "大号灰熊毛绒，超大尺寸，拥抱感满满。",
+    "category": "everyday",
+    "image": "https://res.cloudinary.com/dqj2gwlpf/image/upload/v1781102102/bears5_ofdpgp.png"
+  }
+]
